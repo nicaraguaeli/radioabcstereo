@@ -1,13 +1,6 @@
 @extends('layouts.master')
 @section('contenido')
-
-@isset($cantidad)
-<div class="alert alert-info alert-dismissible">
-                  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                  <h5><i class="icon fas fa-info"></i> Resultados!</h5>
-                  Hemos encontrado {{number_format($cantidad)}}  resultados
-                </div>
-                @endif
+<h5>Hemos encontrado 1455 resutados de</h5>
 @if(sizeof($noticia) > 0)
 <div class="card card-primary card-outline">
 <div class="card-header">

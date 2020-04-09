@@ -26,7 +26,8 @@ class AdminServiceProvider extends ServiceProvider
     {
         //
         View::composer(
-            'layouts.master', 'App\Http\View\Composers\admincomposer'
+            'layouts.master', 'App\Http\View\Composers\AdminComposer'
         );
     }
 }
+

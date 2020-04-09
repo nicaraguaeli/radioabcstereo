@@ -76,6 +76,7 @@ Route::get('admin', function ()
 
 
 Route::get('/datos','HomeController@datos');
+Route::get('busqueda','NoticiaController@busqueda');
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('abctva','AbctvController')->except(['update', 'show','edit']);
