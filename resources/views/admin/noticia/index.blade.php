@@ -175,8 +175,7 @@ function dato(id)
  
 $(".btn-valoracion").click(function(i){i.preventDefault(),id=$(this).attr("id").split("-"),id=id[1],$("#lista"+id).append(" <div class='spinner-border m-5' role='status'><span class='sr-only'>Loading...</span></div>"),$.ajax({url:"{{url('puntaje')}}",type:"get",data:{id:id},success:function(i){$("#lista"+id).children().remove(),$.each(i,function(i,a){$("#lista"+id).append(" <li>"+a.calificacion+" <span class='badge badge-info'>"+a.cant+"</span></li>")})}})});
 
-
-   
+});
 
 </script>
 <script>
@@ -189,6 +188,7 @@ $(".btn-valoracion").click(function(i){i.preventDefault(),id=$(this).attr("id").
       
 });
  </script>
+
 
 @endsection
 
