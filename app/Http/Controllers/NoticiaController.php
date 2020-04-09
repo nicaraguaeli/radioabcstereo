@@ -447,7 +447,7 @@ class NoticiaController extends Controller
 
        request()->imageurl->move(public_path('img/img-noticias/'.$fecha), $imageName);
 
-       return "http://192.168.15.55/radioabcstereo/radioabcstereo/img/img-noticias/".$fecha.'/'.$imageName; 
+       return "http://radioabcstereo.com/img/img-noticias/".$fecha.'/'.$imageName; 
 
 
        } 
