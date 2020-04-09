@@ -62,6 +62,17 @@ class PeriodistaController extends Controller
          return redirect('periodista')->with('status','Periodista almacenado!');
 
         }
+        else
+        {
+            $periodista = new Periodista;
+            $periodista->nombre = $request->nombre;
+            $periodista->tipo = $request->tipo;
+
+            
+            $periodista->save();
+
+         return redirect('periodista')->with('status','Periodista almacenado!');
+        }
     }
 
     /**

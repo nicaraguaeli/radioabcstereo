@@ -18,7 +18,7 @@ class CreatePeriodistasTable extends Migration
             $table->id();
             $table->timestamps();
             $table->string('nombre');
-            $table->string('imagen');
+            $table->string('imagen')->nullable();
             $table->enum('tipo',['Periodista','Colaborador','Redacción Digital ABC']);
             $table->enum('estado',['1','0'])->default(1);
         });
