@@ -1,0 +1,44 @@
+.header
+{
+    max-height: 70px;
+    overflow: hidden;
+    background-color: rgb(27, 50, 142);
+    color: white;
+
+   
+}
+.navbar
+{
+	background-color:  #07155a;
+	height: 25px;
+	
+}
+.text-gray
+{
+	color: #a6a6a6;
+}
+
+@media screen and(max-width: 680px)
+                {
+                  .navbar
+                  {
+                  	height: auto;
+                  	position: fixed;
+                  }
+                  .header
+                  {
+                  	display: none;
+                  }
+                  .fixed-nav
+                  {
+                  	position: fixed;
+                  	width: 100%;
+                  	z-index: 2;
+                  }
+
+                  
+                }
+
+
+
+
