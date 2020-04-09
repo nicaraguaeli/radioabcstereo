@@ -60,7 +60,7 @@
                     <!-- <label for="customFile">Custom File</label> -->
                   <label for="">Imagen </label>
                     <div class="custom-file">                 
-                      <input  accept="image/png, image/jpeg" required name="imagen" type="file" class="custom-file-input" id="customFile">
+                      <input  accept="image/png, image/jpeg" name="imagen" type="file" class="custom-file-input" id="customFile">
                       <label class="custom-file-label" for="customFile">Imagen</label>
                     </div>
                   </div>
