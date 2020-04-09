@@ -182,10 +182,10 @@ $(".btn-valoracion").click(function(i){i.preventDefault(),id=$(this).attr("id").
 <script>
   $(function(){
        //Datemask dd/mm/yyyy
-    $('#datemask').inputmask('dd/mm/yyyy', { 'placeholder': 'dd/mm/yyyy' })
-    $('[data-mask]').inputmask()
+    $('#datemask').inputmask('dd/mm/yyyy', { 'placeholder': 'dd/mm/yyyy' });
+    $('[data-mask]').inputmask();
     //Date range picker
-    $('#reservation').daterangepicker()
+    $('#reservation').daterangepicker();
       
 });
  </script>

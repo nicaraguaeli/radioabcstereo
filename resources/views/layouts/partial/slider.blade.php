@@ -22,12 +22,12 @@
   @foreach($banner as $banner)
   @if($banner->posicion == 'header' && $banner->link == "")
 	<div class="banner mb-2 text-center" style="height: 100px; overflow: hidden; ">
-      <img class="m-auto" src="{{asset(''.$banner->imagen)}}" alt="">
+      <img class="m-auto img-fluid" src="{{asset(''.$banner->imagen)}}" alt="">
   </div>
   @elseif($banner->posicion == 'header' && $banner->link != "")
   <a target="_blank" href="{{$banner->link}}">
     <div class="banner mb-2 text-center" style="height: 100px; overflow: hidden; ">
-      <img class="m-auto" src="{{asset(''.$banner->imagen)}}" alt="">
+      <img class="m-auto img-fluid" src="{{asset(''.$banner->imagen)}}" alt="">
   </div>
 
   </a>
