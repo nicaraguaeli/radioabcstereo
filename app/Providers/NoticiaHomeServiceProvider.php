@@ -27,7 +27,7 @@ class NoticiaHomeServiceProvider extends ServiceProvider
     {
         //
         View::composer(
-            'welcome', 'App\Http\View\Composers\WelcomeComposer'
+            'welcome', 'App\Http\View\Composers\welcomecomposer'
         );
     }
 }

@@ -35,18 +35,19 @@ Route::get('escuchar',function(){
         
         //$nota = DB::table('abcnoticias')->where('ID','17248')->first();
  
-Route::get('local','Homecontroller@local');
-Route::get('nacional','Homecontroller@nacional');
-Route::get('departamental','Homecontroller@departamental');
-Route::get('internacional','Homecontroller@internacional');
-Route::get('nota/{id}','HomeController@noticia');
-Route::get('abctv','HomeController@abctv');
-Route::get('empleos','HomeController@empleos');
-Route::get('buscar','HomeController@buscar');
-Route::get('countview','HomeController@countview');
-Route::get('calificacion','Homecontroller@calificacion');
+Route::get('/local','Homecontroller@local');
+Route::get('/nacional','Homecontroller@nacional');
+Route::get('/departamental','Homecontroller@departamental');
+Route::get('/internacional','Homecontroller@internacional');
+Route::get('/nota/{id}','HomeController@noticia');
+Route::get('/abctv','HomeController@abctv');
+Route::get('/empleos','HomeController@empleos');
+Route::get('/buscar','HomeController@buscar');
+Route::get('/countview','HomeController@countview');
+Route::get('/calificacion','Homecontroller@calificacion');
+Route::get('/prueba','HomeController@prueba');
 
-Route::get('nosotros',function(){
+Route::get('/nosotros',function(){
 
 return view('abcviews.nosotros')->with('nosotros',DB::table('nosotros')->first());
 
@@ -75,12 +76,12 @@ Route::get('admin', function ()
 
 
 
-Route::get('datos','HomeController@datos');
+Route::get('/datos','HomeController@datos');
+
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('abctva','AbctvController')->except(['update', 'show','edit']);
 Route::resource('noticia','NoticiaController');
 Route::resource('podscat','PodscatController');
-Route::resource('location','LocationController');
 Route::resource('empleo','EmpleoController')->except('show');
 Route::get('getCities','LocationController@getCities');
 Route::get('noticiaEstado','NoticiaController@noticiaEstado');
