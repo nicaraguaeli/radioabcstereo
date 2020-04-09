@@ -177,8 +177,5 @@ class HomeController extends Controller
 
              return view('abcviews.notatemplate',compact('global'))->with('tipo','internacional');
     }
-    public function prueba()
-    {
-        return "prueba";
-    }
+    
 }
