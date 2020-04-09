@@ -76,7 +76,7 @@ class NoticiaController extends Controller
             $request->imagen->move(public_path('img/img-noticias/'.$fecha), $imageName);
 
        
-        DB::table('abcnoticias')->insert(['Titular' => Request()->titular ,'Descripcion' => Request()->descripcion,'Contenido' => Request()->texto,'Area' => Request()->area,'FechaP' => now(),'Autor' => Request()->autor,'Mes'=>now()->month,'Dia'=>now()->day,'Ano'=>now()->year,'Imagen'=>'img/img-noticias/'.$fecha.'/'.$imageName,'Ciudad'=>$ciudad->name.'-'.$pais->name]);
+        DB::table('ABCnoticias')->insert(['Titular' => Request()->titular ,'Descripcion' => Request()->descripcion,'Contenido' => Request()->texto,'Area' => Request()->area,'FechaP' => now(),'Autor' => Request()->autor,'Mes'=>now()->month,'Dia'=>now()->day,'Ano'=>now()->year,'Imagen'=>'img/img-noticias/'.$fecha.'/'.$imageName,'Ciudad'=>$ciudad->name.'-'.$pais->name]);
             } 
 
            //Fin Insert
@@ -90,7 +90,7 @@ class NoticiaController extends Controller
                 $request->imagen->move(public_path('img/img-noticias/'.$fecha), $imageName);
 
        
-        DB::table('abcnoticias')->insert(
+        DB::table('ABCnoticias')->insert(
         ['Titular' => Request()->titular ,'Descripcion' => Request()->descripcion,'Contenido' => Request()->texto,'Area' => Request()->area,'FechaP' => now(),'Autor' => Request()->autor,'Mes'=>now()->month,'Dia'=>now()->day,'Ano'=>now()->year,'Imagen'=>'img/img-noticias/'.$fecha.'/'.$imageName,'Ciudad'=>$pais->name]);
 
            //Fin Insert
@@ -102,7 +102,7 @@ class NoticiaController extends Controller
                  $request->imagen->move(public_path('img/img-noticias/'.$fecha), $imageName);
 
        
-        DB::table('abcnoticias')->insert(
+        DB::table('ABCnoticias')->insert(
         ['Titular' => Request()->titular ,'Descripcion' => Request()->descripcion,'Contenido' => Request()->texto,'Area' => Request()->area,'FechaP' => now(),'Autor' => Request()->autor,'Mes'=>now()->month,'Dia'=>now()->day,'Ano'=>now()->year,'Imagen'=>'img/img-noticias/'.$fecha.'/'.$imageName]);
                 }
                 
@@ -402,7 +402,7 @@ class NoticiaController extends Controller
     public function destroy($id)
     {
         //
-        DB::table('abcnoticias')->where('ID',$id)->delete();
+        DB::table('ABCnoticias')->where('ID',$id)->delete();
          return redirect('noticia')->with('status', 'La noticia a sido Eliminada!');
      
     }
@@ -414,13 +414,13 @@ class NoticiaController extends Controller
             //code...
             if(Request()->idUno)
         {
-            DB::table('abcnoticias')->where('ID',Request()->idUno)->update(['Estado'=>'Publicado']);
+            DB::table('ABCnoticias')->where('ID',Request()->idUno)->update(['Estado'=>'Publicado']);
 
             return "La noticia a sido publicada";
         }
         if(Request()->idCero)
         {
-            DB::table('abcnoticias')->where('ID',Request()->idCero)->update(['Estado'=>'']);
+            DB::table('ABCnoticias')->where('ID',Request()->idCero)->update(['Estado'=>'']);
             return "La noticia a sido suspendida";
         }
         } catch (\Throwable $th) {
