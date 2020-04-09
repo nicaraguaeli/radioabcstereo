@@ -57,9 +57,9 @@ class NoticiaController extends Controller
     public function store(Request $request)
     {
         //
-        $fecha = now()->format('d-m-Y');
+        $fecha = now()->format('m-Y');
         
-
+        
        if (Request()->file('imagen'))
        {
 
@@ -87,11 +87,11 @@ class NoticiaController extends Controller
                    
                 $pais = Country::find($request->pais);        
                 $imageName = time().'.'.request()->imagen->getClientOriginalExtension();
-                $request->imagen->move(public_path('img/img-noticias'), $imageName);
+                $request->imagen->move(public_path('img/img-noticias/'.$fecha), $imageName);
 
        
         DB::table('abcnoticias')->insert(
-        ['Titular' => Request()->titular ,'Descripcion' => Request()->descripcion,'Contenido' => Request()->texto,'Area' => Request()->area,'FechaP' => now(),'Autor' => Request()->autor,'Mes'=>now()->month,'Dia'=>now()->day,'Ano'=>now()->year,'Imagen'=>'img/img-noticias/'.$imageName,'Ciudad'=>$pais->name]);
+        ['Titular' => Request()->titular ,'Descripcion' => Request()->descripcion,'Contenido' => Request()->texto,'Area' => Request()->area,'FechaP' => now(),'Autor' => Request()->autor,'Mes'=>now()->month,'Dia'=>now()->day,'Ano'=>now()->year,'Imagen'=>'img/img-noticias/'.$fecha.'/'.$imageName,'Ciudad'=>$pais->name]);
 
            //Fin Insert
                }
@@ -99,11 +99,11 @@ class NoticiaController extends Controller
                 {
                         
                  $imageName = time().'.'.request()->imagen->getClientOriginalExtension();
-                 $request->imagen->move(public_path('img/img-noticias'), $imageName);
+                 $request->imagen->move(public_path('img/img-noticias/'.$fecha), $imageName);
 
        
         DB::table('abcnoticias')->insert(
-        ['Titular' => Request()->titular ,'Descripcion' => Request()->descripcion,'Contenido' => Request()->texto,'Area' => Request()->area,'FechaP' => now(),'Autor' => Request()->autor,'Mes'=>now()->month,'Dia'=>now()->day,'Ano'=>now()->year,'Imagen'=>'img/img-noticias/'.$imageName]);
+        ['Titular' => Request()->titular ,'Descripcion' => Request()->descripcion,'Contenido' => Request()->texto,'Area' => Request()->area,'FechaP' => now(),'Autor' => Request()->autor,'Mes'=>now()->month,'Dia'=>now()->day,'Ano'=>now()->year,'Imagen'=>'img/img-noticias/'.$fecha.'/'.$imageName]);
                 }
                 
           
@@ -259,7 +259,7 @@ class NoticiaController extends Controller
         
         if(Request()->file('imagen'))
             {
-                $fecha = now()->format('d-m-Y');
+                $fecha = now()->format('m-Y');
                 if($request->pais && $request->ciudad)
                 {
                   //inicio
@@ -434,7 +434,7 @@ class NoticiaController extends Controller
     public function imagen()
     {
        
-       $fecha = now()->format('d-m-Y');
+       $fecha = now()->format('m-Y');
 
        if (Request()->file('imageurl'))
        {
@@ -467,5 +467,19 @@ class NoticiaController extends Controller
              return "error";
         }
        
+    }
+    public function busqueda()
+    {
+        $fechas = explode('-', Request()->busqueda);
+
+        $fechaInicial = explode('/', $fechas[0]);
+        $fechaFinal = explode('/', $fechas[1]);
+        $cantidad = Noticia::where([["Ano",'>=',$fechaInicial[2]],['Mes','>=',$fechaInicial[1]],['Ano','<=',$fechaFinal[2]],['Mes','<=',$fechaFinal[1]]])->count();
+        
+        $noticia = Noticia::where([["Ano",'>=',$fechaInicial[2]],['Mes','>=',$fechaInicial[1]],['Ano','<=',$fechaFinal[2]],['Mes','<=',$fechaFinal[1]]])->paginate(50);
+
+        return view('admin.noticia.index',compact('noticia'))->with('i')->with('cantidad',$cantidad);
+
+
     }
 }
