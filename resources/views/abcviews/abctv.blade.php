@@ -7,7 +7,7 @@
         
        
         	
-			<div class="row mt-1 border-bottom">
+			<div class="row mt-5 border-bottom">
 				<div class="col-lg-9">
 					<div id="contenedor-youtube " class="embed-responsive embed-responsive-16by9" style="width: inherit; background-color: black;">
  				<iframe class="embed-responsive-item" onload="{{$destacado->id}}"  id="frame" style="width: inherit;" height="400" src="{{$destacado->url}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
@@ -26,7 +26,7 @@
 				</div>
 				</div>
 				<div class="col-lg-3">
-					<h4 class="text-center font-weight-bold">ÚLTIMOS VIDEOS</h4>
+					<h5 class="text-center font-weight-bold">ÚLTIMOS VIDEOS</h5>
 				
                   @foreach($ultimos as $ultimo)
 				<div class="card border-0" style="max-width: 14rem;">
@@ -101,27 +101,7 @@
 
 
 <script>
-	$(function() {
-    function e(e) {
-        $.ajax({
-            url: "{{url('countview')}}",
-            method: "get",
-            data: {
-                id: e
-            }
-        })
-    }
-    e($("#frame").attr("onload")), $(".link-youtube").click(function(a) {
-        var c;
-        a.preventDefault();
-        const r = (c = (c = $(this).attr("onclick")).split("__"))[6].match(/^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/);
-
-
-        $("#contenedor-youtube").children().remove(), $("#contenedor-youtube").append('<iframe class="wow fadeInUp embed-responsive-item "  src="//www.youtube.com/embed/' + r[2] + '" frameborder="0" allowfullscreen></iframe>'), $(".descr").children().remove(), $(".descr").append('<div id="descripcion " class="mt-2 descr" ><h4 class="p-1">' + c[2] + '</h4><div class="d-flex p-1"><h6 class="mr-2"><i class="far fa-eye mr-1"></i>' + c[1] + ' vistas</h6> <h6  class="mr-2"><i class="far fa-clock mr-1"></i>Publicado el ' + c[5] + '</h6><h6  class="mr-2"><i class="far fa-user mr-1"></i>' + c[4] + '</h6></div><h6 class="ml-1">' + c[3] + "</h6></div>"), e(c[0]), $("HTML, BODY").animate({
-            scrollTop: 0
-        }, 1e3)
-    })
-});
+	$(function(){function e(e){$.ajax({url:"{{url('countview')}}",method:"get",data:{id:e}})}e($("#frame").attr("onload")),$(".link-youtube").click(function(a){var c;a.preventDefault();const s=(c=(c=$(this).attr("onclick")).split("__"))[6].match(/^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/);$("#contenedor-youtube").children().remove(),$("#contenedor-youtube").append('<iframe class="wow fadeInUp embed-responsive-item "  src="//www.youtube.com/embed/'+s[2]+'" frameborder="0" allowfullscreen></iframe>'),$(".descr").children().remove(),$(".descr").append('<div id="descripcion " class="mt-2 descr" ><h4 class="p-1">'+c[2]+'</h4><div class="d-flex p-1"><h6 class="mr-2"><i class="far fa-eye mr-1"></i>'+c[1]+' vistas</h6> <h6  class="mr-2"><i class="far fa-clock mr-1"></i>Publicado el '+c[5]+'</h6><h6  class="mr-2"><i class="far fa-user mr-1"></i>'+c[4]+'</h6></div><h6 class="ml-1">'+c[3]+"</h6></div>"),e(c[0]),$("HTML, BODY").animate({scrollTop:0},1e3)})});
 	
 </script>
 

@@ -126,7 +126,7 @@
  
  
  <div class="container-fluid" style="min-height: calc(100vh - 400px)">
-  <div class="container">
+  <div class="container p-0">
     @yield('contenido')
   </div> 
  </div>
