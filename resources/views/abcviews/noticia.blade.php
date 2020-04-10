@@ -4,17 +4,17 @@
 
 
 
-	<div class="container mt-5 ">
+	<div class=" mt-5 ">
 
   @foreach($banner as $banner)
   @if($banner->posicion == 'header' && $banner->link == "")
   <div class="banner mb-2 text-center" style="height: 100px; overflow: hidden; ">
-      <img class="m-auto" src="{{asset(''.$banner->imagen)}}" alt="">
+      <img class="m-auto img-fluid" src="{{asset(''.$banner->imagen)}}" alt="">
   </div>
   @elseif($banner->posicion == 'header' && $banner->link != "")
   <a target="_blank" href="{{$banner->link}}">
     <div class="banner mb-2 text-center" style="height: 100px; overflow: hidden; ">
-      <img class="m-auto" src="{{asset(''.$banner->imagen)}}" alt="">
+      <img class="m-auto img-fluid" src="{{asset(''.$banner->imagen)}}" alt="">
   </div>
 
   </a>
@@ -43,7 +43,7 @@
      </div>
 	</div>
   
-     <section class="container">
+     <section >
      	
      	<div class="row mt-2 ">
      		<div class="col-lg-9 align-self-center"><img class="img-fluid" src="{{asset(''.$nota->Imagen)}}" alt="{{$nota->Titular}}"></div>

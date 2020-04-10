@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
+   
     <title>{{$titulo}} ABC | Stereo</title>
+    <meta name="author" content="Eli José Moncada" />
+    <meta name="keywords" content="radioabc, radioabc noticias, noticias abc"/>
+
     <!-- TECNOLOGIA SEO ARCED -->
-     @isset($descripcion)
+    @isset($descripcion)
     <meta name="description" content="{{$descripcion}}" />
     @else
      <meta name="description" content="Estelí, Nicaragua, Noticias Nicaragua, Noticias Estelí, Noticias Norte de Nicaragua, Noticias ABC, Abc Stereo, Abc sterio, Abc estereo, Abc esterio, Radio ABC, Radio ABC en vivo, Radio abc stereo 99.7 fm, escuchar abc stereo, abc estelí, radios nicaragua, radios esteli" />
@@ -109,7 +112,7 @@
 
 
   @include('layouts.partial.header')
-   @isset($noticias)
+  @isset($noticias)
   <div  class="franja bg-dark text-center">
  <marquee behavior="scroll" direction="left" style="max-width: 900px;" >
   
@@ -118,14 +121,17 @@
     @endforeach
    
    </marquee>
- </div>
-@endif
-
+ </div>  
+  @endif
  
- <main id="container-master" class="container-fluid " style="min-height:  calc(100vh - 400px)">
-
-   @yield('contenido')
- </main>
+ 
+ <div class="container-fluid" style="min-height: calc(100vh - 400px)">
+  <div class="container">
+    @yield('contenido')
+  </div> 
+ </div>
+   
+ 
  @include('layouts.partial.footer')
   
  <div id="topScroll" style=" position: fixed; bottom: 3rem;right: 3rem;"><i class="fas fa-arrow-circle-up text-primary" style="font-size: 48px;"></i></div>

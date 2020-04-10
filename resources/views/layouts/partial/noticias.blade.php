@@ -1,5 +1,5 @@
 <!-- LOCAL -->
-<section class="container mt-5" >
+<section class="mt-5" >
   <div class="d-flex border-bottom" >
     <div class="tag " style="background-color: blue; width: 14px; height: 14px; border-right: 3px solid red; transform: translateY(3px); "></div>
     <h5 class="h5 font-weight-bold ml-2 wow fadeInUp" data-wow-delay="0.2s">LOCALES</h5>
@@ -46,7 +46,7 @@
 
 
 <!--DEPARTAMENTALES -->
-<section class="container" style="padding-top: 20px;">
+<section  style="padding-top: 20px;">
   <div class="d-flex border-bottom" >
     <div class="tag " style="background-color: blue; width: 14px; height: 14px; border-right: 3px solid red; transform: translateY(3px); "></div>
     <h5 class="h5 font-weight-bold ml-2 wow fadeInUp" data-wow-delay="0.2s">DEPARTAMENTALES</h5>
@@ -82,7 +82,7 @@
 <!--FIN DEPARTAMENTALES -->
 
 <!-- NACIONAL E INTERNACIONAL -->
-<section class="container"  >
+<section   >
   <div class="row mt-5">
     <div class="col-lg-6 border-right">
       <div class="d-flex border-bottom" >

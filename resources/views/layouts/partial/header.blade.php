@@ -44,6 +44,7 @@
   </div>
 </div>
 </header>
+   
    <div class="">
       <nav class="navbar navbar-expand-lg navbar-light" >
   <a style="display: none;"  id="logo-small" class="navbar-brand text-white " href="{{url('/')}}"><img width="30px" src="{{asset('img/brand.png')}}" alt="Logo"></a>
@@ -120,6 +121,7 @@
     </ul>
   </div>
 </nav>
+ 
 
    </div>
   

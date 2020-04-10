@@ -127,7 +127,7 @@ class AbctvController extends Controller
     }
     public function getData()
     {
-    	 $datos = Abctv::select('tipo')->get();
+    	 $datos = Abctv::select('tipo')->distinct()->get();
 
     	 return $datos;
     }
