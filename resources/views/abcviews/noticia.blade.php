@@ -166,7 +166,10 @@
 
 
 <script>
-  $(function(){$("#btn-encuesta").click(function(a){a.preventDefault(),id=$("input[name='groupOfDefaultRadios']:checked").val(),$.ajax({url:"{{url('calificacion')}}",type:"get",data:{id:id},success:function(a){$("#modalencuesta").modal("show"),$("#encuesta").css("display","none")}})})});
+  $(function(){$("#btn-encuesta").click(function(a){a.preventDefault(),id=$("input[name='groupOfDefaultRadios']:checked").val(),$.ajax({url:"{{url('calificacion')}}",type:"get",data:{id:id},success:function(a){$("#modalencuesta").modal("show"),$("#encuesta").css("display","none")}})})
+   $('iframe').addClass('embed-responsive-item').wrap( "<div class='embed-responsive embed-responsive-16by9'></div>" );
+});
+
 </script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
