@@ -15,12 +15,18 @@
     <style>
         body
         {
-            background-color: #6b8bac !important;
+           background-color: #8EC5FC !important;
+background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%) !important;
+
         }
         .player__timeline
         {
-            background-color: #30508c !important;
+            background-color: #7fabff !important;
             color: whitesmoke !important;
+        }
+        .player #playhead
+        {
+            background: #55b0ff !important;
         }
     </style>
 </head>
