@@ -11,5 +11,10 @@
 </div>
 
 @endif
-
+<script>
+	$(function(){
+        $('iframe').addClass('embed-responsive-item').wrap( "<div class='embed-responsive embed-responsive-16by9'></div>" );
+	});
+	
+</script>
 @endsection
