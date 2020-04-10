@@ -4,16 +4,16 @@
 
 
 
-	<div class=" mt-5 ">
+	
 
   @foreach($banner as $banner)
   @if($banner->posicion == 'header' && $banner->link == "")
-  <div class="banner mb-2 text-center" style="height: 100px; overflow: hidden; ">
+  <div class="banner mt-2 text-center" style="height: 100px; overflow: hidden; ">
       <img class="m-auto img-fluid" src="{{asset(''.$banner->imagen)}}" alt="">
   </div>
   @elseif($banner->posicion == 'header' && $banner->link != "")
   <a target="_blank" href="{{$banner->link}}">
-    <div class="banner mb-2 text-center" style="height: 100px; overflow: hidden; ">
+    <div class="banner mt-2 text-center" style="height: 100px; overflow: hidden; ">
       <img class="m-auto img-fluid" src="{{asset(''.$banner->imagen)}}" alt="">
   </div>
 
@@ -41,7 +41,7 @@
      	<div class="mr-3"><button class="btn btn-default p-0" type="button" onclick="javascript:window.print()"><i class="fal fa-print mr-1" ></i><span class="h6  ">Imprimir</span></button></div>
      	
      </div>
-	</div>
+	
   
      <section >
      	
@@ -84,11 +84,11 @@
 </ul>
       </div>
   	  
-     <div class="d-flex flex-column mt-3 wow bounceInRight" data-wow-delay="0.1s" >
-      <a class="wow  mb-4 "  target="_blank" href="https://www.facebook.com/radioabcesteli/?fref=ts"><i class="fab fa-facebook-square " style="font-size: 50px; color: #3b5998;"></i></a>
-      <a class="wow   mb-4"  target="_blank" href="https://twitter.com/radioabcesteli"><i class="fab fab fa-twitter-square " style="font-size: 50px; color: #0084b4;"></i></a>
+     <div class="d-flex flex-column mt-3 wow fadeInUp" data-wow-delay="0.1s" >
+      <a class="  mb-4 "  target="_blank" href="https://www.facebook.com/radioabcesteli/?fref=ts"><i class="fab fa-facebook-square " style="font-size: 50px; color: #3b5998;"></i></a>
+      <a class="   mb-4"  target="_blank" href="https://twitter.com/radioabcesteli"><i class="fab fab fa-twitter-square " style="font-size: 50px; color: #0084b4;"></i></a>
       <a class="wow  mb-4 "  target="_blank" href="https://www.instagram.com/radioabcesteli/"><i class="fab fa-instagram" style="font-size: 50px; color: #3f729b;"></i></a>
-      <a class="wow  mb-4 "  target="_blank" href="https://www.youtube.com/channel/UC4jgoYzXPyiQ-JejLctLtlA">  <i class="fab fab fa-youtube-square " style="font-size: 50px; color: #c4302b;"></i></a>
+      <a class="  mb-4 "  target="_blank" href="https://www.youtube.com/channel/UC4jgoYzXPyiQ-JejLctLtlA">  <i class="fab fab fa-youtube-square " style="font-size: 50px; color: #c4302b;"></i></a>
        
          
           

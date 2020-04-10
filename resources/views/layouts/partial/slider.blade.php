@@ -21,19 +21,19 @@
  
   @foreach($banner as $banner)
   @if($banner->posicion == 'header' && $banner->link == "")
-  <div class="banner mb-2 text-center mt-5" style="height: 100px; overflow: hidden; ">
+  <div class="banner  text-center mt-3" style="height: 100px; overflow: hidden; ">
       <img class="m-auto img-fluid" src="{{asset(''.$banner->imagen)}}" alt="">
   </div>
   @elseif($banner->posicion == 'header' && $banner->link != "")
   <a target="_blank" href="{{$banner->link}}">
-    <div class="banner mb-2 text-center mt-5" style="height: 100px; overflow: hidden; ">
+    <div class="banner  text-center mt-3" style="height: 100px; overflow: hidden; ">
       <img class="m-auto img-fluid" src="{{asset(''.$banner->imagen)}}" alt="">
   </div>
 
   </a>
   @endif
   @endforeach
-	<div class="row" style="background-color: #e8e8e8; ">
+	<div class="row mt-5" style="background-color: #e8e8e8; ">
 
 		<div class=" col-lg-9  ">
 			 <div class="swiper-container wow fadeIn">

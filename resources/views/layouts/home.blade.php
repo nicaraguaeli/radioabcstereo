@@ -87,20 +87,7 @@
 
   </script>
   
-    <style>
-
-      .wrapper
-      {
-        max-width: 1366px;
-        margin: 0 auto;
-      }
-      body, html
-      {
-      font-family: Helmet,Freesans,Helvetica,Arial,sans-serif !important;
-      
-
-      }
-    </style>
+   
 </head>
 <body >
   <div id="spinner" class="justify-content-center d-flex" style="background-color: blue; width: 100%; height: 100vh; position: fixed; z-index: 3;">

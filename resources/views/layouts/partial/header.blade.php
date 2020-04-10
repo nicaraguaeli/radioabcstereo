@@ -47,7 +47,7 @@
    
    <div class="">
       <nav class="navbar navbar-expand-lg navbar-light" >
-  <a style="display: none;"  id="logo-small" class="navbar-brand text-white " href="{{url('/')}}"><img width="30px" src="{{asset('img/brand.png')}}" alt="Logo"></a>
+  <a   id="logo-small" class="navbar-brand text-white " href="{{url('/')}}"><img width="30px" src="{{asset('img/brand.png')}}" alt="Logo"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     
     <i class="far fa-bars text-white" style="font-size: 1.5rem;"></i>
@@ -98,26 +98,19 @@
          <li class="nav-item text-white">
         <a class="nav-link text-white mr-3" href="#">Contactanos</a>
       </li>
-       <li class=" nav-item social-network" style="display: none;"> 
+       <li class=" nav-item hide-element mt-2" > 
         
             <a style="padding-right: 5px;" target="_blank" href="https://www.facebook.com/radioabcesteli/?fref=ts"> <i class="fab fa-facebook-f" style="font-size: 16px;"></i></a>
              <a style="padding-right: 5px;" target="_blank" href="https://twitter.com/radioabcesteli"> <i class="fab fa-twitter" style="font-size: 16px;"></i></a>
                   <a style="padding-right: 5px;" target="_blank" href="https://www.instagram.com/radioabcesteli/"> <i class="fab fa-instagram" style="font-size: 16px;"></i></a>
                    <a target="_blank" href="https://www.youtube.com/channel/UC4jgoYzXPyiQ-JejLctLtlA"> <i class="fab fa-youtube" style="font-size: 16px;"></i></a>
+                    <a target="_blank" href="{{url('escuchar')}}"><i style="font-size: 1rem; color: red; padding-right: 5px;" class="far fa-play-circle ml-3"></i></a>
+                     <small class="mt-1 ml-1 text-primary digital-clock">Nic</small>
                  
         
      </li>
-     <li>
-       <div class="social-network">
-           <a target="_blank" href="{{url('escuchar')}}"><i style="font-size: 1rem; color: red; padding-right: 5px;" class="far fa-play-circle"></i></a>
-       </div>
-     </li>
-     <li>
-      <div class="mt-2 social-network">
-          <small class="mt-1 ml-1 text-primary digital-clock">Nic</small>
-      </div>
-    
-     </li>
+     
+     
     </ul>
   </div>
 </nav>

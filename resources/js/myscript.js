@@ -1,103 +1,12 @@
-$(window).on('load', function () {
-   $("#spinner").fadeOut("slow", function(){
+$(function(){
+
+//Spin
+$("#spinner").fadeOut("slow", function(){
        $("#spinner").remove();
     });
- 
- 
-  });
-
-$(document).ready(function()
-{
      $( "#topScroll" ).fadeOut( "slow", function() {
     // Animation complete
   });
-   
-	//HEADER
-	   if($(window).width() <= 990)
-   {
-       $('.navbar').addClass("fixed-top");
-       $('.navbar').css("height","auto");
-       $('.header').css("display","none");
-       $('.buscador').css("display","block");
-       $('#logo-small').css('display','block');
-       $('.social-network').css("display","block");
-
-     
-   }
-
-     $(window).resize(function()
-     {
-        if($(window).width() <= 990)
-   {
-       $('.header').css("display","none");
-       $('.buscador').css("display","block");
-       $('.navbar').css("height","auto");
-       $('#logo-small').css('display','block');
-       $('.social-network').css("display","block");
-     
-   }
-   else
-   {
-        $('.buscador').css("display","none");
-        $('.header').css("display","block");
-        $('.social-network').css("display","none");
-        $('#logo-small').css('display','none');
-        $('.navbar').css("height","25px");
-   }
-
-     });
-
-    
-     $(window).scroll(function() {
-  var height = $(window).scrollTop();
-  var ancho = $(window).width();
-  if(height < 10 && ancho > 990) {
-     
-       $('.navbar').removeClass("fixed-top");
-       $('.social-network').css('display','none').removeClass('ml-3 mt-2');
-       $('#logo-small').css('display','none');
-     
-  } else {
-   $('.navbar').addClass("fixed-top");
-  
-   $('.social-network').css('display','block').addClass('ml-3 mt-2');
-   $('#logo-small').css('display','block');
-  }
-});
-	//FIN HEADER
-
-
-	//NOTICIAS
-	if($(window).width() <= 960)
-   {
-      
-       $('.auto-height').css("min-height","auto");
-       $('#container-master').addClass('p-0');
-
-     
-   }
-
-     $(window).resize(function()
-     {
-        if($(window).width() <= 960)
-   {
-        $('.auto-height').css("height","auto");
-        $('#container-master').addClass('p-0');
-        $('#container-abctv').removeClass('mt-3');
-        $('#frame').css("heigth","300");
-        $('.col-youtube').addClass('p-0');
-     
-   }
-   else
-   {
-        $('.auto-height').css("min-height","155");
-        $('#container-master').removeClass('p-0');
-        $('#container-abctv').addClass('mt-3');
-        $('#frame').css("heigth","400");
-
-   }
-
-     });
       $(window).scroll(function(){
         if($(window).scrollTop() > 300)
         {
@@ -115,53 +24,97 @@ $(document).ready(function()
              
         }
       });
+//Fin Spin
 
-	//FIN NOTICIAS
 
-
-	//SLIDER
-	 if($(window).width() <= 960)
+//ancho
+if($(window).width() < 990)
    {
+       //Header
+       $('.navbar').css("height","auto");
+       $('.buscador').css("display","block");
+       $('#logo-small').css('display','block');
+       $('.hide-element').css("display","block");
+       //Fin Header
+
+       //Slider
        $('#card-content').addClass( "d-flex" );
        $('.info-nota').addClass('flex-column');
        $('.titular').removeClass( "h1" ).addClass('h3');
-       $('.wrapper').css( "margin-top", "50px" );
        $('#seccion-nota').css("display",'none');
 
-     
-   }
+       $('.auto-height').css("min-height","auto");
+       
+       //Fin Slider
 
-
-   $( window ).resize(function() {
-   
-   if($(window).width() <= 960)
-   {
-      $('#card-content').addClass( "d-flex" );
-       $('.info-nota').addClass('flex-column');
-      $('#seccion-nota').css("display",'none');
-      $('.titular').removeClass( "h1" ).addClass('h3');
-      $('.wrapper').css( "margin-top", "50px" );
      
    }
    else
    {
-        $('#card-content').removeClass( "d-flex" );
-         $('.info-nota').removeClass('flex-column');
+       $('.navbar').css("height","25px");
+       $('.buscador').css("display","none");
+       $('#logo-small').css('display','none');
+       $('.hide-element').css("display","none");
+   }
+//Fin ancho
+$( window ).resize(function() {
+   
+   if($(window).width() < 990)
+   {
+      
+        $('#card-content').addClass( "d-flex" );
+        $('.info-nota').addClass('flex-column');
+        $('#seccion-nota').css("display",'none');
+        $('.titular').removeClass( "h1" ).addClass('h3');
 
-        $('.titular').removeClass( "h3" ).addClass('h1');
-        $('#seccion-nota').css("display",'block');
-        $('.wrapper').css( "margin-top", "auto" );
+        $('.buscador').css("display","block");
+        $('.navbar').css("height","auto");
+        $('#logo-small').css('display','block');
+        $('.hide-element').css("display","block");
+
+        $('.navbar').removeClass("fixed-top");
+      
+     
+   }
+   else
+   {
+         $('#card-content').removeClass( "d-flex" );
+         $('.info-nota').removeClass('flex-column');
+         $('.titular').removeClass( "h3" ).addClass('h1');
+         $('#seccion-nota').css("display",'block');
+
+        $('.buscador').css("display","none");
+        $('.header').css("display","block");
+        $('.hide-element').css("display","none");
+        $('#logo-small').css('display','none');
+        $('.navbar').css("height","25px");
+       
 
    }
 });
-	//FIN SLIDER
 
 
-	//CHECKED
+ $(window).scroll(function() {
+  var height = $(window).scrollTop();
+  var ancho = $(window).width();
+  if(height < 10 && ancho > 990) {
      
-    $('#btn-encuesta').click(function(event)
+       $('.navbar').removeClass("fixed-top");
+       $('.hide-element').css('display','none').removeClass('ml-3 mt-2');
+       $('#logo-small').css('display','none');
+     
+  } else if(height > 10 && ancho > 990) {
+   
+   $('.navbar').addClass("fixed-top");
+  
+   $('.hide-element').css('display','block').addClass('ml-3 mt-2');
+   $('#logo-small').css('display','block');
+  }
+});
+
+ $('#btn-encuesta').click(function(event)
     {
-    	event.preventDefault();
+      event.preventDefault();
        
        id = $("input[name='groupOfDefaultRadios']:checked").val();
      
@@ -187,8 +140,8 @@ request.fail(function( jqXHR, textStatus ) {
 
 
     }); 
-	
-	//FIN CHECKED
+  
+  //FIN CHECKED
 
 
   //CONTENIDO NOTA
@@ -206,7 +159,5 @@ request.fail(function( jqXHR, textStatus ) {
 
          $('#frame').attr('src','//www.youtube.com/embed/'+match[2]);
   //FIN ABCTV
+
 });
-
-
-

@@ -7,7 +7,7 @@
         
        
         	
-			<div class="row mt-5 border-bottom">
+			<div class="row mt-2 border-bottom">
 				<div class="col-lg-9">
 					<div id="contenedor-youtube " class="embed-responsive embed-responsive-16by9" style="width: inherit; background-color: black;">
  				<iframe class="embed-responsive-item" onload="{{$destacado->id}}"  id="frame" style="width: inherit;" height="400" src="{{$destacado->url}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>

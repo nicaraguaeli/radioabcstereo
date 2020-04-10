@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('contenido')
-<h5>Hemos encontrado 1455 resutados de</h5>
+
 @if(sizeof($noticia) > 0)
 <div class="card card-primary card-outline">
 <div class="card-header">
