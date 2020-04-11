@@ -33,7 +33,7 @@
   </a>
   @endif
   @endforeach
-	<div class="row mt-5" style="background-color: #e8e8e8; ">
+	<div class="row mt-1" style="background-color: #e8e8e8; ">
 
 		<div class=" col-lg-9  ">
 			 <div class="swiper-container wow fadeIn">

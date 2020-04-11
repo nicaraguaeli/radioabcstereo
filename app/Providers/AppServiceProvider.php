@@ -35,6 +35,6 @@ class AppServiceProvider extends ServiceProvider
 
      
 
-        View::share(['titulo'=>'Noticias Radio ABC Stereo 99.7 FM']);
+        View::share(['titulo'=>'Radio ABC Stereo | Inicio']);
     }
 }

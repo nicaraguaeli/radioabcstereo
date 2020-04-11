@@ -152,28 +152,28 @@ class HomeController extends Controller
     public function local()
     {
 
-             $global = Noticia::where([['Area','Local'],['Estado','Publicado']])->orderBy('Ano','desc')->orderBy('Mes','desc')->take(5)->get();
+             $global = Noticia::where([['Area','Local'],['Estado','Publicado']])->orderBy('Ano','desc')->orderBy('Mes','desc')->paginate(16);
 
              return view('abcviews.notatemplate',compact('global'))->with('tipo','Local');
     }
     public function nacional()
     {
 
-             $global = Noticia::where([['Area','Nacional'],['Estado','Publicado']])->orderBy('Ano','desc')->orderBy('Mes','desc')->take(5)->get();
+             $global = Noticia::where([['Area','Nacional'],['Estado','Publicado']])->orderBy('Ano','desc')->orderBy('Mes','desc')->paginate(16);
 
              return view('abcviews.notatemplate',compact('global'))->with('tipo','Nacional');
     }
     public function departamental()
     {
 
-             $global = Noticia::where([['Area','Departamental'],['Estado','Publicado']])->orderBy('Ano','desc')->orderBy('Mes','desc')->take(16)->get();
+             $global = Noticia::where([['Area','Departamental'],['Estado','Publicado']])->orderBy('Ano','desc')->orderBy('Mes','desc')->paginate(16);
 
              return view('abcviews.notatemplate',compact('global'))->with('tipo','departamental');
     }
     public function internacional()
     {
 
-             $global = Noticia::where([['Area','Internacional'],['Estado','Publicado']])->orderBy('Ano','desc')->orderBy('Mes','desc')->take(5)->get();
+             $global = Noticia::where([['Area','Internacional'],['Estado','Publicado']])->orderBy('Ano','desc')->orderBy('Mes','desc')->paginate(16);
 
              return view('abcviews.notatemplate',compact('global'))->with('tipo','internacional');
     }

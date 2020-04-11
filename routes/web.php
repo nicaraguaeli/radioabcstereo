@@ -62,7 +62,7 @@ Route::get('admin', function ()
 	{  
 		if(Auth::user()->estado == 0)
 		{
-         abort(403,"¡Acceso Denegado! Tu cuenta a sido suspendida temporalmente");
+         abort(403,"¡Acceso Denegado! Tu cuenta ha sido suspendida temporalmente");
 		}
 		else
 		{

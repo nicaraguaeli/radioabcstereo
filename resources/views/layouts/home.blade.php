@@ -8,17 +8,17 @@
    
     <title>{{$titulo}} ABC | Stereo</title>
     <meta name="author" content="Eli José Moncada" />
-    <meta name="keywords" content="radioabc, radioabc noticias, noticias abc"/>
+    <meta name="keywords" content="radio abc stereo, radio abc estereo, radio abc, noticias abc, noticias esteli, noticias madriz, noticias nueva segovia, noticias nicaragua, escuchar radio abc, escuchar abc, radio abc estereo 99.7"/>
 
     <!-- TECNOLOGIA SEO ARCED -->
     @isset($descripcion)
     <meta name="description" content="{{$descripcion}}" />
     @else
-     <meta name="description" content="Estelí, Nicaragua, Noticias Nicaragua, Noticias Estelí, Noticias Norte de Nicaragua, Noticias ABC, Abc Stereo, Abc sterio, Abc estereo, Abc esterio, Radio ABC, Radio ABC en vivo, Radio abc stereo 99.7 fm, escuchar abc stereo, abc estelí, radios nicaragua, radios esteli" />
+     <meta name="description" content="Radio ABC Stereo, transmitiendo desde Estelí, Nicaragua. Escúchenos en línea e infórmese con las noticias más importantes." />
     @endif<!-- TECNOLOGIA SEO ARCED META INDEXACIÓN -->         
-    <meta name="robots" content="Estelí, Nicaragua, Noticias Nicaragua, Noticias Estelí, Noticias Norte de Nicaragua, Noticias ABC, Abc Stereo, Abc sterio, Abc estereo, Abc esterio, Radio ABC, Radio ABC en vivo, Radio abc stereo 99.7 fm, escuchar abc stereo, abc estelí, radios nicaragua, radios esteli" />
+    <meta name="robots" content="Radio ABC Stereo, transmitiendo desde Estelí, Nicaragua. Escúchenos en línea e infórmese con las noticias más importantes." />
 <!-- TECNOLOGIA SEO ARCED META INDEXACIÓN GOOGLE--> 
-    <meta name="googlebot" content="Estelí, Nicaragua, Noticias Nicaragua, Noticias Estelí, Noticias Norte de Nicaragua, Noticias ABC, Abc Stereo, Abc sterio, Abc estereo, Abc esterio, Radio ABC, Radio ABC en vivo, Radio abc stereo 99.7 fm, escuchar abc stereo, abc estelí, radios nicaragua, radios esteli" />
+    <meta name="googlebot" content="Radio ABC Stereo, transmitiendo desde Estelí, Nicaragua. Escúchenos en línea e infórmese con las noticias más importantes." />
 <!-- TECNOLOGIA SEO ARCED MY BOX DE GOOGLE--> 
     <meta name="google" content="nositelinkssearchbox" />
 <!-- TECNOLOGIA SEO ARCED PROPIETARIOS--> 
@@ -101,7 +101,7 @@
   @include('layouts.partial.header')
   @isset($noticias)
   <div  class="franja bg-dark text-center">
- <marquee behavior="scroll" direction="left" style="max-width: 900px;" >
+ <marquee behavior="scroll" direction="left" style="max-width: 900px; font-size: 0.7rem;" >
   
   @foreach($noticias as $nota)
     <span class="badge badge-success mr-2 text-uppercase">{{$nota->Ciudad}}</span><a class="text-white text-uppercase mr-3" href="{{url('nota',$nota->ID.'_'.Str::slug($nota->Titular,'-'))}}">{{$nota->Titular}}</a>

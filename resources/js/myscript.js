@@ -34,7 +34,10 @@ if($(window).width() < 990)
        $('.navbar').css("height","auto");
        $('.buscador').css("display","block");
        $('#logo-small').css('display','block');
-       $('.hide-element').css("display","block");
+       $('.hide-element').css("display","none");
+       $('#logo-rect').css("display","none");
+       $('.escuchanos').css("display","block");
+       $('.escuchanos-nav').css("display","block");
        //Fin Header
 
        //Slider
@@ -54,7 +57,10 @@ if($(window).width() < 990)
        $('.navbar').css("height","25px");
        $('.buscador').css("display","none");
        $('#logo-small').css('display','none');
+       $('#logo-rect').css("display","none");
        $('.hide-element').css("display","none");
+       $('.escuchanos').css("display","none");
+       $('.escuchanos-nav').css("display","none");
    }
 //Fin ancho
 $( window ).resize(function() {
@@ -66,13 +72,16 @@ $( window ).resize(function() {
         $('.info-nota').addClass('flex-column');
         $('#seccion-nota').css("display",'none');
         $('.titular').removeClass( "h1" ).addClass('h3');
-
+         $('.escuchanos-nav').css("display","none");
         $('.buscador').css("display","block");
         $('.navbar').css("height","auto");
         $('#logo-small').css('display','block');
         $('.hide-element').css("display","block");
 
         $('.navbar').removeClass("fixed-top");
+
+         $('#logo-rect').css("display","none");
+         $('.escuchanos').css("display","block");
       
      
    }
@@ -88,6 +97,10 @@ $( window ).resize(function() {
         $('.hide-element').css("display","none");
         $('#logo-small').css('display','none');
         $('.navbar').css("height","25px");
+
+         $('#logo-rect').css("display","none");
+         $('.escuchanos').css("display","none");
+          $('.escuchanos-nav').css("display","none");
        
 
    }
@@ -101,14 +114,18 @@ $( window ).resize(function() {
      
        $('.navbar').removeClass("fixed-top");
        $('.hide-element').css('display','none').removeClass('ml-3 mt-2');
-       $('#logo-small').css('display','none');
+       $('#logo-rect').css('display','none');
+        $('.escuchanos-nav').css("display","none");
+
+
      
   } else if(height > 10 && ancho > 990) {
    
    $('.navbar').addClass("fixed-top");
   
    $('.hide-element').css('display','block').addClass('ml-3 mt-2');
-   $('#logo-small').css('display','block');
+   $('#logo-rect').css('display','block');
+    $('.escuchanos-nav').css("display","block");
   }
 });
 
