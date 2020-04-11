@@ -18,7 +18,7 @@ class AdminComposer
         $count = Noticia::count();
         $podcount = Podscat::count();
 
-        $user = DB::table('administradores')->count();
+        $user = DB::table('users')->count();
         $emcount = Empleo::count(); 
         
         $view->with('noticount',$count)->with('userscount',$user)->with('emcount',$emcount)->with('podcount',$podcount);
