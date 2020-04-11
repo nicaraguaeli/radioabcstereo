@@ -16,7 +16,7 @@
               	<li style="color: #d9d9d9;"><h6 class="h6 font-weight-bold">SOCIAL</h6></li>
               	<li><a target="_blank" href="https://www.facebook.com/radioabcesteli/?fref=ts"><i class="fab fa-facebook-f mr-1" style="font-size: 12px;"></i>Facebook</a></li>
               	<li><a target="_blank" href="https://twitter.com/radioabcesteli"><i class="fab fa-twitter mr-1" style="font-size: 12px;"></i>Twitter</a></li>
-              	<li><a target="_blank" href="https://www.youtube.com/channel/UC4jgoYzXPyiQ-JejLctLtlA"><i class="fab fa-youtube mr-1" style="font-size: 12px;"></i>Youtube</a></li>
+              	<li><a target="_blank" href="https://www.youtube.com/channel/UC4jgoYzXPyiQ-JejLctLtlA"><i class="fab fa-youtube mr-1" style="font-size: 12px;"></i>YouTube</a></li>
               		<li><a target="_blank" href="https://www.instagram.com/radioabcesteli/"><i class="fab fa-instagram mr-1" style="font-size: 12px;"></i>Instagram</a></li>
               </ul>
 
@@ -39,6 +39,10 @@
               	<li style="color: #3490dc;"><i class="fad fa-phone-volume mr-1" style="font-size: 12px;"></i>+50527142000</li>
               	<li style="color: #3490dc;"><i class="fab fa-whatsapp mr-1" style="font-size: 12px;"></i>+50588450415</li>
               	<li style="color: #3490dc;"><i class="fal fa-envelope mr-1" style="font-size: 12px;"></i>radioabcstereo@gmail.com</li>
+                            <li style="color: #3490dc;"><i class="fas fa-map-marker-alt mr-1" style="font-size: 12px;"></i></i>Iglesia el Calvario 1/2c al este Estelí, Nicaragua</li>
+                     
+                     
+                    
               </ul>
 
 			</div>

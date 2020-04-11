@@ -2,15 +2,41 @@
 {
     height: 90px;
     overflow: hidden;
-    background-color: #c6c6c6;
     color: white;
+
+     &:before
+    
+    {
+      content: "";
+      width: 300px;
+      height: 90px;
+      position: absolute;
+      border-bottom: 90px solid #f9f9f9;
+      border-right: 104px solid transparent;
+      
+    }
+    @media screen and(min-width: 1700px)
+    {
+      &:before
+    
+    {
+      content: "";
+      width: 400px;
+      height: 90px;
+      position: absolute;
+      border-bottom: 90px solid #f9f9f9;
+      border-right: 104px solid transparent;
+      
+    }
+      
+    }
 
    
 }
 .navbar
 {
-	background-color:  #07155a;
-	height: 25px;
+	
+	height: 30px;
 	
 }
 .text-gray
@@ -31,5 +57,34 @@
                 }
 
 
+.fa-play-circle
+{
+    transition: all .5s;
+    color: red;
+   
+    &:hover
+    {
+      color:white;
+    }
 
-
+}
+.link-destacado
+{
+  color: black;
+  &:hover
+  {
+    color: #3490dc;
+  }
+}
+.azul-fuerte
+{
+  background: rgb(7,21,90);
+}
+.azul-medio
+{
+   background: rgb(27,50,142);
+}
+.azul-claro
+{
+   background: rgb(0,96,151);
+}

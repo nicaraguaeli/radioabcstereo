@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Radio en vivo | Radio ABC Stereo 99.7fm</title>
     <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
-    <meta name="description" content="">
+    <meta name="description" content="Escucha Radio ABC Stereo ¡99.7, en las mejores calificaciones!">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="{{asset('css/main.css')}}">

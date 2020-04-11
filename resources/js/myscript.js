@@ -54,7 +54,7 @@ if($(window).width() < 990)
    }
    else
    {
-       $('.navbar').css("height","25px");
+       $('.navbar').css("height","30px");
        $('.buscador').css("display","none");
        $('#logo-small').css('display','none');
        $('#logo-rect').css("display","none");
@@ -96,7 +96,7 @@ $( window ).resize(function() {
         $('.header').css("display","block");
         $('.hide-element').css("display","none");
         $('#logo-small').css('display','none');
-        $('.navbar').css("height","25px");
+        $('.navbar').css("height","30px");
 
          $('#logo-rect').css("display","none");
          $('.escuchanos').css("display","none");
@@ -115,7 +115,7 @@ $( window ).resize(function() {
        $('.navbar').removeClass("fixed-top");
        $('.hide-element').css('display','none').removeClass('ml-3 mt-2');
        $('#logo-rect').css('display','none');
-        $('.escuchanos-nav').css("display","none");
+       $('.escuchanos-nav').css("display","none");
 
 
      
@@ -125,7 +125,7 @@ $( window ).resize(function() {
   
    $('.hide-element').css('display','block').addClass('ml-3 mt-2');
    $('#logo-rect').css('display','block');
-    $('.escuchanos-nav').css("display","block");
+   $('.escuchanos-nav').css("display","block");
   }
 });
 

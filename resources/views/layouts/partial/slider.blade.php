@@ -41,7 +41,7 @@
        @foreach($noticias as $nota)
      
           <div class="swiper-slide" ><a href="{{url('nota',$nota->ID.'_'.Str::slug($nota->Titular,'-'))}}" class="text-dark"><img  class="img-fluid" src="{{asset(''.$nota->Imagen)}}" alt="">
-       <div >
+       <div class="mt-1" >
     <span class="h1 titular ml-1 font-weight-bold" >{{$nota->Titular}}</span></a>
     <div class="row">
       <div class="col sm-6 text-gray"><i class="fad fa-id-card ml-1" ></i><span class="h6 p-2">{{$nota->Autor}}</span></div>

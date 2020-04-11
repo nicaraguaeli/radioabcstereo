@@ -35,10 +35,10 @@ Route::get('escuchar',function(){
         
         //$nota = DB::table('abcnoticias')->where('ID','17248')->first();
  
-Route::get('/local','HomeController@local');
-Route::get('/nacional','HomeController@nacional');
-Route::get('/departamental','HomeController@departamental');
-Route::get('/internacional','HomeController@internacional');
+Route::get('/locales','HomeController@local');
+Route::get('/nacionales','HomeController@nacional');
+Route::get('/departamentales','HomeController@departamental');
+Route::get('/internacionales','HomeController@internacional');
 Route::get('/nota/{id}','HomeController@noticia');
 Route::get('/abctv','HomeController@abctv');
 Route::get('/empleos','HomeController@empleos');

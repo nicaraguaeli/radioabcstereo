@@ -86,7 +86,12 @@
     
 
   </script>
-  
+  <style>
+    body
+    {
+      font-family: "Nunito", sans-serif !important;
+    }
+  </style>
    
 </head>
 <body >

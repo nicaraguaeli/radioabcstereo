@@ -1,7 +1,7 @@
-<header class="header">
+<header class="header azul-medio">
   <div class="container-fluid text-center">
   <div class="row align-items-center" style="min-height: 90px;">
-    <div class="col-lg-3 " ><a href="{{url('/')}}"><img width="64px" src="{{asset('img/brand.png')}}" alt="Logo"></a></div>
+    <div class="col-lg-3 " ><a href="{{url('/')}}"><img width="90px" src="{{asset('img/brand.png')}}" alt="Logo"></a></div>
      <div class="col-lg-3" >
       <form action="{{url('buscar')}}" method="get">
       <div class="form-group mt-1">
@@ -18,16 +18,17 @@
      </div>
       <div class="col-lg-3" >
         
+        <a href="{{url('escuchar')}}">
         <div class="row align-items-center ml-3" style="max-width: 7rem; height: 100%; justify-content: right;">
-          <div class="col-xs-1"> <div ><a target="_blank" href="{{url('escuchar')}}"><i style="font-size: 1.5rem; color: red; padding-right: 5px;" class="far fa-play-circle"></i></a>
+          <div class="col-xs-1"> <div ><i  style="font-size: 1.5rem;  padding-right: 5px;" class="far fa-play-circle"></i>
  
                   </div></div>
-           <div class="col-xs-11 text-dark ">  <div style="line-height: 10px; font-weight: bold; font-size: 10px;">
+           <div class="col-xs-11 text-white ">  <div style="line-height: 10px; font-weight: bold; font-size: 10px;">
                       ESCÚCHANOS <br>
                       EN VIVO
                       </div></div>
         </div>
-
+          </a>
 
       </div>
        <div class="col-lg-3" >
@@ -53,13 +54,16 @@
 </header>
    
    <div class="">
-      <nav class="navbar navbar-expand-lg navbar-light" >
-  <a   id="logo-small" class="navbar-brand text-white " href="{{url('/')}}"><img width="64px" src="{{asset('img/brand.png')}}" alt="Logo"></a>
-   <a   id="logo-rect" class="navbar-brand text-white " href="{{url('/')}}"><img width="64px" src="{{asset('img/logorect.png')}}" alt="Logo"></a>
+      <nav class="navbar navbar-expand-lg navbar-light azul-fuerte" >
+  <a   id="logo-small" class="navbar-brand text-white " href="{{url('/')}}"><img width="50px" src="{{asset('img/brand.png')}}" alt="Logo"></a>
+   <a   id="logo-rect" class="navbar-brand text-white " href="{{url('/')}}"><img width="80px" src="{{asset('img/logorect.png')}}" alt="Logo"></a>
+  
+   <a href="{{url('escuchar')}} " class="escuchanos" target="_blank">
    <div class="d-flex">
-     <div >   <a class="escuchanos" target="_blank" href="{{url('escuchar')}}"><i style="font-size: 1.5rem; color: red; padding-right: 5px;" class="far fa-play-circle ml-3"></i></a></div>
+     <div >   <i style="font-size: 1.5rem; color: red; padding-right: 5px;" class="far fa-play-circle ml-3"></i></div>
      <div class="align-self-center">  <small class="text-white font-weight-bold escuchanos">Escúchanos </small></div>
    </div>
+   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     
     <span class="mr-1 text-white font-weight-bold" >MENU</span><i class="far fa-bars text-white" style="font-size: 1rem;"></i>
@@ -91,10 +95,10 @@
           Noticias <span >ABC</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="{{url('local')}}">Local</a>
-          <a class="dropdown-item" href="{{url('nacional')}}">Nacional</a>
-          <a class="dropdown-item" href="{{url('departamental')}}">Departamental</a>
-           <a class="dropdown-item" href="{{url('internacional')}}">Internacional</a>
+          <a class="dropdown-item" href="{{url('local')}}">Locales</a>
+          <a class="dropdown-item" href="{{url('nacional')}}">Nacionales</a>
+          <a class="dropdown-item" href="{{url('departamental')}}">Departamentales</a>
+           <a class="dropdown-item" href="{{url('internacional')}}">Internacionales</a>
 
         </div>
       </li>
@@ -108,7 +112,7 @@
         <a class="nav-link text-white mr-3" href="{{url('nosotros')}}">Nosotros</a>
       </li>
          <li class="nav-item text-white">
-        <a class="nav-link text-white mr-3" href="#">Contactanos</a>
+        <a class="nav-link text-white mr-3" href="#">Contáctanos</a>
       </li>
        <li class=" nav-item hide-element mt-2" > 
         
@@ -121,7 +125,7 @@
         
      </li>
      <li class="nav-item mt-2 escuchanos-nav text-center"> 
-      <a target="_blank" href="{{url('escuchar')}}"><i style="font-size: 1rem; color: red; padding-right: 5px;" class="far fa-play-circle ml-3"></i></a><small class="text-white">Escúchanos</small>
+      <a target="_blank" href="{{url('escuchar')}}"><i style="font-size: 1rem; color: red; padding-right: 5px;" class="far fa-play-circle ml-3"></i><small class="text-white">Escúchanos</small></a>
                      <small class="mt-1 ml-1 text-primary digital-clock">Nic</small>
      </li>
      
