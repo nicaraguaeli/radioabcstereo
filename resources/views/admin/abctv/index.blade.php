@@ -36,7 +36,7 @@
 @csrf
 @method('DELETE')
 <div class="btn-group">
-
+<a class="btn btn-block bg-gradient-warning btn-sm" href="{{route('abctva.edit',$video->id)}}"><i class="fas fa-edit"></i></a>
 <button type="button" class="btn btn-danger btn-block" data-toggle="modal" data-target="#modal-danger">
                   <i class="fas fa-trash-alt" ></i>
                 </button>

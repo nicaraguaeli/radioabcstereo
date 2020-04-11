@@ -21,6 +21,7 @@ class AbctvController extends Controller
     {
         //
         $videos = Abctv::latest()->paginate(25);
+
       
         return view('admin.abctv.index',compact('videos'));
 
@@ -65,7 +66,7 @@ class AbctvController extends Controller
          
          $abctv->thumbnail = "img/img-abctv/".$imageName;
          $abctv->save();
-          return redirect('abctva')->with('status','El video a sido publicado!');
+          return redirect('abctva')->with('status','El video ha sido publicado!');
  
         }
          
@@ -97,6 +98,9 @@ class AbctvController extends Controller
     public function edit($id)
     {
         //
+        $video = Abctv::find($id);
+        $periodistas = Periodista::where('estado',1)->get();
+        return view('admin.abctv.edit',compact('periodistas'))->with('video',$video);
     }
 
     /**
@@ -109,6 +113,46 @@ class AbctvController extends Controller
     public function update(Request $request, $id)
     {
         //
+          if(Request()->file('imagen'))
+        {
+ 
+        $abctv = Abctv::find($id);
+        $abctv->url = Request()->url;
+        $abctv->descripcion = Request()->descripcion;
+        $abctv->autor = Request()->autor;
+        $abctv->titulo = Request()->titulo;
+        $abctv->tipo = Request()->tipo;
+
+         if(file_exists(public_path($abctv->thumbnail))){
+                    unlink(public_path($abctv->thumbnail));
+                    };
+
+        
+        $imageName = time().'.'.request()->imagen->getClientOriginalExtension();
+
+        
+
+         request()->imagen->move(public_path('img/img-abctv'), $imageName);
+         
+         $abctv->thumbnail = "img/img-abctv/".$imageName;
+         $abctv->save();
+          return redirect('abctva')->with('status','El video ha sido actualizado!');
+ 
+        }else
+        {
+            
+        $abctv = Abctv::find($id);
+        $abctv->url = Request()->url;
+        $abctv->descripcion = Request()->descripcion;
+        $abctv->autor = Request()->autor;
+        $abctv->titulo = Request()->titulo;
+        $abctv->tipo = Request()->tipo;
+
+        $abctv->save();
+        return redirect('abctva')->with('status','El video ha sido actualizado!');
+
+        }
+
     }
 
     /**
@@ -123,7 +167,7 @@ class AbctvController extends Controller
 
        $abctv = Abctv::find($id);
        $abctv->delete();
-       return redirect('abctva')->with('status', 'El video a sido eliminado!');
+       return redirect('abctva')->with('status', 'El video ha sido eliminado!');
     }
     public function getData()
     {

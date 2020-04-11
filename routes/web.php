@@ -79,7 +79,7 @@ Route::get('/datos','HomeController@datos');
 Route::get('busqueda','NoticiaController@busqueda');
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::resource('abctva','AbctvController')->except(['update', 'show','edit']);
+Route::resource('abctva','AbctvController')->except(['show']);
 Route::resource('noticia','NoticiaController');
 Route::resource('podscat','PodscatController');
 Route::resource('empleo','EmpleoController')->except('show');
