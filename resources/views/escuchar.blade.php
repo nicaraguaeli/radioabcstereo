@@ -51,10 +51,10 @@ src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
     <div class="player__bar">
         <div class="player__album">
             <div class="player__albumImg active-song" data-author="Radio ABC Stereo 99.7 fm" data-song="Esteli-Nicaragua" data data-src="http://51.161.13.49:8029/stream"
-                style="background-image: url('{{asset('img/negado.png')}}')">
+                style="background-image: url('{{asset('img/brand.png')}}')">
             </div>
             <div class="player__albumImg" data-author="Radio ABC Stereo" data-song="Angels" data data-src="http://51.161.13.49:8029/stream"
-                style="background-image: url('{{asset('img/negado.png')}}' )">
+                style="background-image: url('{{asset('img/brand.png')}}' )">
             </div>
         </div>
         <div class="player__controls">
@@ -68,9 +68,11 @@ src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
             <div class="player__play">
                 <svg class="icon play">
                     <use xlink:href="{{asset('img/sprite.svg#play')}}"></use>
+                    
                 </svg>
                 <svg class="icon pause">
                     <use xlink:href="{{asset('img/sprite.svg#pause')}}"></use>
+
                 </svg>
             </div>
 
