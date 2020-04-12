@@ -36,7 +36,7 @@
                                   @endif
                                   @endforeach
   </span>{{$nota->Autor}}</span></div>
-     	<div class="mr-3"><i class="fal fa-clock " ></i><span class="h6 p-2 ">{{date('d-M-y', strtotime($fecha))}}</span></div>
+     	<div class="mr-3"><i class="fal fa-clock " ></i><span class="h6 p-2 ">{{$fecha}}</span></div>
      	<div class="mr-3"><i class="far fa-map-marker-alt" ></i><span class="h6 p-2 ">{{$nota->Ciudad}}</span></div>
      	<div class="mr-3"><button class="btn btn-default p-0" type="button" onclick="javascript:window.print()"><i class="fal fa-print mr-1" ></i><span class="h6  ">Imprimir</span></button></div>
      	

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\getMes;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 use App\Noticia;
@@ -40,11 +41,20 @@ class HomeController extends Controller
     {
         
 
+       
+         
+        
+    
                try {
     
+    $mes = new getMes();
+    $nota = Noticia::where('Estado','Publicado')->findOrFail($id);
     
-    $nota = Noticia::where('Estado','Publicado')->findOrFail($id);  
-    $fecha = $nota->Ano.'-'.$nota->Mes.'-'.$nota->Dia;    
+    $nota->Mes = $mes->getmes($nota->Mes);
+    
+    
+
+    $fecha = $nota->Dia.'-'.$nota->Mes.'-'.$nota->Ano;    
     $nota->Leido += 1;  
     $nota->save();
     $periodistas = Periodista::all();
@@ -182,5 +192,6 @@ class HomeController extends Controller
 
              return view('abcviews.notatemplate',compact('global','destacado'))->with('tipo','internacional');
     }
+   
     
 }
