@@ -63,7 +63,7 @@
  	</div>
  	<div class="col-lg-3 wow fadeInUp border-left lomas ">
     		
-    		<p class="text-center font-weight-bold" style=" background-color: #ddd;">LO MÁS DESTACADO DEL MES</p>
+    		<p class="text-center font-weight-bold azul-fuerte text-white" >LO MÁS DESTACADO DEL MES</p>
     	    <div class="d-flex">
         <ul class="list-unstyled">
           @foreach($destacado as $de)
