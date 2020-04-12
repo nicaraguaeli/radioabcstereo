@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
+    @yield('etiquetas')
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -23,6 +24,7 @@
     <meta name="google" content="nositelinkssearchbox" />
 <!-- TECNOLOGIA SEO ARCED PROPIETARIOS--> 
     <meta name="google-site-verification" content="Radio ABC Stereo Estelí" />
+    
 
     <link rel="icon" type="icon"   href="{{asset('favicon.ico')}}">
 

@@ -1,4 +1,11 @@
 @extends('layouts.home')
+@section('etiquetas')
+  <meta property="og:url"           content="http://www.radioabcstereo.com/nota/{{$nota->ID}}_{{Str::slug($nota->Titular,'-')}}" />
+  <meta property="og:type"          content="website" />
+  <meta property="og:title"         content="{{$nota->Titular}}" />
+  <meta property="og:description"   content="{{$nota->Descripcion}}" />
+  <meta property="og:image"         content="http://www.radioabcstereo.com/{{$nota->Imagen}}" />
+@endsection
 @section('contenido')
 
 
@@ -159,6 +166,21 @@
     </div>
   </div>
 </div>
+
+<div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+
+  <!-- Your share button code -->
+  <div class="fb-share-button" 
+    data-href="http://www.radioabcstereo.com/nota/{{$nota->ID}}_{{Str::slug($nota->Titular,'-')}}"  
+    data-layout="button_count">
+  </div>
 <script
         src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
