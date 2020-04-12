@@ -87,14 +87,14 @@
   </div>
 
       </li>
-      <li class="nav-item active">
+      <li class="nav-item active nav-link-hover">
         <a class="nav-link text-white mr-3" href="{{url('/')}}">Inicio <span class="sr-only">(current)</span></a>
       </li>
-    <li class="nav-item dropdown">
+    <li class="nav-item dropdown nav-link-hover">
         <a  class="nav-link dropdown-toggle text-white  mr-3" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Noticias <span >ABC</span>
         </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        <div class="dropdown-menu nav-link-hover" aria-labelledby="navbarDropdownMenuLink">
           <a class="dropdown-item" href="{{url('locales')}}">Locales</a>
           <a class="dropdown-item" href="{{url('nacionales')}}">Nacionales</a>
           <a class="dropdown-item" href="{{url('departamentales')}}">Departamentales</a>
@@ -102,19 +102,19 @@
 
         </div>
       </li>
-      <li class="nav-item">
+      <li class="nav-item nav-link-hover">
         <a class="nav-link text-white mr-3" href="{{url('abctv')}}">ABCtv</a>
       </li>
          <li class="nav-item">
-        <a  class="nav-link text-white  mr-3" href="{{url('empleos')}}"><span >Empleos</span></a>
+        <a  class="nav-link text-white  mr-3 nav-link-hover" href="{{url('empleos')}}"><span >Empleos</span></a>
       </li>
-         <li class="nav-item">
+         <li class="nav-item nav-link-hover">
         <a class="nav-link text-white mr-3" href="{{url('nosotros')}}">Nosotros</a>
       </li>
-         <li class="nav-item text-white">
+         <li class="nav-item text-white nav-link-hover">
         <a class="nav-link text-white mr-3" href="#">Contáctanos</a>
       </li>
-       <li class=" nav-item hide-element mt-2" > 
+       <li class=" nav-item hide-element mt-2 " > 
         
             <a style="padding-right: 5px;" target="_blank" href="https://www.facebook.com/radioabcesteli/?fref=ts"> <i class="fab fa-facebook-f" style="font-size: 16px;"></i></a>
              <a style="padding-right: 5px;" target="_blank" href="https://twitter.com/radioabcesteli"> <i class="fab fa-twitter" style="font-size: 16px;"></i></a>

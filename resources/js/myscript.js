@@ -40,6 +40,7 @@ if($(window).width() < 990)
        $('.escuchanos-nav').css("display","block");
        $('.template-des').css("width","100%").removeClass('ml-4');
        $('.pagination').addClass('pagination-sm');
+       $('.nav-item').removeClass('nav-link-hover');
 
        //Fin Header
 
@@ -99,6 +100,8 @@ $( window ).resize(function() {
           $('.template-des').css("width","100%").removeClass('ml-4');
 
            $('.pagination').addClass('pagination-sm');
+            $('.nav-item').removeClass('nav-link-hover');
+
       
      
    }
@@ -123,6 +126,8 @@ $( window ).resize(function() {
 
            $('.template-des').css("width","13rem").addClass('ml-4');
             $('.pagination').removeClass('pagination-sm');
+             $('.nav-item').addClass('nav-link-hover');
+
        
 
    }
