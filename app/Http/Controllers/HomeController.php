@@ -151,31 +151,36 @@ class HomeController extends Controller
     }
     public function local()
     {
+             
+             $destacado = DB::table('ABCnoticias')->orderBy('Leido','desc')->where([['Ano',now()->year],['Estado','Publicado'],['Area','Local']])->take(8)->get();
 
-             $global = Noticia::where([['Area','Local'],['Estado','Publicado']])->orderBy('Ano','desc')->orderBy('Mes','desc')->paginate(16);
+             $global = Noticia::where([['Area','Local'],['Estado','Publicado']])->orderBy('Ano','desc')->orderBy('Mes','desc')->paginate(8);
 
-             return view('abcviews.notatemplate',compact('global'))->with('tipo','local');
+             return view('abcviews.notatemplate',compact('global','destacado'))->with('tipo','local');
     }
     public function nacional()
     {
+             $destacado = DB::table('ABCnoticias')->orderBy('Leido','desc')->where([['Ano',now()->year],['Estado','Publicado'],['Area','Nacional']])->take(8)->get();
 
-             $global = Noticia::where([['Area','Nacional'],['Estado','Publicado']])->orderBy('Ano','desc')->orderBy('Mes','desc')->paginate(16);
+             $global = Noticia::where([['Area','Nacional'],['Estado','Publicado']])->orderBy('Ano','desc')->orderBy('Mes','desc')->paginate(8);
 
-             return view('abcviews.notatemplate',compact('global'))->with('tipo','nacional');
+             return view('abcviews.notatemplate',compact('global','destacado'))->with('tipo','nacional');
     }
     public function departamental()
-    {
+    {     
+        $destacado = DB::table('ABCnoticias')->orderBy('Leido','desc')->where([['Ano',now()->year],['Estado','Publicado'],['Area','Departamental']])->take(8)->get();
 
-             $global = Noticia::where([['Area','Departamental'],['Estado','Publicado']])->orderBy('Ano','desc')->orderBy('Mes','desc')->paginate(16);
+             $global = Noticia::where([['Area','Departamental'],['Estado','Publicado']])->orderBy('Ano','desc')->orderBy('Mes','desc')->paginate(8);
 
-             return view('abcviews.notatemplate',compact('global'))->with('tipo','departamental');
+             return view('abcviews.notatemplate',compact('global','destacado'))->with('tipo','departamental');
     }
     public function internacional()
-    {
+    {    
+     $destacado = DB::table('ABCnoticias')->orderBy('Leido','desc')->where([['Ano',now()->year],['Estado','Publicado'],['Area','Internacional']])->take(8)->get();
 
-             $global = Noticia::where([['Area','Internacional'],['Estado','Publicado']])->orderBy('Ano','desc')->orderBy('Mes','desc')->paginate(16);
+             $global = Noticia::where([['Area','Internacional'],['Estado','Publicado']])->orderBy('Ano','desc')->orderBy('Mes','desc')->paginate(8);
 
-             return view('abcviews.notatemplate',compact('global'))->with('tipo','internacional');
+             return view('abcviews.notatemplate',compact('global','destacado'))->with('tipo','internacional');
     }
     
 }

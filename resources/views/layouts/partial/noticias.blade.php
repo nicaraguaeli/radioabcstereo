@@ -27,7 +27,7 @@
     <li class="media">
     <img width="64px;" class="mr-3" src="{{asset(''.$de->Imagen)}}" alt="Cargando..">
     <div class="media-body">
-      <h5 class="mt-0 mb-1 ">{{$de->Titular}}</h5>
+      <p class="mt-0 mb-1 format">{{$de->Titular}}</p>
      
     </div>
   </li>

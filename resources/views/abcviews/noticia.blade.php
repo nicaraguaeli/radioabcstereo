@@ -51,7 +51,7 @@
 
 
 
-     		<div class="col-lg-3 " id="seccion-nota">
+     		<div class="col-lg-3 border-left" id="seccion-nota">
      			@include('layouts.partial.lomasvisto')
      		</div>
      	</div>
@@ -168,6 +168,8 @@
 <script>
   $(function(){$("#btn-encuesta").click(function(a){a.preventDefault(),id=$("input[name='groupOfDefaultRadios']:checked").val(),$.ajax({url:"{{url('calificacion')}}",type:"get",data:{id:id},success:function(a){$("#modalencuesta").modal("show"),$("#encuesta").css("display","none")}})})
    $('iframe').addClass('embed-responsive-item').wrap( "<div class='embed-responsive embed-responsive-16by9'></div>" );
+   $('#contenido-nota').addClass('format').children('p').addClass('format');
+    
 });
 
 </script>

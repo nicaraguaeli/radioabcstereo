@@ -10,7 +10,7 @@
   <img src="{{asset(''.$mas->Imagen)}}" class="card-img-top" alt="...">
   <div class="card-body text-white azul-claro" >
     <div class="row justify-content-around">
-      <div class="col-xs-6"><p style="font-size: 1rem;" class="card-text text-white">{{$mas->Titular}}</p></div>
+      <div class="col-xs-6"><p  class="card-text text-white format">{{$mas->Titular}}</p></div>
        <div class="col-xs-6"><i class="fas fa-arrow-circle-right text-white" style="font-size: 20px;"></i></div>
        
     </div>

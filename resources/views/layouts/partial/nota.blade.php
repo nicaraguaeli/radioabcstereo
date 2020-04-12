@@ -6,8 +6,8 @@
   <div class="card-body text-white" >
    <div class="row justify-content-around">
        <div class="col-xs-6"><h4  style="min-height: 155px;" class="h4 text-dark auto-height font-weight-bold">{{$global->Titular}}</h4></div>
-       <div class="col-xs-6 "><p class="card-text text-dark   " style="min-height: 70px;
-overflow: hidden; font-size: 1rem;">{{$global->Descripcion}}</p>
+       <div class="col-xs-6 "><p class="card-text text-dark format  " style="min-height: 70px;
+overflow: hidden;">{{$global->Descripcion}}</p>
 
  
  </div>
