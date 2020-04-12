@@ -17,6 +17,7 @@ class AsideComposer
     {
     
     $mes = new getMes();
+
     $noticias = DB::table('ABCnoticias')->where('Estado','Publicado')->orderBy('ID','desc')->take(5)
      ->get();
 

@@ -18,7 +18,7 @@
 @media screen and (min-width: 1700px) {
   .header:before {
     content: "";
-    width: 400px;
+    width: 450px;
     height: 90px;
     position: absolute;
     border-bottom: 90px solid #f9f9f9;
