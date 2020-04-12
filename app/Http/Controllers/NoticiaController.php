@@ -76,7 +76,7 @@ class NoticiaController extends Controller
             $request->imagen->move(public_path('img/img-noticias/'.$fecha), $imageName);
 
        
-        DB::table('ABCnoticias')->insert(['Titular' => Request()->titular ,'Descripcion' => Request()->descripcion,'Contenido' => Request()->texto,'Area' => Request()->area,'FechaP' => now(),'Autor' => Request()->autor,'Mes'=>now()->month,'Dia'=>now()->day,'Ano'=>now()->year,'Imagen'=>'img/img-noticias/'.$fecha.'/'.$imageName,'Ciudad'=>$ciudad->name.'-'.$pais->name]);
+        DB::table('ABCnoticias')->insert(['Titular' => Request()->titular ,'Contenido' => Request()->texto,'Area' => Request()->area,'FechaP' => now(),'Autor' => Request()->autor,'Mes'=>now()->month,'Dia'=>now()->day,'Ano'=>now()->year,'Imagen'=>'img/img-noticias/'.$fecha.'/'.$imageName,'Ciudad'=>$ciudad->name.'-'.$pais->name, 'entrada'=>Request()->descripcion]);
             } 
 
            //Fin Insert
@@ -91,7 +91,7 @@ class NoticiaController extends Controller
 
        
         DB::table('ABCnoticias')->insert(
-        ['Titular' => Request()->titular ,'Descripcion' => Request()->descripcion,'Contenido' => Request()->texto,'Area' => Request()->area,'FechaP' => now(),'Autor' => Request()->autor,'Mes'=>now()->month,'Dia'=>now()->day,'Ano'=>now()->year,'Imagen'=>'img/img-noticias/'.$fecha.'/'.$imageName,'Ciudad'=>$pais->name]);
+        ['Titular' => Request()->titular ,'Contenido' => Request()->texto,'Area' => Request()->area,'FechaP' => now(),'Autor' => Request()->autor,'Mes'=>now()->month,'Dia'=>now()->day,'Ano'=>now()->year,'Imagen'=>'img/img-noticias/'.$fecha.'/'.$imageName,'Ciudad'=>$pais->name, 'entrada'=>Request()->descripcion]);
 
            //Fin Insert
                }
@@ -103,7 +103,7 @@ class NoticiaController extends Controller
 
        
         DB::table('ABCnoticias')->insert(
-        ['Titular' => Request()->titular ,'Descripcion' => Request()->descripcion,'Contenido' => Request()->texto,'Area' => Request()->area,'FechaP' => now(),'Autor' => Request()->autor,'Mes'=>now()->month,'Dia'=>now()->day,'Ano'=>now()->year,'Imagen'=>'img/img-noticias/'.$fecha.'/'.$imageName]);
+        ['Titular' => Request()->titular ,'Contenido' => Request()->texto,'Area' => Request()->area,'FechaP' => now(),'Autor' => Request()->autor,'Mes'=>now()->month,'Dia'=>now()->day,'Ano'=>now()->year,'Imagen'=>'img/img-noticias/'.$fecha.'/'.$imageName, 'entrada'=>Request()->descripcion]);
                 }
                 
           
@@ -268,7 +268,7 @@ class NoticiaController extends Controller
 
                 $noticia = Noticia::find($id);
                 $noticia->Titular = Request()->titular;
-                $noticia->Descripcion = Request()->descripcion;
+                $noticia->entrada = Request()->descripcion;
                 $noticia->Contenido = Request()->texto;
                 $noticia->Ciudad = $ciudad->name.'-'.$pais->name;
                 $noticia->Area = Request()->area;
@@ -293,7 +293,7 @@ class NoticiaController extends Controller
                 
                 $noticia = Noticia::find($id);
                 $noticia->Titular = Request()->titular;
-                $noticia->Descripcion = Request()->descripcion;
+                $noticia->entrada = Request()->descripcion;
                 $noticia->Contenido = Request()->texto;
                 $noticia->Ciudad = $pais->name;
                 $noticia->Area = Request()->area;
@@ -317,7 +317,7 @@ class NoticiaController extends Controller
                         //inicio
                 $noticia = Noticia::find($id);
                 $noticia->Titular = Request()->titular;
-                $noticia->Descripcion = Request()->descripcion;
+                $noticia->entrada = Request()->descripcion;
                 $noticia->Contenido = Request()->texto;
                 $noticia->Area = Request()->area;
                 $noticia->Autor = Request()->autor;
@@ -349,7 +349,7 @@ class NoticiaController extends Controller
                 $ciudad= City::find($request->ciudad);
                 $noticia = Noticia::find($id);
                 $noticia->Titular = Request()->titular;
-                $noticia->Descripcion = Request()->descripcion;
+                $noticia->entrada = Request()->descripcion;
                 $noticia->Contenido = Request()->texto;
                 $noticia->Ciudad = $ciudad->name.'-'.$pais->name;
                 $noticia->Area = Request()->area;
@@ -365,7 +365,7 @@ class NoticiaController extends Controller
                 
                 $noticia = Noticia::find($id);
                 $noticia->Titular = Request()->titular;
-                $noticia->Descripcion = Request()->descripcion;
+                $noticia->entrada = Request()->descripcion;
                 $noticia->Contenido = Request()->texto;
                 $noticia->Ciudad = $pais->name;
                 $noticia->Area = Request()->area;
@@ -378,7 +378,7 @@ class NoticiaController extends Controller
                 {
                 $noticia = Noticia::find($id);
                 $noticia->Titular = Request()->titular;
-                $noticia->Descripcion = Request()->descripcion;
+                $noticia->entrada = Request()->descripcion;
                 $noticia->Contenido = Request()->texto;
                 $noticia->Area = Request()->area;
                 $noticia->Autor = Request()->autor;
@@ -403,7 +403,7 @@ class NoticiaController extends Controller
     {
         //
         DB::table('ABCnoticias')->where('ID',$id)->delete();
-         return redirect('noticia')->with('status', 'La noticia a sido Eliminada!');
+         return redirect('noticia')->with('status', 'La noticia ha sido Eliminada!');
      
     }
     public function noticiaEstado()
@@ -416,12 +416,12 @@ class NoticiaController extends Controller
         {
             DB::table('ABCnoticias')->where('ID',Request()->idUno)->update(['Estado'=>'Publicado']);
 
-            return "La noticia a sido publicada";
+            return "La noticia ha sido publicada";
         }
         if(Request()->idCero)
         {
             DB::table('ABCnoticias')->where('ID',Request()->idCero)->update(['Estado'=>'']);
-            return "La noticia a sido suspendida";
+            return "La noticia ha sido suspendida";
         }
         } catch (\Throwable $th) {
             //throw $th;

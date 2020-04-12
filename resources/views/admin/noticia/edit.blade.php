@@ -138,7 +138,7 @@
                       <!-- textarea -->
                       <div class="form-group">
                         <label>Breve descripción</label>
-                        <textarea required name="descripcion" class="form-control" rows="3" placeholder="Escribir ...">{{$nota->Descripcion}}</textarea>
+                        <textarea required name="descripcion" class="form-control" rows="3" placeholder="Escribir ...">{{$nota->entrada}}</textarea>
                       </div>
                     </div>
                  
