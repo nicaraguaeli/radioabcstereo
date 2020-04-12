@@ -154,14 +154,14 @@ class HomeController extends Controller
 
              $global = Noticia::where([['Area','Local'],['Estado','Publicado']])->orderBy('Ano','desc')->orderBy('Mes','desc')->paginate(16);
 
-             return view('abcviews.notatemplate',compact('global'))->with('tipo','Local');
+             return view('abcviews.notatemplate',compact('global'))->with('tipo','local');
     }
     public function nacional()
     {
 
              $global = Noticia::where([['Area','Nacional'],['Estado','Publicado']])->orderBy('Ano','desc')->orderBy('Mes','desc')->paginate(16);
 
-             return view('abcviews.notatemplate',compact('global'))->with('tipo','Nacional');
+             return view('abcviews.notatemplate',compact('global'))->with('tipo','nacional');
     }
     public function departamental()
     {
