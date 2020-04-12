@@ -1,13 +1,13 @@
-<footer class="footer mt-5 container-fluid fixed-height " style="background-color:   #1b328e; box-shadow: 0px 35px 0px 0px  #07155a inset;">
+es<footer class="footer mt-5 container-fluid fixed-height " style="background-color:   #1b328e; box-shadow: 0px 35px 0px 0px  #07155a inset;">
 	<div class="container ">
 		<div class="row pt-3">
 			<div class="col-md-3 text-white">
               <ul class="list-unstyled wow fadeIn " data-wow-delay="0.1">
               	<li style="color: #d9d9d9;"><h6 class="h6 font-weight-bold">NOTICIAS</h6></li>
-              	<li><a href="{{url('local')}}">Locales</a></li>
-              	<li><a href="{{url('departamental')}}">Departamentales</a></li>
-              	<li><a href="{{url('nacional')}}">Nacionales</a></li>
-                     <li><a href="{{url('internacional')}}">Internacionales</a></li>
+              	<li><a href="{{url('locales')}}">Locales</a></li>
+              	<li><a href="{{url('departamentales')}}">Departamentales</a></li>
+              	<li><a href="{{url('nacionales')}}">Nacionales</a></li>
+                     <li><a href="{{url('internacionales')}}">Internacionales</a></li>
               </ul>
 
 			</div>

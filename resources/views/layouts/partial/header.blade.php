@@ -95,10 +95,10 @@
           Noticias <span >ABC</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="{{url('local')}}">Locales</a>
-          <a class="dropdown-item" href="{{url('nacional')}}">Nacionales</a>
-          <a class="dropdown-item" href="{{url('departamental')}}">Departamentales</a>
-           <a class="dropdown-item" href="{{url('internacional')}}">Internacionales</a>
+          <a class="dropdown-item" href="{{url('locales')}}">Locales</a>
+          <a class="dropdown-item" href="{{url('nacionales')}}">Nacionales</a>
+          <a class="dropdown-item" href="{{url('departamentales')}}">Departamentales</a>
+           <a class="dropdown-item" href="{{url('internacionales')}}">Internacionales</a>
 
         </div>
       </li>
