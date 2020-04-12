@@ -29,7 +29,6 @@
 .navbar {
   height: 30px;
   box-shadow: 0px 1px 0px 0px inset #0067a2;
-  overflow: hidden;
 }
 
 .text-gray {
@@ -81,8 +80,6 @@
 
 .nav-link-hover:hover {
   box-shadow: 0px -36px 0px 0px inset #006097 !important;
-  border-right: 1px solid #698fa2;
-  border-left: 1px solid #698fa2;
 }
 
 /*!
