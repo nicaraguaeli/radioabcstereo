@@ -1,4 +1,4 @@
-es<footer class="footer mt-5 container-fluid fixed-height " style="background-color:   #1b328e; box-shadow: 0px 35px 0px 0px  #07155a inset;">
+<footer class="footer mt-5 container-fluid fixed-height " style="background-color:   #1b328e; box-shadow: 0px 35px 0px 0px  #07155a inset;">
 	<div class="container ">
 		<div class="row pt-3">
 			<div class="col-md-3 text-white">
