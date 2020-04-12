@@ -9,7 +9,7 @@
     </a>
     <div class="row mt-5">
        
-      @foreach($local as $global)
+      @foreach($local as $global_nota)
       <div class="col-lg-3 wow bounceInLeft " data-wow-delay="0.{{$i+=1}}s">
 
         @include('layouts.partial.nota')
