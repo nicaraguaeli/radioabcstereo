@@ -5,6 +5,8 @@
   <meta property="og:title"         content="{{$nota->Titular}}" />
   <meta property="og:description"   content="{{$nota->Descripcion}}" />
   <meta property="og:image"         content="http://www.radioabcstereo.com/{{$nota->Imagen}}" />
+
+
 @endsection
 @section('contenido')
 
@@ -166,6 +168,30 @@
     </div>
   </div>
 </div>
+ 
+<div class="row mt-3">
+  <div class="col-md-3 text-center align-self-center">
+      <!-- Your share button code -->
+  <div class="fb-share-button" 
+    data-href="http://www.radioabcstereo.com/nota/{{$nota->ID}}_{{Str::slug($nota->Titular,'-')}}"  
+    data-layout="button_count">
+  </div>
+  </div>
+  <div class="col-md-3 align-self-center">
+   
+<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  </div>
+  <div class="col-md-3 align-self-center">
+    <a style="border-radius: 3px;" class="badge-info text-white pl-2 pr-2" href="mailto:?subject=Noticia&amp;body=Noticia ABC http://www.radioabcstereo.com/nota/{{$nota->ID}}_{{Str::slug($nota->Titular,'-')}}"
+   title="Compartir por correo">
+  <i class="fal fa-envelope mr-1" style="font-size: 12px;"></i><span>Email</span>
+</a>
+  </div>
+</div>
+ 
+  
+
+
 
 <div id="fb-root"></div>
   <script>(function(d, s, id) {
@@ -175,12 +201,6 @@
     js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));</script>
-
-  <!-- Your share button code -->
-  <div class="fb-share-button" 
-    data-href="http://www.radioabcstereo.com/nota/{{$nota->ID}}_{{Str::slug($nota->Titular,'-')}}"  
-    data-layout="button_count">
-  </div>
 <script
         src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
