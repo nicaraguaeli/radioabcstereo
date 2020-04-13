@@ -37,6 +37,8 @@
 		
 		
 	</div>
+
+
      <h1 class="h1 mt-3 titular ">{{$nota->Titular}}</h1>
      <div class="d-flex info-nota">
      	<div class="mr-3"><i class="fad fa-id-card " ></i><span class="h6 p-2"><span class="badge badge-secondary mr-2">@foreach($periodistas as $perio)
@@ -71,9 +73,10 @@
  		<div id="contenido-nota" >{!! $nota->Contenido !!}{!! $nota->Contenido2 !!}</div>
  	</div>
  	<div class="col-lg-3 wow fadeInUp border-left lomas ">
-    		
-    		<p class="text-center font-weight-bold azul-fuerte text-white" >LO MÁS DESTACADO DEL MES</p>
-    	    <div class="d-flex">
+    		<div class="row">
+        <div class="col-sm-12">
+            <p class="text-center font-weight-bold azul-fuerte text-white" >LO MÁS DESTACADO DEL MES</p>
+          <div class="d-flex">
         <ul class="list-unstyled">
           @foreach($destacado as $de)
   <a href="{{url('nota',$de->ID.'_'.Str::slug($de->Titular,'-'))}}">
@@ -92,17 +95,16 @@
   
 </ul>
       </div>
-  	  
-     <div class="d-flex flex-column mt-3 wow fadeInUp" data-wow-delay="0.1s" >
-      <a class="  mb-4 "  target="_blank" href="https://www.facebook.com/radioabcesteli/?fref=ts"><i class="fab fa-facebook-square " style="font-size: 50px; color: #3b5998;"></i></a>
-      <a class="   mb-4"  target="_blank" href="https://twitter.com/radioabcesteli"><i class="fab fab fa-twitter-square " style="font-size: 50px; color: #0084b4;"></i></a>
-      <a class="wow  mb-4 "  target="_blank" href="https://www.instagram.com/radioabcesteli/"><i class="fab fa-instagram" style="font-size: 50px; color: #3f729b;"></i></a>
-      <a class="  mb-4 "  target="_blank" href="https://www.youtube.com/channel/UC4jgoYzXPyiQ-JejLctLtlA">  <i class="fab fab fa-youtube-square " style="font-size: 50px; color: #c4302b;"></i></a>
-       
-         
-          
-           
-     </div>
+        </div>  
+        <div class="col-sm-12 mt-2">
+             
+          <div id="fb-root"></div>
+          <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v6.0"></script>
+<div class="fb-page" data-href="https://www.facebook.com/radioabcesteli" data-tabs="timeline" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/radioabcesteli" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/radioabcesteli">Radio ABC Stereo</a></blockquote></div> 
+        </div>
+        </div>
+    	
+  	
         
     </div>
 
@@ -110,6 +112,21 @@
 
 
      </section>
+     
+     <h4 class="mt-3"><span class="badge badge-primary">Comparte esta noticia<i class="fas fa-share-alt text-white ml-1"></i></span></h4>
+     <div class="d-flex">
+       <div class="mr-2"><div class="fb-share-button" 
+    data-href="http://www.radioabcstereo.com/nota/{{$nota->ID}}_{{Str::slug($nota->Titular,'-')}}"  
+    data-layout="button_count">
+  </div></div>
+       <div class="mr-2">
+         <a style="border-radius: 3px; background: #1da1f2;" target="_blank " href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button  text-white pl-2 pr-2" data-show-count="true">Tweet</a>
+       </div>
+       <div class="mr-2"><a style="border-radius: 3px;" class="badge-info text-white pl-2 pr-2 bg-dark" href="mailto:?subject=Noticia&amp;body=Noticia ABC http://www.radioabcstereo.com/nota/{{$nota->ID}}_{{Str::slug($nota->Titular,'-')}}"
+   title="Compartir por correo">
+  <i class="fal fa-envelope mr-1" style="font-size: 12px;"></i><span>Email</span>
+</a></div>
+     </div>
      <!--ENCUESTA -->
      <section id="encuesta" class="container mt-5 wow fadeInUp" >
      	 
@@ -169,38 +186,7 @@
   </div>
 </div>
  
-<div class="row mt-3">
-  <div class="col-md-3 text-center align-self-center">
-      <!-- Your share button code -->
-  <div class="fb-share-button" 
-    data-href="http://www.radioabcstereo.com/nota/{{$nota->ID}}_{{Str::slug($nota->Titular,'-')}}"  
-    data-layout="button_count">
-  </div>
-  </div>
-  <div class="col-md-3 align-self-center">
-   
-<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-  </div>
-  <div class="col-md-3 align-self-center">
-    <a style="border-radius: 3px;" class="badge-info text-white pl-2 pr-2" href="mailto:?subject=Noticia&amp;body=Noticia ABC http://www.radioabcstereo.com/nota/{{$nota->ID}}_{{Str::slug($nota->Titular,'-')}}"
-   title="Compartir por correo">
-  <i class="fal fa-envelope mr-1" style="font-size: 12px;"></i><span>Email</span>
-</a>
-  </div>
-</div>
- 
-  
 
-
-
-<div id="fb-root"></div>
-  <script>(function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));</script>
 <script
         src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
@@ -225,4 +211,5 @@
   ga('send', 'pageview');
 
 </script>
+
 @endsection
