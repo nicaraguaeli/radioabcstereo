@@ -57,7 +57,7 @@
     </a>
     <div class="row mt-5">
 
-            @foreach($departamental as $global)
+            @foreach($departamental as $global_nota)
 
       <div class="col-lg-3 wow bounceInLeft " data-wow-delay="0.{{$i+=1}}s">
 
@@ -96,7 +96,7 @@
     </a>
     <div class="row mt-5" >
        
-      @foreach($nacional as $global)
+      @foreach($nacional as $global_nota)
       <div class="col-lg-6 wow bounceInLeft " data-wow-delay="0.{{$i+=1}}s">
        
        @include('layouts.partial.nota')
@@ -112,7 +112,7 @@
     </a>
     <div class="row mt-5">
       
-      @foreach($internacional as $global)
+      @foreach($internacional as $global_nota)
       <div class="col-lg-6 wow bounceInLeft " data-wow-delay="0.{{$i+=1}}s">
         @include('layouts.partial.nota')
       
