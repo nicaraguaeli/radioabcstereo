@@ -28,12 +28,14 @@ class AsideComposer
         
      }
 
-     $masvisto = DB::table('ABCnoticias')->orderBy('Leido','desc')->where([['Mes',now()->month],['Ano',now()->year],['Estado','Publicado']])->take(2)->get();
+    
+   $masvisto = DB::table('ABCnoticias')->orderBy('Leido','desc')->where([['Mes',now()->month],['Ano',now()->year],['Estado','Publicado']])->orWhere('Mes',$mes->getmes(now()->month))->take(2)->get();
 
    $banner = Banner::latest()->where('expiracion','>=',now())->take(2)->get();
 
 
-  $destacado = DB::table('ABCnoticias')->orderBy('Leido','desc')->where([['Mes',now()->month],['Ano',now()->year],['Estado','Publicado']])->take(5)->get();
+   
+   $destacado = DB::table('ABCnoticias')->orderBy('Leido','desc')->where([['Mes',now()->month],['Ano',now()->year],['Estado','Publicado']])->orWhere('Mes',$mes->getmes(now()->month))->take(5)->get();
 
   
 
