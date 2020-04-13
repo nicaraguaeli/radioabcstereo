@@ -57,7 +57,9 @@
      <section >
      	
      	<div class="row mt-2 ">
-     		<div class="col-lg-9 align-self-center"><img class="img-fluid" src="{{asset(''.$nota->Imagen)}}" alt="{{$nota->Titular}}"></div>
+     		<div class="col-lg-9 align-self-center">
+          <div class="p-2">{{$nota->entrada}}</div>
+          <img class="img-fluid" src="{{asset(''.$nota->Imagen)}}" alt="{{$nota->Titular}}"></div>
      		
 
 
