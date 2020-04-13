@@ -64,7 +64,7 @@ class HomeController extends Controller
     if(sizeof($ubicacion) == 2)
     {
 
-       return view('abcviews.noticia',['nota'=>$nota,'periodistas'=>$periodistas,'fecha'=>$fecha])->with('titulo',$nota->Titular)->with('descripcion',$nota->Descripcion);
+       return view('abcviews.noticia',['nota'=>$nota,'periodistas'=>$periodistas,'fecha'=>$fecha])->with('titulo',$nota->Titular)->with('descripcion',$nota->entrada);
     }
     elseif(sizeof($ubicacion) == 1  && $ubicacion[0] != null)
     {     
@@ -76,10 +76,10 @@ class HomeController extends Controller
                 $nota->Ciudad = $ciudad->name.'-'.$pais->name;
 
 
-          return view('abcviews.noticia',['nota'=>$nota,'periodistas'=>$periodistas,'fecha'=>$fecha])->with('titulo',$nota->Titular)->with('descripcion',$nota->Descripcion);
+          return view('abcviews.noticia',['nota'=>$nota,'periodistas'=>$periodistas,'fecha'=>$fecha])->with('titulo',$nota->Titular)->with('descripcion',$nota->entrada);
           }else
           {
-               return view('abcviews.noticia',['nota'=>$nota,'periodistas'=>$periodistas,'fecha'=>$fecha])->with('titulo',$nota->Titular)->with('descripcion',$nota->Descripcion);
+               return view('abcviews.noticia',['nota'=>$nota,'periodistas'=>$periodistas,'fecha'=>$fecha])->with('titulo',$nota->Titular)->with('descripcion',$nota->entrada);
           }
           
 
@@ -88,7 +88,7 @@ class HomeController extends Controller
     }
     else
     {
-        return view('abcviews.noticia',['nota'=>$nota,'periodistas'=>$periodistas,'fecha'=>$fecha])->with('titulo',$nota->Titular);
+        return view('abcviews.noticia',['nota'=>$nota,'periodistas'=>$periodistas,'fecha'=>$fecha])->with('titulo',$nota->Titular)->with('descripcion',$nota->entrada);
     }
     
     

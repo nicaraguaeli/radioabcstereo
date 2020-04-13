@@ -3,7 +3,7 @@
   <meta property="og:url"           content="http://www.radioabcstereo.com/nota/{{$nota->ID}}_{{Str::slug($nota->Titular,'-')}}" />
   <meta property="og:type"          content="website" />
   <meta property="og:title"         content="{{$nota->Titular}}" />
-  <meta property="og:description"   content="{{$nota->Descripcion}}" />
+  <meta property="og:description"   content="{{$nota->entrada}}" />
   <meta property="og:image"         content="http://www.radioabcstereo.com/{{$nota->Imagen}}" />
 
 
