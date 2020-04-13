@@ -173,7 +173,7 @@
             <div class="card-body pad">
               <div class="mb-3">
                 <textarea name="texto" class="textarea" placeholder="Escribe tu nota aqui"
-                          style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;">{{$nota->Contenido}}{{$nota->Contenido2}}</textarea>
+                          style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;">{!!$nota->Contenido!!}{!!$nota->Contenido2!!}</textarea>
               </div>
               <button type="submit">Actualizar</button>
             </div>
