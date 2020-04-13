@@ -10,6 +10,7 @@ use Illuminate\Support\Split;
 use App\Periodista;
 use App\City;
 use App\Calificacion;
+use App\Http\getMes;
 
 class NoticiaController extends Controller
 {
@@ -25,8 +26,16 @@ class NoticiaController extends Controller
     public function index()
     {
         //
-         
+         $mes = new getMes();
          $noticia = Noticia::orderBy('id','Desc')->paginate(20);
+         
+         for ($i=0; $i < count($noticia) ; $i++) { 
+             # code...
+            $noticia[$i]->Mes = $mes->getmes($noticia[$i]->Mes);
+         }
+
+        
+
          $cal = Calificacion::all();
 
         

@@ -64,7 +64,7 @@
 @foreach($noticia as $nota)
 <tr>
 <td>{{++$i}}</td>
-<td>{{date('d-M-y', strtotime($nota->Ano.'-'.$nota->Mes.'-'.$nota->Dia))}}
+<td>{{$nota->Dia.'-'.$nota->Mes.'-'.$nota->Ano}}
 <td>{{$nota->Titular}}</td>
 <td>{{$nota->Area}}</td>
 <td>

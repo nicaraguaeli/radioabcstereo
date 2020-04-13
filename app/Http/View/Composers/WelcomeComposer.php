@@ -7,7 +7,7 @@ use App\Noticia;
 use Illuminate\Support\Facades\DB;
 use App\Abctv;
 use App\Podscat;
-use App\Http\getMes;
+
 
 class WelcomeComposer
 {
@@ -16,7 +16,7 @@ class WelcomeComposer
 
     public function compose(View $view)
     {
-      $mes = new getMes();
+      
       
       $podscats = Podscat::latest()->get()->take(6);
 
