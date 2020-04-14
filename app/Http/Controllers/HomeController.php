@@ -16,6 +16,7 @@ use App\Country;
 Use App\City;
 use App\Banner;
 
+
 class HomeController extends Controller
 {
     /**
@@ -140,10 +141,16 @@ class HomeController extends Controller
     }
     public function empleos()
     {
-
+        $mes = new getMes();
         
         $empleos = Empleo::join('cities as c','empleos.city_id','=','c.id')->orderBy('empleos.id','desc')->where('empleos.expiracion','>', now())->get();
-    
+        
+        for ($i=0; $i < count($empleos) ; $i++) { 
+            # code...
+            $fecha = explode('-', $empleos[$i]->expiracion);
+            $empleos[$i]->expiracion = $fecha[2].'-'.$mes->getmes($fecha[1]).'-'.$fecha[0];
+        }
+        
         
 
         return view('abcviews.empleos',compact('empleos'))->with('titulo','Oportunidad de Empleo');

@@ -24,9 +24,9 @@
 			@foreach($empleos as $empleo)
 			<div class="col-sm-6">
 				<div class="card border-secondary mb-3">
-  <div class="card-header">{{$empleo->empleador}} | <span>{{$empleo->name}}</span> | Vence:{{$empleo->expiracion}}</div>
+  <div class="card-header">{{$empleo->empleador}} | <span>{{$empleo->name}}</span> | Vence: {{$empleo->expiracion}}</div>
   <div class="card-body text-secondary">
-     <span class="badge badge-secondary">Cargo</span><h5 class="card-title">{{$empleo->cargo}}</h5>
+     <h4 class="h4-responsive"><span class="badge badge-secondary">Cargo</span></h4><h5 class="card-title">{{$empleo->cargo}}</h5>
     <p class="card-text">{{$empleo->descripcion}}</p>
   </div>
 </div>
