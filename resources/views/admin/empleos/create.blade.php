@@ -69,10 +69,13 @@
                   <div class="row">
                     <div class="col-sm-12">
                       <!-- textarea -->
-                      <div class="form-group">
-                        <label>Descripción</label>
-                        <textarea required name="descripcion" class="form-control" rows="3" placeholder="Escribir ..."></textarea>
-                      </div>
+                      <div class="card-body pad">
+              <div class="mb-3">
+                <textarea name="descripcion" class="textarea" placeholder="Escribe tu nota aqui"
+                          style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
+              </div>
+             
+            </div>
                     </div>
                  
                   </div>
