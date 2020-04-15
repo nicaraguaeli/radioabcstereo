@@ -35,10 +35,12 @@
               <ul class="list-unstyled wow fadeIn"  data-wow-delay="0.9">
               	<li style="color: #d9d9d9;"><h6 class="h6 font-weight-bold">CONTACTO</h6></li>
               	<li style="color: #3490dc;"><i class="fas fa-radio-alt mr-1" style="font-size: 12px;"></i>Radio ABC Stereo 99.7 & 102.1 FM</li>
-              	<li style="color: #3490dc;"><i class="fad fa-phone-volume mr-1" style="font-size: 12px;"></i>+50527133043</li>
-              	<li style="color: #3490dc;"><i class="fad fa-phone-volume mr-1" style="font-size: 12px;"></i>+50527142000</li>
-              	<li style="color: #3490dc;"><i class="fab fa-whatsapp mr-1" style="font-size: 12px;"></i>+50588450415</li>
-              	<li style="color: #3490dc;"><i class="fal fa-envelope mr-1" style="font-size: 12px;"></i>radioabcstereo@gmail.com</li>
+              	<li style="color: #3490dc;"><i class="fad fa-phone-volume mr-1" style="font-size: 12px;"></i>+505 2713-3043 (Cabina)</li>
+              	<li style="color: #3490dc;"><i class="fad fa-phone-volume mr-1" style="font-size: 12px;"></i>+505 2714-2000 (Cabina)</li>
+              	<li style="color: #3490dc;"><i class="fab fa-whatsapp mr-1" style="font-size: 12px;"></i>+505 8845-0415 (Claro)</li>
+                     <li style="color: #3490dc;"><i class="fab fa-whatsapp mr-1" style="font-size: 12px;"></i>+505 8113-2643 (Movistar)</li>
+                     <li style="color: #3490dc;"><i class="fab fa-whatsapp mr-1" style="font-size: 12px;"></i>+505 2713-6001 (Administración)</li>
+              	<li style="color: #3490dc;"><i class="fal fa-envelope mr-1" style="font-size: 12px;"></i>inforadioabc@gmail.com</li>
                             <li style="color: #3490dc;"><i class="fas fa-map-marker-alt mr-1" style="font-size: 12px;"></i></i>Iglesia el Calvario 1/2c al este Estelí, Nicaragua</li>
                      
                      
