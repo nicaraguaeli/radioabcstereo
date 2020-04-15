@@ -39,7 +39,7 @@
               	<li style="color: #3490dc;"><i class="fad fa-phone-volume mr-1" style="font-size: 12px;"></i>+505 2714-2000 (Cabina)</li>
               	<li style="color: #3490dc;"><i class="fab fa-whatsapp mr-1" style="font-size: 12px;"></i>+505 8845-0415 (Claro)</li>
                      <li style="color: #3490dc;"><i class="fab fa-whatsapp mr-1" style="font-size: 12px;"></i>+505 8113-2643 (Movistar)</li>
-                     <li style="color: #3490dc;"><i class="fab fa-whatsapp mr-1" style="font-size: 12px;"></i>+505 2713-6001 (Administración)</li>
+                     <li style="color: #3490dc;"><i class="fad fa-phone-volume mr-1" style="font-size: 12px;"></i>+505 2713-6001 (Administración)</li>
               	<li style="color: #3490dc;"><i class="fal fa-envelope mr-1" style="font-size: 12px;"></i>inforadioabc@gmail.com</li>
                             <li style="color: #3490dc;"><i class="fas fa-map-marker-alt mr-1" style="font-size: 12px;"></i></i>Iglesia el Calvario 1/2c al este Estelí, Nicaragua</li>
                      
