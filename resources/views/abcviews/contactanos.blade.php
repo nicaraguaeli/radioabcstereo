@@ -6,9 +6,16 @@
 <section class="mb-4">
 
     <!--Section heading-->
-    <h2 class="h1-responsive font-weight-bold text-center my-4">Contáctanos</h2>
+    <h2 class="h1-responsive font-weight-bold text-center my-4 text-primary " >Contáctanos</h2>
     <!--Section description-->
-    <p class="text-center w-responsive mx-auto mb-5">¿Tiene usted alguna pregunta? Por favor no dude en contactarnos directamente. Nuestro equipo se pondrá en contacto con usted en cuestión de horas para ayudarlo.</p>
+    
+        <h5 class="text-secondary text-left">¿Tienes alguna pregunta?</h5>
+        <h5 class="text-secondary text-left">¿Deseas enviar un saludo o solicitar una canción? </h5>
+        <h5 class="text-secondary text-left">¿Deseas anunciarte con nosotros?</h5>
+        <h5 class="text-secondary text-left">¿Quieres comunicarte con el área de prensa?</h5>
+        <h6 class="text-secondary text-left">Por favor no dudes en contactarnos a través de este formulario. ¡Gracias por tu preferencia!</h6>
+       
+   
    @if ($message = Session::get('success'))
    <div class="alert alert-success alert-block">
     <button type="button" class="close" data-dismiss="alert">×</button>
@@ -24,10 +31,10 @@
         </ul>
     </div>
 @endif
-    <div class="row">
+    <div class="row ">
 
         <!--Grid column-->
-        <div class="col-md-9 mb-md-0 mb-5">
+        <div class="col-md-9 mb-md-0 mb-5 mt-2">
             <form  action="{{route('enviar')}}" method="POST">
              @csrf
                 <!--Grid row-->
@@ -102,11 +109,29 @@
 		
 	</div>
 </div>
-<h5 class="h5-responsive text-center mb-3 mt-3"><span class="font-weight-bold">Números de contacto</span></h5>
+<h5 class="h5-responsive text-center mb-3 mt-3"><span class="font-weight-bold text-primary">Números de contacto</span></h5>
 <div class="row">
 
-	<div class="col-md-4"><h5 class="h5-responsive text-center"><span class="badge badge-dark">Cabina</span><br>+505 2713-3043 <br>+505 2714-2000</h5></div>
-	<div class="col-md-4"><h5 class="h5-responsive text-center"><span class="badge badge-dark"><i class="fab fa-whatsapp mr-1" style="font-size: 20px;"></i>Whatsapp</span><br>+505 8845-0415 Claro  <br>+505 8113-2643 Movistar</h5></div>
-	<div class="col-md-4"><h5 class="h5-responsive text-center"><span class="badge badge-dark">Administración</span><br>+505 2713-6001</h5></div>
+	<div class="col-md-6">
+        <h5 class="h5-responsive text-center"><span class="badge badge-dark">Cabina</span>
+        </h5>
+         <h6 class="text-center font-weight-bold">Teléfonos para llamadas</h6>
+         <h6 class="text-center">+505 2713-3043</h6>
+         <h6 class="text-center">+505 2714-2000</h6>
+         <h6 class="text-center font-weight-bold">Celulares para mensajes</h6>
+         <h6 class="text-center">+505 8845-0415 Claro (WhatsApp)</h6>
+         <h6 class="text-center">+505 8113-2643 Movistar</h6>
+
+
+
+    </div>
+	<div class="col-md-6">
+        <h5 class="h5-responsive text-center"><span class="badge badge-dark">Oficinas</span></h5>
+        <h6 class="text-center font-weight-bold">Teléfonos</h6>
+        <h6 class="text-center">+505 2713-6001</h6>
+        <h6 class="text-center font-weight-bold">Celulares</h6>
+        <h6 class="text-center">+505 8151-3977 Movistar (WhatsApp)</h6>
+    </div>
+
 </div>
 @endsection
