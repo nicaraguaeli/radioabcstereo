@@ -37,7 +37,7 @@
                     <div class="col-md-12">
                         <div class="md-form mb-0">
                             <input  type="text" name="nombre" class="form-control">
-                            <label for="nombre" class="">Tú nombre</label>
+                            <label for="nombre" class="">Tu nombre</label>
                         </div>
                     </div>
                     <!--Grid column-->
@@ -46,7 +46,7 @@
                     <div class="col-md-12">
                         <div class="md-form mb-0">
                             <input type="email"  name="email" class="form-control">
-                            <label for="email" class="">Tú correo electrónico</label>
+                            <label for="email" class="">Tu correo electrónico</label>
                         </div>
                     </div>
                     <!--Grid column-->
@@ -73,7 +73,7 @@
 
                         <div class="md-form">
                             <textarea required type="text"  name="mensaje" rows="2" class="form-control md-textarea"></textarea>
-                            <label for="mensaje">Tú mensaje</label>
+                            <label for="mensaje">Tu mensaje</label>
                         </div>
 
                     </div>
