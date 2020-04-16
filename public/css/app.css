@@ -1,17 +1,17 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
 
 .header {
-  height: 90px;
+  height: 120px;
   overflow: hidden;
   color: white;
 }
 
 .header:before {
   content: "";
-  width: 300px;
-  height: 90px;
+  width: 370px;
+  height: 120px;
   position: absolute;
-  border-bottom: 90px solid #f9f9f9;
+  border-bottom: 120px solid #f9f9f9;
   border-right: 104px solid transparent;
 }
 
@@ -19,9 +19,9 @@
   .header:before {
     content: "";
     width: 450px;
-    height: 90px;
+    height: 120px;
     position: absolute;
-    border-bottom: 90px solid #f9f9f9;
+    border-bottom: 120px solid #f9f9f9;
     border-right: 104px solid transparent;
   }
 }
