@@ -1,7 +1,7 @@
 <header class="header azul-medio">
   <div class="container-fluid text-center">
   <div class="row align-items-center" style="min-height: 90px;">
-    <div class="col-lg-3 " ><a href="{{url('/')}}"><img width="90px" src="{{asset('img/brand.png')}}" alt="Logo"></a></div>
+    <div class="col-lg-3 " ><a href="{{url('/')}}"><img width="120px" src="{{asset('img/brand.png')}}" alt="Logo"></a></div>
      <div class="col-lg-3" >
       <form action="{{url('buscar')}}" method="get">
       <div class="form-group mt-1">
