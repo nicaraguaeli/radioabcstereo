@@ -45,12 +45,15 @@ Route::get('/empleos','HomeController@empleos');
 Route::get('/buscar','HomeController@buscar');
 Route::get('/countview','HomeController@countview');
 Route::get('/calificacion','HomeController@calificacion');
+Route::get('/contactanos','HomeController@contactanos');
+Route::post('/contactanos/enviar','HomeController@enviar')->name('enviar');
 
 Route::get('/nosotros',function(){
 
 return view('abcviews.nosotros')->with('nosotros',DB::table('nosotros')->first());
 
 });
+
 
 
 
@@ -82,6 +85,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('abctva','AbctvController')->except(['show']);
 Route::resource('noticia','NoticiaController');
 Route::resource('podscat','PodscatController');
+Route::resource('transmision','TransmisionController');
 Route::resource('empleo','EmpleoController')->except('show');
 Route::get('getCities','LocationController@getCities');
 Route::get('noticiaEstado','NoticiaController@noticiaEstado');

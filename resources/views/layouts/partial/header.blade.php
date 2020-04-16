@@ -1,7 +1,7 @@
 <header class="header azul-medio">
   <div class="container-fluid text-center">
   <div class="row align-items-center" style="min-height: 90px;">
-    <div class="col-lg-3 " ><a href="{{url('/')}}"><img width="90px" src="{{asset('img/brand.png')}}" alt="Logo"></a></div>
+    <div class="col-lg-3 " ><a href="{{url('/')}}"><img width="120px" src="{{asset('img/brand.png')}}" alt="Logo"></a></div>
      <div class="col-lg-3" >
       <form action="{{url('buscar')}}" method="get">
       <div class="form-group mt-1">
@@ -96,8 +96,9 @@
         </a>
         <div class="dropdown-menu nav-link-hover" aria-labelledby="navbarDropdownMenuLink">
           <a class="dropdown-item" href="{{url('locales')}}">Locales</a>
+           <a class="dropdown-item" href="{{url('departamentales')}}">Departamentales</a>
           <a class="dropdown-item" href="{{url('nacionales')}}">Nacionales</a>
-          <a class="dropdown-item" href="{{url('departamentales')}}">Departamentales</a>
+         
            <a class="dropdown-item" href="{{url('internacionales')}}">Internacionales</a>
 
         </div>
@@ -112,7 +113,7 @@
         <a class="nav-link text-white mr-3" href="{{url('nosotros')}}">Nosotros</a>
       </li>
          <li class="nav-item text-white nav-link-hover">
-        <a class="nav-link text-white mr-3" href="#">Contáctanos</a>
+        <a class="nav-link text-white mr-3" href="{{url('contactanos')}}">Contáctanos</a>
       </li>
        <li class=" nav-item hide-element mt-2 " > 
         

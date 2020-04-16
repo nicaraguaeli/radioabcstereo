@@ -9,29 +9,43 @@
     <h2 class="h1-responsive font-weight-bold text-center my-4">Contáctanos</h2>
     <!--Section description-->
     <p class="text-center w-responsive mx-auto mb-5">¿Tiene usted alguna pregunta? Por favor no dude en contactarnos directamente. Nuestro equipo se pondrá en contacto con usted en cuestión de horas para ayudarlo.</p>
-
+   @if ($message = Session::get('success'))
+   <div class="alert alert-success alert-block">
+    <button type="button" class="close" data-dismiss="alert">×</button>
+           <strong>{{ $message }}</strong>
+   </div>
+   @endif
+   @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
     <div class="row">
 
         <!--Grid column-->
         <div class="col-md-9 mb-md-0 mb-5">
-            <form id="contact-form" name="contact-form" action="mail.php" method="POST">
-
+            <form  action="{{route('enviar')}}" method="POST">
+             @csrf
                 <!--Grid row-->
                 <div class="row">
 
                     <!--Grid column-->
-                    <div class="col-md-6">
+                    <div class="col-md-12">
                         <div class="md-form mb-0">
-                            <input type="text" id="name" name="name" class="form-control">
-                            <label for="name" class="">Tú nombre</label>
+                            <input  type="text" name="nombre" class="form-control">
+                            <label for="nombre" class="">Tú nombre</label>
                         </div>
                     </div>
                     <!--Grid column-->
 
                     <!--Grid column-->
-                    <div class="col-md-6">
+                    <div class="col-md-12">
                         <div class="md-form mb-0">
-                            <input type="text" id="email" name="email" class="form-control">
+                            <input type="email"  name="email" class="form-control">
                             <label for="email" class="">Tú correo electrónico</label>
                         </div>
                     </div>
@@ -44,8 +58,8 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="md-form mb-0">
-                            <input type="text" id="subject" name="subject" class="form-control">
-                            <label for="subject" class="">Asunto</label>
+                            <input required type="text"  name="asunto" class="form-control">
+                            <label for="asunto" class="">Asunto</label>
                         </div>
                     </div>
                 </div>
@@ -58,20 +72,17 @@
                     <div class="col-md-12">
 
                         <div class="md-form">
-                            <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
-                            <label for="message">Tú mensaje</label>
+                            <textarea required type="text"  name="mensaje" rows="2" class="form-control md-textarea"></textarea>
+                            <label for="mensaje">Tú mensaje</label>
                         </div>
 
                     </div>
                 </div>
                 <!--Grid row-->
-
+                     <button type="submit" class="btn btn-primary">Enviar</button>
             </form>
 
-            <div class="text-center text-md-left">
-                <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Enviar</a>
-            </div>
-            <div class="status"></div>
+         
         </div>
         <!--Grid column-->
 

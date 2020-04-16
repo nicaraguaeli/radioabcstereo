@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use App\Http\getMes;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
@@ -15,6 +16,7 @@ use App\Calificacion;
 use App\Country;
 Use App\City;
 use App\Banner;
+use App\Mail\sendMail;
 
 
 class HomeController extends Controller
@@ -206,5 +208,27 @@ $banner = Banner::latest()->where('expiracion','>=',now())->take(2)->get();
              return view('abcviews.notatemplate',compact('global','destacado','banner'))->with('tipo','internacional');
     }
    
-    
+    public function contactanos()
+    {
+        return view('abcviews.contactanos');
+    }
+    public function enviar()
+    {
+        Request()->validate([
+        'nombre' => 'required|max:30',
+        'asunto' => 'required|max:80',
+        'email' => 'required|email',
+        'mensaje' => 'required|max:250',
+    ]);
+        $data = array(
+            'name'      =>  Request()->nombre,
+            'message'   =>  Request()->mensaje,
+            'email'   => Request()->email,
+            'subject'   => Request()->asunto,
+        );
+     
+     
+     Mail::to('inforadioabc@gmail.com')->send(new SendMail($data));
+     return back()->with('success', 'Gracias por contactarnos! Tu mensaje ha sido enviado.');
+    }
 }
