@@ -1,7 +1,23 @@
 $(document).ready(function() {
     var e = document.createElement("audio");
+
     e.setAttribute("src", $(".active-song").attr("data-src"));
     var a = new TimelineMax;
+ 
+
+
+    $(".player").hasClass("play") ? ($(".player").removeClass("play"), e.pause(), TweenMax.to(".player__albumImg", .2, {
+            scale: 1,
+            ease: Power0.easeNone
+        }), console.log("entro stop"), a.pause()) : ($(".player").addClass("play"), e.play(), TweenMax.to(".player__albumImg", .2, {
+            scale: 1.1,
+            ease: Power0.easeNone
+        }), a.resume())
+    
+
+
+
+
     a.to(".player__albumImg", 3, {
         
         repeat: -1,
