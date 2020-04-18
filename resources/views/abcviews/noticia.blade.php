@@ -38,44 +38,45 @@
 		
 	</div>
 
-
-     <h1 class="h1 mt-3 titular ">{{$nota->Titular}}</h1>
+    <div class="bg-white pl-2">
+      
+       <h1 class="h1 mt-3 titular ">{{$nota->Titular}}</h1>
      <div class="d-flex info-nota">
-     	<div class="mr-3"><i class="fad fa-id-card " ></i><span class="h6 p-2"><span class="badge badge-secondary mr-2">@foreach($periodistas as $perio)
+      <div class="mr-3"><i class="fad fa-id-card " ></i><span class="h6 p-2"><span class="badge badge-secondary mr-2">@foreach($periodistas as $perio)
                                   @if($perio->nombre == $nota->Autor)
                                   {{$perio->tipo}}
                                   @endif
                                   @endforeach
   </span>{{$nota->Autor}}</span></div>
-     	<div class="mr-3"><i class="fal fa-clock " ></i><span class="h6 p-2 ">{{$fecha}}</span></div>
-     	<div class="mr-3"><i class="far fa-map-marker-alt" ></i><span class="h6 p-2 ">{{$nota->Ciudad}}</span></div>
-     	<div class="mr-3"><button class="btn btn-default p-0" type="button" onclick="javascript:window.print()"><i class="fal fa-print mr-1" ></i><span class="h6  ">Imprimir</span></button></div>
-     	
+      <div class="mr-3"><i class="fal fa-clock " ></i><span class="h6 p-2 ">{{$fecha}}</span></div>
+      <div class="mr-3"><i class="far fa-map-marker-alt" ></i><span class="h6 p-2 ">{{$nota->Ciudad}}</span></div>
+      <div class="mr-3"><button class="btn btn-default p-0" type="button" onclick="javascript:window.print()"><i class="fal fa-print mr-1" ></i><span class="h6  ">Imprimir</span></button></div>
+      
      </div>
-	
+  
   
      <section >
-     	
-     	<div class="row mt-2 ">
-     		<div class="col-lg-9 align-self-center">
+      
+      <div class="row mt-2 ">
+        <div class="col-lg-9 align-self-center">
           <div class="p-2">{{$nota->entrada}}</div>
           <img class="img-fluid" src="{{asset(''.$nota->Imagen)}}" alt="{{$nota->Titular}}"></div>
-     		
+        
 
 
 
-     		<div class="col-lg-3 border-left" id="seccion-nota">
-     			@include('layouts.partial.lomasvisto')
-     		</div>
-     	</div>
+        <div class="col-lg-3 border-left" id="seccion-nota">
+          @include('layouts.partial.lomasvisto')
+        </div>
+      </div>
      
  <div class="row mt-3">
- 	<div class="col-lg-9">
- 		
- 		<div id="contenido-nota" >{!! $nota->Contenido !!}{!! $nota->Contenido2 !!}</div>
- 	</div>
- 	<div class="col-lg-3 wow fadeInUp border-left lomas ">
-    		<div class="row">
+  <div class="col-lg-9">
+    
+    <div id="contenido-nota" >{!! $nota->Contenido !!}{!! $nota->Contenido2 !!}</div>
+  </div>
+  <div class="col-lg-3 wow fadeInUp border-left lomas ">
+        <div class="row">
         <div class="col-sm-12">
             <p class="text-center font-weight-bold azul-fuerte text-white" >LO MÁS DESTACADO DEL MES</p>
           <div class="d-flex">
@@ -105,8 +106,8 @@
 <div class="fb-page" data-href="https://www.facebook.com/radioabcesteli" data-tabs="timeline" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/radioabcesteli" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/radioabcesteli">Radio ABC Stereo</a></blockquote></div> 
         </div>
         </div>
-    	
-  	
+      
+    
         
     </div>
 
@@ -115,7 +116,12 @@
 
      </section>
      
-     <h4 class="mt-3"><span class="badge badge-primary">Comparte esta noticia<i class="fas fa-share-alt text-white ml-1"></i></span></h4>
+     
+
+    </div>
+      
+
+      <h4 class="mt-3"><span class="badge badge-primary">Comparte esta noticia<i class="fas fa-share-alt text-white ml-1"></i></span></h4>
      <div class="d-flex">
        <div class="mr-2"><div class="fb-share-button" 
     data-href="http://www.radioabcstereo.com/nota/{{$nota->ID}}_{{Str::slug($nota->Titular,'-')}}"  
