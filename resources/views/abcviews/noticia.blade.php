@@ -65,7 +65,7 @@
 
 
 
-        <div class="col-lg-3 border-left" id="seccion-nota">
+        <div class="col-lg-3 border-left p-0" id="seccion-nota">
           @include('layouts.partial.lomasvisto')
         </div>
       </div>
@@ -86,7 +86,7 @@
     <li class="media">
     <img width="64px;" class="mr-3" src="{{asset(''.$de->Imagen)}}" alt="Cargando..">
     <div class="media-body">
-      <h6 class="mt-0 mb-1 ">{{$de->Titular}}</h6>
+      <h6 class="mt-0 mb-1  ">{{$de->Titular}}</h6>
      
     </div>
   </li>
