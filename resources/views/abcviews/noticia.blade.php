@@ -82,7 +82,7 @@
           <div class="d-flex">
         <ul class="list-unstyled">
           @foreach($destacado as $de)
-  <a href="{{url('nota',$de->ID.'_'.Str::slug($de->Titular,'-'))}}">
+  <a href="{{url('nota',$de->ID.'_'.Str::slug($de->Titular,'-'))}}" class="link-destacado">
     <li class="media">
     <img width="64px;" class="mr-3" src="{{asset(''.$de->Imagen)}}" alt="Cargando..">
     <div class="media-body">
