@@ -59,7 +59,7 @@
       
       <div class="row mt-2 ">
         <div class="col-lg-9 align-self-center">
-          <div class="p-2">{{$nota->entrada}}</div>
+          <h5 class="p-2 font-weight-bold text-dark">{{$nota->entrada}}</h5>
           <img class="img-fluid" src="{{asset(''.$nota->Imagen)}}" alt="{{$nota->Titular}}"></div>
         
 
