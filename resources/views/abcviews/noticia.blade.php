@@ -40,7 +40,7 @@
 
     <div class="bg-white pl-2">
       
-       <h1 class="h1 mt-3 titular ">{{$nota->Titular}}</h1>
+       <h1 class="h1-responsive mt-3 font-weight-bold ">{{$nota->Titular}}</h1>
      <div class="d-flex info-nota">
       <div class="mr-3"><i class="fad fa-id-card " ></i><span class="h6 p-2"><span class="badge badge-secondary mr-2">@foreach($periodistas as $perio)
                                   @if($perio->nombre == $nota->Autor)
