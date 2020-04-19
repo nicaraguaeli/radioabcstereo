@@ -48,11 +48,30 @@ Route::get('/calificacion','HomeController@calificacion');
 Route::get('/contactanos','HomeController@contactanos');
 Route::post('/contactanos/enviar','HomeController@enviar')->name('enviar');
 
+
+
 Route::get('/nosotros',function(){
 
 return view('abcviews.nosotros')->with('nosotros',DB::table('nosotros')->first());
 
 });
+
+
+Route::get('/abc/podcast',function(){
+
+return view('abcviews.podcast')->with('podcast',DB::table('podcasts')->orderBy('id','desc')->paginate(10));
+
+});
+
+
+Route::get('getPodcast',function(){
+
+$pod = DB::table('podcasts')->where('id',Request()->id)->first();
+
+return response()->json($pod);
+
+});
+
 
 
 
@@ -84,7 +103,7 @@ Route::get('busqueda','NoticiaController@busqueda');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('abctva','AbctvController')->except(['show']);
 Route::resource('noticia','NoticiaController');
-Route::resource('podscat','PodscatController');
+Route::resource('podcast','PodcastController');
 Route::resource('transmision','TransmisionController');
 Route::resource('empleo','EmpleoController')->except('show');
 Route::get('getCities','LocationController@getCities');
@@ -92,6 +111,7 @@ Route::get('noticiaEstado','NoticiaController@noticiaEstado');
 Route::get('puntaje','NoticiaController@puntaje');
 Route::post('imagen','NoticiaController@imagen')->name('imagen');
 Route::get('getData','AbctvController@getData');
+Route::get('getCategoria','PodcastController@getCategoria');
 
 
 
