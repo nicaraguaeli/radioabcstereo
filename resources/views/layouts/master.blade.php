@@ -110,9 +110,15 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{route('podscat.index')}}" class="nav-link">
+                <a href="{{route('podcast.index')}}" class="nav-link">
                   <i class="fas fa-podcast mr-2"></i>
-                  <p>Podscat</p>
+                  <p>Podcast</p>
+                </a>
+              </li>
+               <li class="nav-item">
+                <a href="{{route('transmision.index')}}" class="nav-link">
+                  <i class="fas fa-signal mr-2"></i>
+                  <p>Transmisiones</p>
                 </a>
               </li>
                 <li class="nav-item">
