@@ -8,7 +8,7 @@
           <div class="card card-outline card-info">
             <div class="card-header">
               <h3 class="card-title">
-                Información de la transmisón
+                Información de la transmisión
                 <small>abctv</small>
               </h3>
               <!-- tools box -->
@@ -29,7 +29,7 @@
            
                 
                  <div class="form-group row">
-                    <label for="inputEmail3" class="col-sm-2 col-form-label">Url de la transmición</label>
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Url de la transmisión</label>
                     <div class="col-sm-12">
                       <input required name="url" type="text" class="form-control" id="inputEmail3" placeholder="Url">
                     </div>
