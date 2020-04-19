@@ -4,7 +4,7 @@
 <div class="card card-primary card-outline">
 <div class="card-header">
 <div class="row">
-<div class="col sm-4"><a class="btn btn-block btn-secondary" href="{{route('transmision.create')}}">Agregar Periodista</a></div>
+<div class="col sm-4"><a class="btn btn-block btn-secondary" href="{{route('transmision.create')}}">Agregar nueva transmisión</a></div>
  <div class="col sm-4"></div>
  <div class="col sm-4"></div>
 </div>
