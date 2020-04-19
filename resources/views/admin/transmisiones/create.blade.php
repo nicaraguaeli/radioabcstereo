@@ -9,7 +9,7 @@
             <div class="card-header">
               <h3 class="card-title">
                 Información de la transmisión
-                <small>abctv</small>
+               
               </h3>
               <!-- tools box -->
              
