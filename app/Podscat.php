@@ -7,8 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 class Podscat extends Model
 {
     //
-    protected $table = 'podscats';
+    protected $table = 'podcasts';
     protected $primaryKey = 'id';
 
-    protected $fillable = ['titulo','url'];
+    protected $fillable = ['titulo','url','entrada','contenido','categoria','imagen','autor'];
 }
