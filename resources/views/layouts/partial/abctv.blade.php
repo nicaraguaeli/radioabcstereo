@@ -1,4 +1,4 @@
-<section class="container">
+<section>
 	<div class="d-flex border-bottom mt-5 text-white azul-medio"  >
 		<div class="tag " style="background-color: blue; width: 14px; height: 14px; border-right: 3px solid red; transform: translateY(3px); "></div>
 		<h5 class="h5 font-weight-bold ml-2 wow fadeInUp" data-wow-delay="0.2s">ABCtv</h5>
@@ -36,13 +36,13 @@
 	  	<div class="col-lg-6 wow fadeIn">
 	  	 <p class="text-center text-white azul-fuerte" >ÚLTIMAS TRANSMISIONES EN VIVO</p>
 	  	 <ul class="list-unstyled ">
-	  	 	@foreach($podscats as $podscat)
-
-
-	  	 	<li class="border-bottom pb-3"><i class="fas fa-play text-info" style="font-size: 15px;"></i><a target="_blank" class="ml-2 " href="{{$podscat->url}}">{{$podscat->titulo}}</a></li>
 	  	 	
+      @foreach($transmision as $trans)
+
+	  	 	<li class="border-bottom pb-3"><i class="fas fa-play text-info" style="font-size: 15px;"></i><a target="_blank" class="ml-2 " href="{{$trans->url}}">{{$trans->titulo}}</a></li>
 	  	 	
-	  	 	@endforeach
+	  @endforeach	
+	  	 	
 	  	 </ul>
 	  	 
 	  	

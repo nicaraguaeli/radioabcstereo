@@ -7,6 +7,7 @@ use App\Noticia;
 use Illuminate\Support\Facades\DB;
 use App\Abctv;
 use App\Podscat;
+use App\Transmision;
 
 
 class WelcomeComposer
@@ -18,7 +19,7 @@ class WelcomeComposer
     {
       
       
-      $podscats = Podscat::latest()->get()->take(6);
+      $transmision = Transmision::latest()->get()->take(6);
 
 
       $noticias = DB::table('ABCnoticias')->orderBy('ID','desc')->where('Estado','Publicado')->take(5)
@@ -45,6 +46,6 @@ class WelcomeComposer
      
       
 
-        $view->with('local',$local)->with('departamental',$departamental)->with('nacional',$nacional)->with('internacional',$internacional)->with('abctvdes',$abctvdes)->with('podscats',$podscats)->with('i');
+        $view->with('local',$local)->with('departamental',$departamental)->with('nacional',$nacional)->with('internacional',$internacional)->with('abctvdes',$abctvdes)->with('transmision',$transmision)->with('i');
     }
 }
