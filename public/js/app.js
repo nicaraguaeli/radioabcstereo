@@ -37165,7 +37165,7 @@ $(function () {
     $('.buscador').css("display", "block");
     $('#logo-small').css('display', 'block');
     $('.hide-element').css("display", "none");
-    $('#logo-rect').css("display", "none");
+    $('.nav-hidden').css("display", "none");
     $('.escuchanos').css("display", "block");
     $('.escuchanos-nav').css("display", "block");
     $('.template-des').css("width", "100%").removeClass('ml-4');
@@ -37180,10 +37180,10 @@ $(function () {
     $('.auto-height').css("min-height", "auto");
     $('.template').addClass('flex-column'); //Fin Slider
   } else {
-    $('.navbar').css("height", "30px");
+    $('.navbar').css("height", "40px");
     $('.buscador').css("display", "none");
     $('#logo-small').css('display', 'none');
-    $('#logo-rect').css("display", "none");
+    $('.nav-hidden').css("display", "none");
     $('.hide-element').css("display", "none");
     $('.escuchanos').css("display", "none");
     $('.escuchanos-nav').css("display", "none");
@@ -37205,7 +37205,7 @@ $(function () {
       $('#logo-small').css('display', 'block');
       $('.hide-element').css("display", "block");
       $('.navbar').removeClass("fixed-top");
-      $('#logo-rect').css("display", "none");
+      $('.nav-hidden').css("display", "none");
       $('.escuchanos').css("display", "block");
       $('.template').addClass('flex-column');
       $('.template-des').css("width", "100%").removeClass('ml-4');
@@ -37220,8 +37220,8 @@ $(function () {
       $('.header').css("display", "block");
       $('.hide-element').css("display", "none");
       $('#logo-small').css('display', 'none');
-      $('.navbar').css("height", "30px");
-      $('#logo-rect').css("display", "none");
+      $('.navbar').css("height", "40px");
+      $('.nav-hidden').css("display", "none");
       $('.escuchanos').css("display", "none");
       $('.escuchanos-nav').css("display", "none");
       $('.template').addClass('flex-row');
@@ -37233,16 +37233,17 @@ $(function () {
   $(window).scroll(function () {
     var height = $(window).scrollTop();
     var ancho = $(window).width();
+    $('#formulario').removeClass('d-block').addClass('d-none');
 
     if (height < 10 && ancho > 990) {
       $('.navbar').removeClass("fixed-top");
       $('.hide-element').css('display', 'none').removeClass('ml-3 mt-2');
-      $('#logo-rect').css('display', 'none');
+      $('.nav-hidden').css('display', 'none');
       $('.escuchanos-nav').css("display", "none");
     } else if (height > 10 && ancho > 990) {
       $('.navbar').addClass("fixed-top");
       $('.hide-element').css('display', 'block').addClass('ml-3 mt-2');
-      $('#logo-rect').css('display', 'block');
+      $('.nav-hidden').css('display', 'block');
       $('.escuchanos-nav').css("display", "block");
     }
   });

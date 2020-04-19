@@ -35,7 +35,7 @@ if($(window).width() < 990)
        $('.buscador').css("display","block");
        $('#logo-small').css('display','block');
        $('.hide-element').css("display","none");
-       $('#logo-rect').css("display","none");
+       $('.nav-hidden').css("display","none");
        $('.escuchanos').css("display","block");
        $('.escuchanos-nav').css("display","block");
        $('.template-des').css("width","100%").removeClass('ml-4');
@@ -61,10 +61,10 @@ if($(window).width() < 990)
    }
    else
    {
-       $('.navbar').css("height","30px");
+       $('.navbar').css("height","40px");
        $('.buscador').css("display","none");
        $('#logo-small').css('display','none');
-       $('#logo-rect').css("display","none");
+       $('.nav-hidden').css("display","none");
        $('.hide-element').css("display","none");
        $('.escuchanos').css("display","none");
        $('.escuchanos-nav').css("display","none");
@@ -92,7 +92,7 @@ $( window ).resize(function() {
 
         $('.navbar').removeClass("fixed-top");
 
-         $('#logo-rect').css("display","none");
+         $('.nav-hidden').css("display","none");
          $('.escuchanos').css("display","block");
 
          $('.template').addClass('flex-column');
@@ -116,9 +116,9 @@ $( window ).resize(function() {
         $('.header').css("display","block");
         $('.hide-element').css("display","none");
         $('#logo-small').css('display','none');
-        $('.navbar').css("height","30px");
+        $('.navbar').css("height","40px");
 
-         $('#logo-rect').css("display","none");
+         $('.nav-hidden').css("display","none");
          $('.escuchanos').css("display","none");
           $('.escuchanos-nav').css("display","none");
 
@@ -137,11 +137,15 @@ $( window ).resize(function() {
  $(window).scroll(function() {
   var height = $(window).scrollTop();
   var ancho = $(window).width();
+
+  $('#formulario').removeClass('d-block').addClass('d-none');
+  
+
   if(height < 10 && ancho > 990) {
      
        $('.navbar').removeClass("fixed-top");
        $('.hide-element').css('display','none').removeClass('ml-3 mt-2');
-       $('#logo-rect').css('display','none');
+       $('.nav-hidden').css('display','none');
        $('.escuchanos-nav').css("display","none");
 
 
@@ -151,7 +155,7 @@ $( window ).resize(function() {
    $('.navbar').addClass("fixed-top");
   
    $('.hide-element').css('display','block').addClass('ml-3 mt-2');
-   $('#logo-rect').css('display','block');
+   $('.nav-hidden').css('display','block');
    $('.escuchanos-nav').css("display","block");
   }
 });
