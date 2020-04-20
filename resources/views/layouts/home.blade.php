@@ -100,9 +100,15 @@
    
 </head>
 <body >
-  <div id="spinner" class="justify-content-center d-flex" style="background-color: blue; width: 100%; height: 100vh; position: fixed; z-index: 3;">
+  <div id="spinner" class="justify-content-center d-flex flex-column" style="background-color: #e8e8e8; width: 100%; height: 100vh; position: fixed; z-index: 3;">
     <div class="align-self-center">
-          <img class="spinner-grow " style="width: 3rem; height: 3rem;" role="status" src="{{asset('img/brand.png')}}" alt="">
+       <img  style="width: 5rem; height: 5rem;" role="status" src="{{asset('img/brand.png')}}" alt="">
+    </div>
+    <div class="align-self-center ">
+
+       
+        <span  class="spinner-border "></span>
+          
     </div>  
     
   </div>
