@@ -21,7 +21,7 @@
       <div class="form-group mt-1">
               <div class="input-group mb-3">
               
-  <input style="background-color: transparent;border:none; color:white;border-bottom: 1px solid #5386ff;" type="text" class="form-control" name="buscar" required placeholder="Buscar" aria-label="" aria-describedby="basic-addon1">
+  <input style="background-color: transparent;border:none; color:white;border-bottom: 1px solid #5386ff;" type="text" class="form-control text-dark" name="buscar" required placeholder="Buscar" aria-label="" aria-describedby="basic-addon1">
   <div class="input-group-prepend">
     <button style="border:none; border-bottom: 1px solid #5386ff; " class="btn btn-outline-secondary" type="submit"><i class="fal fa-search" ></i></button>
   </div>

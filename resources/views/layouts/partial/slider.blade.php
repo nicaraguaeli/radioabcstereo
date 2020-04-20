@@ -44,8 +44,9 @@
        <div class="mt-1" >
     <span class="h1 titular ml-1 font-weight-bold" >{{$nota->Titular}}</span></a>
     <div class="row">
-      <div class="col sm-6 text-gray"><i class="fad fa-id-card ml-1" ></i><span class="h6 p-2">{{$nota->Autor}}</span></div>
-      <div class="col sm-6 text-gray"><i class="fal fa-clock" ></i><span class="h6 p-2">{{$nota->Dia}}-{{$nota->Mes}}-{{$nota->Ano}}</span></div>
+      <div class="col sm-4 text-black"><i class="fad fa-id-card ml-1" ></i><span class="h6 p-2">{{$nota->Autor}}</span></div>
+      <div class="col sm-4 text-black"><i class="fal fa-clock" ></i><span class="h6 p-2">{{$nota->Dia}}-{{$nota->Mes}}-{{$nota->Ano}}</span></div>
+      <div class="col sm-4 text-black"><i class="far fa-map-marker-alt" ></i><span class="h6 p-2">{{$nota->Ciudad}}</span></div>
     </div>
 
       
