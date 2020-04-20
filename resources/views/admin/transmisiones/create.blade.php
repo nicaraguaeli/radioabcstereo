@@ -2,7 +2,7 @@
 @section('contenido')
 
 
-<form action="{{route('transmision.store')}}" method="post" enctype="multipart/form-data">
+<form action="{{route('transmision.store')}}" method="post" enctype="multipart/form-data" autocomplete="off">
 @csrf
         <div class="col-md-12">
           <div class="card card-outline card-info">

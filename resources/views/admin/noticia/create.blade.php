@@ -2,7 +2,7 @@
 @section('contenido')
 
 <div class="row">
-<form action="{{route('noticia.store')}}" method="post" enctype="multipart/form-data">
+<form action="{{route('noticia.store')}}" method="post" enctype="multipart/form-data" autocomplete="off">
 @csrf
         <div class="col-md-12">
           <div class="card card-outline card-info">
@@ -14,14 +14,7 @@
               <!-- tools box -->
              
                    
-              <div class="card-tools">
-                <button type="button" class="btn btn-tool btn-sm" data-card-widget="collapse" data-toggle="tooltip"
-                        title="Collapse">
-                  <i class="fas fa-minus"></i></button>
-                <button type="button" class="btn btn-tool btn-sm" data-card-widget="remove" data-toggle="tooltip"
-                        title="Remove">
-                  <i class="fas fa-times"></i></button>
-              </div>
+             
               <!-- /. tools -->
             </div>
             <!-- /.card-header -->
@@ -130,13 +123,13 @@
                   </div>
                 </div>
                 </div>
-            <div class="card-body pad">
+           
               <div class="mb-3">
                 <textarea name="texto" class="textarea" placeholder="Escribe tu nota aqui"
                           style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
               </div>
               <button type="submit">Publicar</button>
-            </div>
+           
           </div>
         </div>
         </form>

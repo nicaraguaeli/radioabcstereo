@@ -12,7 +12,7 @@
 @endif
 
 
-<form action="{{route('podcast.update',$podcast->id)}}" method="post" enctype="multipart/form-data">
+<form action="{{route('podcast.update',$podcast->id)}}" method="post" enctype="multipart/form-data" autocomplete="off">
 @csrf
 @method('PUT')
         <div class="col-md-12">

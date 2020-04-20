@@ -12,7 +12,7 @@
 @endif
 
 
-<form action="{{route('podcast.store')}}" method="post" enctype="multipart/form-data">
+<form action="{{route('podcast.store')}}" method="post" enctype="multipart/form-data" autocomplete="off">
 @csrf
         <div class="col-md-12">
           <div class="card card-outline card-info">
@@ -33,7 +33,7 @@
                  <div class="form-group row">
                     <label for="inputEmail3" class="col-sm-2 col-form-label">Título</label>
                     <div class="col-sm-12">
-                      <input required name="titulo" type="text" class="form-control" id="inputEmail3" placeholder="Url">
+                      <input required name="titulo" type="text" class="form-control" id="inputEmail3" placeholder="Titulo">
                     </div>
                   </div>
                    <div class="form-group row">
