@@ -142,9 +142,9 @@
     </div>
 	<div class="col-md-6">
         <h5 class="h5-responsive text-center"><span class="badge badge-dark">Oficinas</span></h5>
-        <h6 class="text-center font-weight-bold">Teléfonos</h6>
+        <h6 class="text-center font-weight-bold">Teléfono</h6>
         <h6 class="text-center">+505 2713-6001</h6>
-        <h6 class="text-center font-weight-bold">Celulares</h6>
+        <h6 class="text-center font-weight-bold">Celular</h6>
         <h6 class="text-center">+505 8151-3977 Movistar (WhatsApp)</h6>
     </div>
 
