@@ -65,6 +65,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/animate.css') }}" rel="stylesheet">
     <link href="{{ asset('fontawesome/css/all.min.css') }}" rel="stylesheet">
+     <link href="{{ asset('css/fuentebig.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('css/css.css')}}" media="print">
     <script
         src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -80,7 +81,7 @@
                  
               </script>
               <script>
- function clockUpdate(){var t=new Date;function c(t){return t<10?"0"+t:t}$(".digital-clock").css({color:"#fff","text-shadow":"0 0 6px #ff0"});var e,o=c((e=t.getHours())>12?e-12:0==e?12:e),n=c(t.getMinutes()),a=c(t.getSeconds());$(".digital-clock").text(o+":"+n+":"+a)}$(function(){clockUpdate(),setInterval(clockUpdate,1e3)});
+ function clockUpdate(){var t=new Date;function c(t){return t<10?"0"+t:t}$(".digital-clock").css({color:"black"});var e,o=c((e=t.getHours())>12?e-12:0==e?12:e),n=c(t.getMinutes()),a=c(t.getSeconds());$(".digital-clock").text(o+":"+n+":"+a)}$(function(){clockUpdate(),setInterval(clockUpdate,1e3)});
    
    
 
@@ -93,6 +94,8 @@
     {
       font-family: "Nunito", sans-serif !important;
     }
+
+
   </style>
    
 </head>
@@ -111,7 +114,7 @@
  <marquee behavior="scroll" direction="left" style="max-width: 900px; font-size: 0.7rem;" >
   
   @foreach($noticias as $nota)
-    <span class="badge badge-success mr-2 text-uppercase">{{$nota->Ciudad}}</span><a class="text-white text-uppercase mr-3" href="{{url('nota',$nota->ID.'_'.Str::slug($nota->Titular,'-'))}}">{{$nota->Titular}}</a>
+    <span class="badge badge-danger mr-2 text-uppercase">{{$nota->Ciudad}}</span><a class="text-white text-uppercase mr-3" href="{{url('nota',$nota->ID.'_'.Str::slug($nota->Titular,'-'))}}">{{$nota->Titular}}</a>
     @endforeach
    
    </marquee>
