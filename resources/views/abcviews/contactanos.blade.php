@@ -28,7 +28,7 @@
         <h5 class="text-secondary text-left">¿Deseas enviar un saludo o solicitar una canción? </h5>
         <h5 class="text-secondary text-left">¿Deseas anunciarte con nosotros?</h5>
         <h5 class="text-secondary text-left">¿Quieres comunicarte con el área de prensa?</h5>
-        <h6 class="text-secondary text-left">Por favor no dudes en contactarnos a través de este formulario. ¡Gracias por tu preferencia!</h6>
+        <h5 class="text-secondary text-left">Por favor no dudes en contactarnos a través de este formulario. <br> ¡Gracias por tu preferencia!</h5>
        
    
    @if ($message = Session::get('success'))
