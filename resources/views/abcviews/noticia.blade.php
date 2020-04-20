@@ -39,8 +39,12 @@
 	</div>
 
     <div class="bg-white pl-2">
-      
-       <h1  class="h-1 mt-3 font-weight-bold ">{{$nota->Titular}}</h1>
+      <div class="row">
+        <div class="col-lg-9">
+            <h1  class="h-1 mt-3 font-weight-bold ">{{$nota->Titular}}</h1>
+        </div>
+      </div>
+     
      <div class="d-flex info-nota">
       <div class="mr-3"><i class="fad fa-id-card " ></i><span class="h6 p-2"><span class="badge badge-secondary mr-2">@foreach($periodistas as $perio)
                                   @if($perio->nombre == $nota->Autor)
@@ -59,7 +63,7 @@
       
       <div class="row mt-2 ">
         <div class="col-lg-9 align-self-center">
-          <h5 class="p-2 font-weight-bold text-dark text-muted">{{$nota->entrada}}</h5>
+          <i class="p-2 font-weight-bold text-dark text-muted h5">{{$nota->entrada}}</i>
           <img class="img-fluid" src="{{asset(''.$nota->Imagen)}}" alt="{{$nota->Titular}}"></div>
         
 
@@ -136,13 +140,15 @@
 </a></div>
      </div>
      <!--ENCUESTA -->
-     <section id="encuesta" class="container mt-5 wow fadeInUp" >
-     	 
-     	  <h3>¿ Te fue de interés esta noticia ?</h3>
-     	  <h5>Regálanos un minuto por favor.</h5>
-     	  <div class="card">
-     	  	<form class="form" >
-     	  	
+     <div class="row">
+       <div class="col-lg-9">
+            <section id="encuesta" class="container mt-5 wow fadeInUp" >
+       
+        <h3>¿ Te fue de interés esta noticia ?</h3>
+        <h5>Regálanos un minuto por favor.</h5>
+        <div class="card">
+          <form class="form" >
+          
 
 <h5 class="text-center">Danos tu calificación:</h5>
 <div class="custom-control custom-radio form-group border-bottom ">
@@ -163,9 +169,12 @@
 </div>
 <button type="button" id="btn-encuesta" class="btn btn-primary text-white" >Calificar</button>
 
-     	  	</form>
-     	  </div>
+          </form>
+        </div>
      </section>
+       </div>
+     </div>
+   
       <!--FIN ENCUESTA -->
 
 
