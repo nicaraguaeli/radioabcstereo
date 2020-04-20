@@ -13,7 +13,7 @@ overflow: hidden;">{{$global_nota->entrada}}</p>
  </div>
     </div>
     <div class="row  flex-nowrap ">
-  <div class="col-sm-6"><div class="text-dark  "><i class="far fa-eye mr-1"></i><span>{{ number_format($global_nota->Leido) }}</span>
+  <div class="col-sm-6"><div class="text-dark  "><span>{{$global_nota->Dia}}-{{$global_nota->Mes}}-{{$global_nota->Ano}}</span>
     </div></div>
   <div class="col-sm-6"><div><span class="btn btn-primary" >Más</span>
   </div></div>
