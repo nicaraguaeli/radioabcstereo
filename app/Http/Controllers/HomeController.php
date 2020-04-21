@@ -116,7 +116,7 @@ class HomeController extends Controller
 
          $destacado = Abctv::latest()->first();
          $destacado->created_at = date('d-m-y',strtotime($destacado->created_at));
-         dd($destacado->created_at);
+         
          $ultimos = Abctv::latest()->take(2)->get();
          $tipos = Abctv::select('tipo')->distinct('tipo')->get();
 
