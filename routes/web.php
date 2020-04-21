@@ -46,6 +46,7 @@ Route::get('/buscar','HomeController@buscar');
 Route::get('/countview','HomeController@countview');
 Route::get('/calificacion','HomeController@calificacion');
 Route::get('/contactanos','HomeController@contactanos');
+Route::get('/noticias/{id}','HomeController@periodista');
 Route::post('/contactanos/enviar','HomeController@enviar')->name('enviar');
 
 

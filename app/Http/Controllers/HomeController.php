@@ -111,8 +111,12 @@ class HomeController extends Controller
   
     }
     public function abctv()
-    {   
+    {     
+         $mes = new getMes();
+
          $destacado = Abctv::latest()->first();
+         $destacado->created_at = date('d-m-y',strtotime($destacado->created_at));
+         dd($destacado->created_at);
          $ultimos = Abctv::latest()->take(2)->get();
          $tipos = Abctv::select('tipo')->distinct('tipo')->get();
 
@@ -230,5 +234,21 @@ $banner = Banner::latest()->where('expiracion','>=',now())->take(2)->get();
      
      Mail::to('inforadioabc@gmail.com')->send(new SendMail($data));
      return back()->with('success', 'Gracias por contactarnos! Tu mensaje ha sido enviado.');
+    }
+
+    public function periodista($id)
+    {
+        $mes = new getMes();
+
+        $count = Noticia::where([['Autor',$id],['Estado','Publicado']])->count();
+        $notas = Noticia::where([['Autor',$id],['Estado','Publicado']])->orderBy('id','desc')->paginate(30);
+
+        for ($i=0; $i < count($notas) ; $i++) { 
+            # code...
+
+            $notas[$i]->Mes = $mes->getmes($notas[$i]->Mes);
+        }
+
+        return view ('abcviews.noticias',compact('notas'))->with('count',$count)->with('buscar',$id);
     }
 }

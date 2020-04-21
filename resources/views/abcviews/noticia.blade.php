@@ -46,12 +46,13 @@
       </div>
      
      <div class="d-flex info-nota">
+     <a target="_blank" class="text-dark" href="{{url('noticias/'.$nota->Autor)}}">
       <div class="mr-3"><i class="fad fa-id-card " ></i><span class="h6 p-2"><span class="badge badge-secondary mr-2">@foreach($periodistas as $perio)
                                   @if($perio->nombre == $nota->Autor)
                                   {{$perio->tipo}}
                                   @endif
                                   @endforeach
-  </span>{{$nota->Autor}}</span></div>
+  </span>{{$nota->Autor}}</span></div></a>
       <div class="mr-3"><i class="fal fa-clock " ></i><span class="h6 p-2 ">{{$fecha}}</span></div>
       <div class="mr-3"><i class="far fa-map-marker-alt" ></i><span class="h6 p-2 ">{{$nota->Ciudad}}</span></div>
       <div class="mr-3"><button class="btn btn-default p-0" type="button" onclick="javascript:window.print()"><i class="fal fa-print mr-1" ></i><span class="h6  ">Imprimir</span></button></div>
