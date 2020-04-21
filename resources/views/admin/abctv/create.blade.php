@@ -2,7 +2,7 @@
 @section('contenido')
 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
-<form action="{{route('abctva.store')}}" method="post" enctype="multipart/form-data">
+<form action="{{route('abctva.store')}}" method="post" enctype="multipart/form-data" autocomplete="off">
 @csrf
         <div class="col-md-12">
           <div class="card card-outline card-info">
@@ -55,6 +55,21 @@
                         <textarea required name="descripcion" class="form-control" rows="3" placeholder="Escribir ..."></textarea>
                       </div>
                     </div>
+
+
+                   <div class="col-sm-12">
+                    <div class="form-group">
+                  <label>Fecha de publicación</label>
+
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
+                    </div>
+                    <input required type="date" name="date" class="form-control">
+                  </div>
+                  <!-- /.input group -->
+                </div>
+                   </div>
                  
                   </div>
                    

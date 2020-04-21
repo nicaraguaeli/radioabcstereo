@@ -50,6 +50,14 @@ class AbctvController extends Controller
         //
         if(Request()->file('imagen'))
         {
+            Request()->validate([
+                'url' => 'required|max:100',
+                'descripcion'=> 'required',
+                'autor'=> 'required',
+                'tipo'=> 'required',
+                'date'=> 'required|date',
+                'imagen'=>'mimes:jpeg,jpg,png,gif|required'
+            ]);
  
         $abctv = new Abctv;
         $abctv->url = Request()->url;
@@ -57,6 +65,7 @@ class AbctvController extends Controller
         $abctv->autor = Request()->autor;
         $abctv->titulo = Request()->titulo;
         $abctv->tipo = Request()->tipo;
+        $abctv->created_at = Request()->date;
 
         $imageName = time().'.'.request()->imagen->getClientOriginalExtension();
 
@@ -115,6 +124,14 @@ class AbctvController extends Controller
         //
           if(Request()->file('imagen'))
         {
+            Request()->validate([
+                'url' => 'required|max:100',
+                'descripcion'=> 'required',
+                'autor'=> 'required',
+                'tipo'=> 'required',
+                'date'=> 'required|date',
+                'imagen'=>'mimes:jpeg,jpg,png,gif|required'
+            ]);
  
         $abctv = Abctv::find($id);
         $abctv->url = Request()->url;
@@ -122,6 +139,7 @@ class AbctvController extends Controller
         $abctv->autor = Request()->autor;
         $abctv->titulo = Request()->titulo;
         $abctv->tipo = Request()->tipo;
+        $abctv->created_at = Request()->date;
 
          if(file_exists(public_path($abctv->thumbnail))){
                     unlink(public_path($abctv->thumbnail));
@@ -140,6 +158,14 @@ class AbctvController extends Controller
  
         }else
         {
+            Request()->validate([
+                'url' => 'required|max:100',
+                'descripcion' => 'required',
+                'autor' => 'required',
+                'tipo' => 'required',
+                'date' => 'required|date',
+                
+            ]);
             
         $abctv = Abctv::find($id);
         $abctv->url = Request()->url;
@@ -147,6 +173,7 @@ class AbctvController extends Controller
         $abctv->autor = Request()->autor;
         $abctv->titulo = Request()->titulo;
         $abctv->tipo = Request()->tipo;
+        $abctv->created_at = Request()->date;
 
         $abctv->save();
         return redirect('abctva')->with('status','El video ha sido actualizado!');
