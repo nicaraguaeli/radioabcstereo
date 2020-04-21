@@ -85,7 +85,7 @@ class NoticiaController extends Controller
             $request->imagen->move(public_path('img/img-noticias/'.$fecha), $imageName);
 
        
-        DB::table('ABCnoticias')->insert(['Titular' => Request()->titular ,'Contenido' => Request()->texto,'Area' => Request()->area,'FechaP' => now(),'Autor' => Request()->autor,'Mes'=>now()->month,'Dia'=>now()->day,'Ano'=>now()->year,'Imagen'=>'img/img-noticias/'.$fecha.'/'.$imageName,'Ciudad'=>$ciudad->name.'-'.$pais->name, 'entrada'=>Request()->descripcion]);
+        DB::table('ABCnoticias')->insert(['Titular' => Request()->titular ,'Contenido' => Request()->texto,'Area' => Request()->area,'FechaP' => now(),'Autor' => Request()->autor,'Mes'=>now()->month,'Dia'=>now()->day,'Ano'=>now()->year,'Imagen'=>'img/img-noticias/'.$fecha.'/'.$imageName,'Ciudad'=>$ciudad->name.'-'.$pais->name, 'entrada'=>Request()->descripcion, 'referencia'=>Request()->referencia]);
             } 
 
            //Fin Insert
@@ -100,7 +100,7 @@ class NoticiaController extends Controller
 
        
         DB::table('ABCnoticias')->insert(
-        ['Titular' => Request()->titular ,'Contenido' => Request()->texto,'Area' => Request()->area,'FechaP' => now(),'Autor' => Request()->autor,'Mes'=>now()->month,'Dia'=>now()->day,'Ano'=>now()->year,'Imagen'=>'img/img-noticias/'.$fecha.'/'.$imageName,'Ciudad'=>$pais->name, 'entrada'=>Request()->descripcion]);
+        ['Titular' => Request()->titular ,'Contenido' => Request()->texto,'Area' => Request()->area,'FechaP' => now(),'Autor' => Request()->autor,'Mes'=>now()->month,'Dia'=>now()->day,'Ano'=>now()->year,'Imagen'=>'img/img-noticias/'.$fecha.'/'.$imageName,'Ciudad'=>$pais->name, 'entrada'=>Request()->descripcion, 'referencia'=>Request()->referencia]);
 
            //Fin Insert
                }
@@ -112,7 +112,7 @@ class NoticiaController extends Controller
 
        
         DB::table('ABCnoticias')->insert(
-        ['Titular' => Request()->titular ,'Contenido' => Request()->texto,'Area' => Request()->area,'FechaP' => now(),'Autor' => Request()->autor,'Mes'=>now()->month,'Dia'=>now()->day,'Ano'=>now()->year,'Imagen'=>'img/img-noticias/'.$fecha.'/'.$imageName, 'entrada'=>Request()->descripcion]);
+        ['Titular' => Request()->titular ,'Contenido' => Request()->texto,'Area' => Request()->area,'FechaP' => now(),'Autor' => Request()->autor,'Mes'=>now()->month,'Dia'=>now()->day,'Ano'=>now()->year,'Imagen'=>'img/img-noticias/'.$fecha.'/'.$imageName, 'entrada'=>Request()->descripcion, 'referencia'=>Request()->referencia]);
                 }
                 
           
@@ -122,7 +122,7 @@ class NoticiaController extends Controller
 
        } 
               
-        return redirect('noticia')->with('status', 'La noticia a sido almacenada!');
+        return redirect('noticia')->with('status', 'La noticia ha sido almacenada!');
 
     }
 
@@ -282,6 +282,7 @@ class NoticiaController extends Controller
                 $noticia->Ciudad = $ciudad->name.'-'.$pais->name;
                 $noticia->Area = Request()->area;
                 $noticia->Autor = Request()->autor;
+                $noticia->referencia = Request()->referencia;
 
                 if(file_exists(public_path($noticia->Imagen))){
                     unlink(public_path($noticia->Imagen));
@@ -294,7 +295,7 @@ class NoticiaController extends Controller
                 $noticia->Imagen = 'img/img-noticias/'.$fecha.'/'.$imageName;
                 $noticia->save();
 
-                 return redirect('noticia')->with('status', 'La noticia a sido Actualizada!');
+                 return redirect('noticia')->with('status', 'La noticia ha sido Actualizada!');
                     //fin
                 }elseif ($request->pais) {
                     # code...
@@ -307,6 +308,7 @@ class NoticiaController extends Controller
                 $noticia->Ciudad = $pais->name;
                 $noticia->Area = Request()->area;
                 $noticia->Autor = Request()->autor;
+                $noticia->referencia = Request()->referencia;
 
                 if(file_exists(public_path($noticia->Imagen))){
                     unlink(public_path($noticia->Imagen));
@@ -319,7 +321,7 @@ class NoticiaController extends Controller
                 $noticia->Imagen = 'img/img-noticias/'.$fecha.'/'.$imageName;
                 $noticia->save();
 
-                 return redirect('noticia')->with('status', 'La noticia a sido Actualizada!');
+                 return redirect('noticia')->with('status', 'La noticia ha sido Actualizada!');
                 }
                 else
                 {
@@ -330,6 +332,7 @@ class NoticiaController extends Controller
                 $noticia->Contenido = Request()->texto;
                 $noticia->Area = Request()->area;
                 $noticia->Autor = Request()->autor;
+                $noticia->referencia = Request()->referencia;
 
                 if(file_exists(public_path($noticia->Imagen))){
                     unlink(public_path($noticia->Imagen));
@@ -342,7 +345,7 @@ class NoticiaController extends Controller
                 $noticia->Imagen = 'img/img-noticias/'.$fecha.'/'.$imageName;
                 $noticia->save();
 
-                 return redirect('noticia')->with('status', 'La noticia a sido Actualizada!');
+                 return redirect('noticia')->with('status', 'La noticia ha sido Actualizada!');
                        //FIN
                 }
 
@@ -363,9 +366,10 @@ class NoticiaController extends Controller
                 $noticia->Ciudad = $ciudad->name.'-'.$pais->name;
                 $noticia->Area = Request()->area;
                 $noticia->Autor = Request()->autor;
+                $noticia->referencia = Request()->referencia;
                 $noticia->save();
 
-                 return redirect('noticia')->with('status', 'La noticia a sido Actualizada!');
+                 return redirect('noticia')->with('status', 'La noticia ha sido Actualizada!');
 
                 }
                 elseif ($request->pais) {
@@ -379,9 +383,10 @@ class NoticiaController extends Controller
                 $noticia->Ciudad = $pais->name;
                 $noticia->Area = Request()->area;
                 $noticia->Autor = Request()->autor;
+                $noticia->referencia = Request()->referencia;
                 $noticia->save();
 
-                 return redirect('noticia')->with('status', 'La noticia a sido Actualizada!');
+                 return redirect('noticia')->with('status', 'La noticia ha sido Actualizada!');
                 }
                 else
                 {
@@ -391,9 +396,10 @@ class NoticiaController extends Controller
                 $noticia->Contenido = Request()->texto;
                 $noticia->Area = Request()->area;
                 $noticia->Autor = Request()->autor;
+                $noticia->referencia = Request()->referencia;
                 $noticia->save();
 
-                 return redirect('noticia')->with('status', 'La noticia a sido Actualizada!');
+                 return redirect('noticia')->with('status', 'La noticia ha sido Actualizada!');
                 }
 
                 

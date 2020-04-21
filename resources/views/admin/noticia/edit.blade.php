@@ -134,6 +134,8 @@
                         <textarea required name="descripcion" class="form-control" rows="3" placeholder="Escribir ...">{{$nota->entrada}}</textarea>
                       </div>
                     </div>
+
+                     
                  
                   </div>
 
@@ -148,6 +150,13 @@
                       <label class="custom-file-label" for="customFile">Imagen Destacada</label>
                     </div>
                   </div>
+                  </div>
+                   <div class="col-sm-12"> 
+                     
+                     <div class="form-group">
+                      <label>Texto de referencia de la imagen</label>
+                       <input  name="referencia" type="text" class="form-control"  value="{{$nota->referencia}}">
+                     </div>
                   </div>
                 </div>
                  <div class="row">

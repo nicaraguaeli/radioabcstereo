@@ -11,5 +11,5 @@ class Noticia extends Model
     protected $primaryKey = 'ID';
     public $timestamps = false;
 
-    protected $fillable = ['Titular','FechaP','Autor','Area','Contenido','Estado','Leido'];
+    protected $fillable = ['Titular','FechaP','Autor','Area','Contenido','Estado','Leido','referencia'];
 }

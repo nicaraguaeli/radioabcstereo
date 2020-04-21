@@ -1,15 +1,7 @@
 @extends('layouts.master')
 @section('contenido')
 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
- @if ($errors->any())
-    <div class="alert alert-danger">
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
-@endif
+ 
 
 
 <form action="{{route('podcast.store')}}" method="post" enctype="multipart/form-data" autocomplete="off">

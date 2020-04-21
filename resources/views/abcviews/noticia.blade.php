@@ -64,8 +64,12 @@
       <div class="row mt-2 ">
         <div class="col-lg-9 align-self-center">
           <i class="p-2 font-weight-bold text-dark text-muted h5">{{$nota->entrada}}</i>
-          <img class="img-fluid" src="{{asset(''.$nota->Imagen)}}" alt="{{$nota->Titular}}"></div>
-        
+          <img class="img-fluid" src="{{asset(''.$nota->Imagen)}}" alt="{{$nota->Titular}}">
+          <h6 class="text-center">{{$nota->referencia}}</h6>
+
+
+        </div>
+         
 
 
 
