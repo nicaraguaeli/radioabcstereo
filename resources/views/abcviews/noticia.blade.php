@@ -46,7 +46,7 @@
       </div>
      
      <div class="d-flex info-nota">
-     <a target="_blank" class="text-dark" href="{{url('noticias/'.$nota->Autor)}}">
+     <a title="Más notas sobre este autor" target="_blank" class="text-dark" href="{{url('noticias/'.$nota->Autor)}}">
       <div class="mr-3"><i class="fad fa-id-card " ></i><span class="h6 p-2"><span class="badge badge-secondary mr-2">@foreach($periodistas as $perio)
                                   @if($perio->nombre == $nota->Autor)
                                   {{$perio->tipo}}
