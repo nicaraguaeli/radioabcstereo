@@ -109,6 +109,13 @@
                     </div>
                   </div>
                   </div>
+                  <div class="col-sm-12"> 
+                     
+                     <div class="form-group">
+                      <label>Texto de referencia de la imagen</label>
+                       <input  name="referencia" type="text" class="form-control"  placeholder="Referencia">
+                     </div>
+                  </div>
                 </div>
                  <div class="row">
                   <div class="col-sm-12">
