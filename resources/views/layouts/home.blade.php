@@ -94,7 +94,10 @@
     {
       font-family: "Nunito", sans-serif !important;
     }
-
+    .gris
+    {
+      background: #e8e8e8;
+    }
 
   </style>
    
