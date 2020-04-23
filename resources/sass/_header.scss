@@ -1,7 +1,12 @@
+p
+{
+  font-size: 1.1rem !important;
+}
 .header
 {
     height: 140px;
     overflow: hidden;
+    background: #e8e8e8;
     
 
       
@@ -55,15 +60,15 @@
 }
 .azul-fuerte
 {
-  background: rgb(7,21,90);
+  background-color: rgb(7,21,90) !important;
 }
 .azul-medio
 {
-   background: rgb(27,50,142);
+   background-color: rgb(27,50,142) !important;
 }
 .azul-claro
 {
-   background: rgb(0,96,151);
+   background-color: rgb(0,96,151) !important;
 }
 .format
 {
@@ -72,6 +77,10 @@
   
 
 }
+.gris
+    {
+      background: #e8e8e8 !important;
+    }
 .nav-link-hover
 {
   
