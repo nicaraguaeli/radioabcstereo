@@ -1,5 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
 
+p {
+  font-size: 1.1rem !important;
+}
+
 .header {
   height: 140px;
   overflow: hidden;
@@ -39,19 +43,23 @@
 }
 
 .azul-fuerte {
-  background: #07155a;
+  background-color: #07155a !important;
 }
 
 .azul-medio {
-  background: #1b328e;
+  background-color: #1b328e !important;
 }
 
 .azul-claro {
-  background: #006097;
+  background-color: #006097 !important;
 }
 
 .format {
   font-size: 1.1rem !important;
+}
+
+.gris {
+  background: #e8e8e8 !important;
 }
 
 .nav-link-hover {
