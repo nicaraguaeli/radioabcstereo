@@ -35,6 +35,7 @@ class EmpleoController extends Controller
     public function create()
     {
         //
+
         $countries = Country::all();
         return view('admin.empleos.create',compact('countries'));
     }
@@ -48,6 +49,16 @@ class EmpleoController extends Controller
     public function store(Request $request)
     {
         //
+          Request()->validate([
+          'pais'=>'required',
+          'city_id'=>'required',
+          'cargo'=>'required|max:35',
+          'empleador'=>'required|max:35',
+          'descripcion' =>'required',
+          'expiracion'=> 'required|date',
+
+        ]);
+        
         Empleo::create($request->all());
 
         return redirect('empleo')->with('status','Empleo publicado!');
@@ -77,12 +88,14 @@ class EmpleoController extends Controller
         
 
         $empleo = Empleo::find($id);
+
         $countries = Country::all();  
-        $ciudad = City::join('countries as c','country_id','=','c.id')->select('c.name as pais','cities.name as ciudad', 'c.id as idp', 'cities.id as idc')->first();
+
+        $ciudad = City::join('countries as c','country_id','=','c.id')->select('c.name as pais','cities.name as ciudad', 'c.id as idp', 'cities.id as idc')->where('cities.id',$empleo->city_id)->first();
        
         
-
-
+        
+      
         return view('admin.empleos.edit',compact('countries'),['empleo'=>$empleo,'ciudad'=>$ciudad]);
     }
 
@@ -96,6 +109,17 @@ class EmpleoController extends Controller
     public function update(Request $request, $id)
     {
         //
+           
+             Request()->validate([
+          'pais'=>'required',
+          'city_id'=>'required',
+          'cargo'=>'required|max:35',
+          'empleador'=>'required|max:35',
+          'descripcion' =>'required',
+          'expiracion'=> 'required|date',
+
+        ]);
+
             $empleo = Empleo::find($id);
             $empleo->cargo = $request->cargo;
             $empleo->empleador = $request->empleador;
@@ -105,7 +129,7 @@ class EmpleoController extends Controller
             $empleo->save();
            
 
-            return redirect('empleo')->with('status','a sido actualizado!');
+            return redirect('empleo')->with('status','ha sido actualizado!');
 
     }
 
@@ -120,6 +144,6 @@ class EmpleoController extends Controller
         //
         $empleo = Empleo::find($id)->delete();
 
-        return redirect('empleo')->with('status','A sido eliminado!');
+        return redirect('empleo')->with('status','ha sido eliminado!');
     }
 }
