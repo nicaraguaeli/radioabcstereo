@@ -37,7 +37,7 @@
 					           @endforeach
 	 		</div>
 	 	</div>
-	 	<div class="col-lg-3  border-left">
+	 	<div class="col-lg-3  border-left gris">
 	 		<div class="row">
 	 			<div class="col-sm-12">
 	 				 <div class=" wow fadeInUp " data-wow-delay="0.2s" >
