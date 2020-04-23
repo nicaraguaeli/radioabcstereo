@@ -17,7 +17,7 @@
       </div>
       @endforeach
 
-      <div class="col-lg-3 wow fadeInUp border-left ">
+      <div class="col-lg-3 wow fadeInUp border-left " style="background: #e8e8e8;">
         
         <p class="text-center font-weight-bold text-white azul-fuerte " >LO MÁS DESTACADO DEL MES</p>
          <div class="d-flex">
