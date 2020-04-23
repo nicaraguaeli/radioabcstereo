@@ -32,12 +32,12 @@
                       <div class="form-group">
                         <label>Pais</label>
                         <select id="country" class="form-control" name="pais">
-                        <option selected="true" disabled="disabled">Selecciona un pais</option>
-                        @foreach($countries as $country)
-                          @if($ciudad->idp == $country->id)
+                       
+                         @foreach($countries as $country)
+                          @if($ciudad->idc == $empleo->city_id)
                           <option selected value="{{$ciudad->idp}}">{{$ciudad->pais}}</option>
                           @endif
-                          <option value="{{$country->id}}">{{$country->name}}</option>
+                           <option value="{{$country->id}}">{{$country->name}}</option>
                         @endforeach
           
                           

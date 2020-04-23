@@ -63,7 +63,7 @@
                    <div class="form-group row">
                     <label for="inputEmail3" class="col-sm-2 col-form-label">Empleador</label>
                     <div class="col-sm-12">
-                      <input required name="empleador" type="text" class="form-control" id="inputEmail3" >
+                      <input  name="empleador" type="text" class="form-control" id="inputEmail3" >
                     </div>
                   </div>
                   <div class="row">

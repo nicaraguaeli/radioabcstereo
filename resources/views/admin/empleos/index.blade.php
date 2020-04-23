@@ -28,7 +28,7 @@
 		<tr>
 			<td>{{$empleo->cargo}}</td>
 			<td>{{$empleo->empleador}}</td>
-			<td>{{$empleo->descripcion}}</td>
+			<td>{!!$empleo->descripcion!!}</td>
 			<td>{{$empleo->created_at}}</td>
 			<td>{{$empleo->expiracion}}</td>
 			<td>@if($empleo->expiracion > now())
