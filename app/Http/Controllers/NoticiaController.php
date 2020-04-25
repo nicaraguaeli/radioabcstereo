@@ -69,6 +69,11 @@ class NoticiaController extends Controller
         
         Request()->validate([
              'imagen' => 'dimensions:width=850,height=450|mimes:jpeg,jpg,png,gif|required',
+             'titular' =>'required',
+             'descripcion' => 'required',
+             'autor'=> 'required',
+              'area' => 'required',
+
         ]);
 
 
@@ -141,7 +146,7 @@ class NoticiaController extends Controller
     public function show($id)
     {
         //
-        $mes = new getMes();
+    $mes = new getMes();
     $m = $mes->getmes(now()->month);
 
 
@@ -221,7 +226,7 @@ class NoticiaController extends Controller
     }
     else
     {
-         return view('abcviews.noticia',['nota'=>$nota,'periodistas'=>$periodistas,'fecha'=>$fecha])->with('titulo',$nota->Titular);
+         return view('abcviews.noticia',['nota'=>$nota,'periodistas'=>$periodistas,'fecha'=>$fecha])->with('titulo',$nota->Titular)->with('noticiasRam',$noticiasRam);
 
     }
     
@@ -316,9 +321,17 @@ class NoticiaController extends Controller
         
         if(Request()->file('imagen'))
             {
-                 Request()->validate([
-             'imagen' => 'dimensions:max_width=850,max_height=450|mimes:jpeg,jpg,png,gif|required',
+                 
+
+               Request()->validate([
+             'imagen' => 'dimensions:width=850,height=450|mimes:jpeg,jpg,png,gif|required',
+             'titular' =>'required',
+             'descripcion' => 'required',
+             'autor'=> 'required',
+              'area' => 'required',
+
         ]);
+
                 $fecha = now()->format('m-Y');
                 if($request->pais && $request->ciudad)
                 {
