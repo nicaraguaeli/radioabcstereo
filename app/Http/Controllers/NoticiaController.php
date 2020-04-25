@@ -68,7 +68,7 @@ class NoticiaController extends Controller
         //
         
         Request()->validate([
-             'imagen' => 'dimensions:max_width=850,max_height=450|mimes:jpeg,jpg,png,gif|required',
+             'imagen' => 'dimensions:width=850,height=450|mimes:jpeg,jpg,png,gif|required',
         ]);
 
 
@@ -141,6 +141,48 @@ class NoticiaController extends Controller
     public function show($id)
     {
         //
+        $mes = new getMes();
+    $m = $mes->getmes(now()->month);
+
+
+    $noticiasR = DB::table('ABCnoticias')->where(
+        [
+            ['Estado','Publicado'],
+            ['Mes','<=',now()->month],
+            ['Mes','>=',now()->month],
+            ['Ano',now()->year]
+
+        ])->orWhere([
+            ['Estado','Publicado'],
+            ['Dia','>',1],
+            ['Mes',$m],
+            ['Ano',now()->year]
+
+        ])->inRandomOrder()->take(30)->get();
+   
+    $noticiasRam;
+    
+    
+    if (count($noticiasR) > 4) {
+        # code...
+       for ($i=0; $i < 4 ; $i++) { 
+           # code...
+         
+         $noticiasRam[$i] = $noticiasR[$i];
+         
+
+        
+
+       }
+    }
+    else
+    {
+       $noticiasRam = $noticiasR;
+
+      
+    }
+   
+
         try {
     
     
@@ -152,7 +194,7 @@ class NoticiaController extends Controller
     if(sizeof($ubicacion) == 2)
     {
 
-       return view('abcviews.noticia',['nota'=>$nota,'periodistas'=>$periodistas,'fecha'=>$fecha])->with('titulo',$nota->Titular);
+       return view('abcviews.noticia',['nota'=>$nota,'periodistas'=>$periodistas,'fecha'=>$fecha])->with('titulo',$nota->Titular)->with('noticiasRam',$noticiasRam);
     }
     elseif(sizeof($ubicacion) == 1 && $ubicacion[0] != null)
     {     
@@ -162,11 +204,11 @@ class NoticiaController extends Controller
             {
                  $pais = Country::find($ciudad->country_id);
                  $nota->Ciudad = $ciudad->name.'-'.$pais->name;
-                 return view('abcviews.noticia',['nota'=>$nota,'periodistas'=>$periodistas,'fecha'=>$fecha])->with('titulo',$nota->Titular);
+                 return view('abcviews.noticia',['nota'=>$nota,'periodistas'=>$periodistas,'fecha'=>$fecha])->with('titulo',$nota->Titular)->with('noticiasRam',$noticiasRam);
 
             }else
             {
-                return view('abcviews.noticia',['nota'=>$nota,'periodistas'=>$periodistas,'fecha'=>$fecha])->with('titulo',$nota->Titular);
+                return view('abcviews.noticia',['nota'=>$nota,'periodistas'=>$periodistas,'fecha'=>$fecha])->with('titulo',$nota->Titular)->with('noticiasRam',$noticiasRam);
             }
 
          
