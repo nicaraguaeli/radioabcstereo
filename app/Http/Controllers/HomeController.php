@@ -45,7 +45,8 @@ class HomeController extends Controller
     {
         
 
-       
+    $noticiasRam = DB::table('ABCnoticias')->where([['Estado','Publicado'],['Mes','<=',now()->month],['Mes','>=',now()->month],['Ano',now()->year]])->inRandomOrder()->take(30)->get();
+    
          
         
     
@@ -53,6 +54,9 @@ class HomeController extends Controller
     
     $mes = new getMes();
     $nota = Noticia::where('Estado','Publicado')->findOrFail($id);
+    
+
+    
     
     $nota->Mes = $mes->getmes($nota->Mes);
     
@@ -67,7 +71,7 @@ class HomeController extends Controller
     if(sizeof($ubicacion) == 2)
     {
 
-       return view('abcviews.noticia',['nota'=>$nota,'periodistas'=>$periodistas,'fecha'=>$fecha])->with('titulo',$nota->Titular)->with('descripcion',$nota->entrada);
+       return view('abcviews.noticia',['nota'=>$nota,'periodistas'=>$periodistas,'fecha'=>$fecha])->with('titulo',$nota->Titular)->with('descripcion',$nota->entrada)->with('noticiasRam',$noticiasRam);
     }
     elseif(sizeof($ubicacion) == 1  && $ubicacion[0] != null)
     {     
@@ -79,10 +83,10 @@ class HomeController extends Controller
                 $nota->Ciudad = $ciudad->name.'-'.$pais->name;
 
 
-          return view('abcviews.noticia',['nota'=>$nota,'periodistas'=>$periodistas,'fecha'=>$fecha])->with('titulo',$nota->Titular)->with('descripcion',$nota->entrada);
+          return view('abcviews.noticia',['nota'=>$nota,'periodistas'=>$periodistas,'fecha'=>$fecha])->with('titulo',$nota->Titular)->with('descripcion',$nota->entrada)->with('noticiasRam',$noticiasRam);
           }else
           {
-               return view('abcviews.noticia',['nota'=>$nota,'periodistas'=>$periodistas,'fecha'=>$fecha])->with('titulo',$nota->Titular)->with('descripcion',$nota->entrada);
+               return view('abcviews.noticia',['nota'=>$nota,'periodistas'=>$periodistas,'fecha'=>$fecha])->with('titulo',$nota->Titular)->with('descripcion',$nota->entrada)->with('noticiasRam',$noticiasRam);
           }
           
 
@@ -91,7 +95,7 @@ class HomeController extends Controller
     }
     else
     {
-        return view('abcviews.noticia',['nota'=>$nota,'periodistas'=>$periodistas,'fecha'=>$fecha])->with('titulo',$nota->Titular)->with('descripcion',$nota->entrada);
+        return view('abcviews.noticia',['nota'=>$nota,'periodistas'=>$periodistas,'fecha'=>$fecha])->with('titulo',$nota->Titular)->with('descripcion',$nota->entrada)->with('noticiasRam',$noticiasRam);
     }
     
     
@@ -118,6 +122,7 @@ class HomeController extends Controller
          $destacado->created_at = date('d-m-y',strtotime($destacado->created_at));
          
          $ultimos = Abctv::latest()->take(2)->get();
+         
          $tipos = Abctv::select('tipo')->distinct('tipo')->get();
 
          
