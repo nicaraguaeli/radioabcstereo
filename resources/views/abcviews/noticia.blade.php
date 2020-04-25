@@ -145,50 +145,7 @@
 </a></div>
      </div>
 
-   <!--Mas Noticias -->
-
-    <div class="d-flex mt-5 " >
-    <div class="tag " style="background-color: blue; width: 14px; height: 14px; border-right: 3px solid red; transform: translateY(3px); "></div>
-    <div><h4 class="h6 ml-2">MÁS</h4></div><i class="fas fa-caret-right ml-2" style="font-size: 17px;"></i>
-    <div><h4 class="h6 font-weight-bold  ml-2 wow fadeInUp text-uppercase" data-wow-delay="0.2s">NOTICIAS</h4></div>
-    
-    
-  </div>
-
-   <div class="row mt-3">
-     <div class="col-lg-9">
-      
-          @for($i=0; $i < 4; $i++)
-           <a href="{{url('nota',$noticiasRam[$i]->ID.'_'.Str::slug($noticiasRam[$i]->Titular,'-'))}}" class="link-destacado">
-          <div class="row gris mb-2 wow fadeIn" data-wow-delay="0.{{$i}}s" >
-           
-            <div class="col-sm-3"> <img height="100" src="{{$noticiasRam[$i]->Imagen}}" alt=""></div>
-            <div class="col-sm-9"><p>{{$noticiasRam[$i]->Titular}}</p>
-                <p class="text-muted text-truncate" >{{$noticiasRam[$i]->entrada}}</p>
-              </div>
-            
-
-          </div>
-            </a>
-          @endfor
-     
-     
-      
-       
-        
-
-       </div>
-       <div class="col-lg-3">
-        
-       </div>
-     
-
-     </div>
-    
-  
-
-   <!-- Fin mas noticias-->
-
+   
 
      <!--ENCUESTA -->
      <div class="row">
