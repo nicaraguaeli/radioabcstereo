@@ -165,7 +165,7 @@
            <a href="{{url('nota',$ram->ID.'_'.Str::slug($ram->Titular,'-'))}}" class="link-destacado">
           <div class="row gris mb-2 wow fadeIn" data-wow-delay="0.2s" >
            
-            <div class="col-sm-3"> <img height="100" src="{{asset('').$ram->Imagen}}" alt=""></div>
+            <div class="col-sm-3"> <img height="100" src="{{asset(''.$ram->Imagen)}}" alt=""></div>
             <div class="col-sm-9"><p>{{$ram->Titular}}</p>
                 <p class="text-muted text-truncate" >{{$ram->entrada}}</p>
               </div>
