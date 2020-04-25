@@ -45,9 +45,30 @@ class HomeController extends Controller
     {
         
 
-    $noticiasRam = DB::table('ABCnoticias')->where([['Estado','Publicado'],['Mes','<=',now()->month],['Mes','>=',now()->month],['Ano',now()->year]])->inRandomOrder()->take(30)->get();
+    $noticiasR = DB::table('ABCnoticias')->where([['Estado','Publicado'],['Mes','<=',now()->month],['Mes','>=',now()->month],['Ano',now()->year]])->inRandomOrder()->take(30)->get();
+    $noticiasRam;
     
     
+    if (count($noticiasR) > 4) {
+        # code...
+       for ($i=0; $i < 4 ; $i++) { 
+           # code...
+         
+         $noticiasRam[$i] = $noticiasR[$i];
+         
+
+        
+
+       }
+    }
+    else
+    {
+       $noticiasRam = $noticiasR;
+
+      
+    }
+    
+   
         
     
                try {

@@ -157,24 +157,7 @@
 
    <div class="row mt-3">
      <div class="col-lg-9">
-        @if(count($noticiasRam) > 4)
-         
-         @for($i=0; $i < 4; $i++)
-           <a href="{{url('nota',$noticiasRam[$i]->ID.'_'.Str::slug($noticiasRam[$i]->Titular,'-'))}}" class="link-destacado">
-          <div class="row gris mb-2 wow fadeIn" data-wow-delay="0.{{$i}}s" >
-           
-            <div class="col-sm-3"> <img height="100" src="{{$noticiasRam[$i]->Imagen}}" alt=""></div>
-            <div class="col-sm-9"><p>{{$noticiasRam[$i]->Titular}}</p>
-                <p class="text-muted text-truncate" >{{$noticiasRam[$i]->entrada}}</p>
-              </div>
-            
-
-          </div>
-            </a>
-          @endfor
-
-
-        @else
+       
             
 
          
@@ -192,15 +175,7 @@
             </a>
           @endforeach
 
-        @endif
-      
-          
-     
-     
-      
-       
-        
-
+ 
        </div>
        <div class="col-lg-3">
         
