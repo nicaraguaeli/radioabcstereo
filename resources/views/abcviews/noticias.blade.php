@@ -5,8 +5,9 @@
 
 <h3 class="mt-5 mb-3">Noticias de: {{$buscar}} </h3>
 <div class="row">
-	
-	<ul class="list-unstyled">
+	<div class="col-lg-12">
+		
+		<ul  class="list-unstyled">
 		@foreach($notas as $nota)
 		<li><a href="{{url('nota',$nota->ID.'_'.Str::slug($nota->Titular,'-'))}}">
 			
@@ -22,6 +23,8 @@
 @else
     <h3 class="mt-5 mb-3">No hay resultados del autor: {{$buscar}} </h3>
 @endif
+	</div>
+	
 
 
 
