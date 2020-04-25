@@ -44,8 +44,25 @@ class HomeController extends Controller
     public function noticia($id)
     {
         
+    $mes = new getMes();
+    $m = $mes->getmes(now()->month);
 
-    $noticiasR = DB::table('ABCnoticias')->where([['Estado','Publicado'],['Mes','<=',now()->month],['Mes','>=',now()->month],['Ano',now()->year]])->inRandomOrder()->take(30)->get();
+
+    $noticiasR = DB::table('ABCnoticias')->where(
+        [
+            ['Estado','Publicado'],
+            ['Mes','<=',now()->month],
+            ['Mes','>=',now()->month],
+            ['Ano',now()->year]
+
+        ])->orWhere([
+            ['Estado','Publicado'],
+            ['Dia','>',1],
+            ['Mes',$m],
+            ['Ano',now()->year]
+
+        ])->inRandomOrder()->take(30)->get();
+   
     $noticiasRam;
     
     
@@ -73,7 +90,7 @@ class HomeController extends Controller
     
                try {
     
-    $mes = new getMes();
+   
     $nota = Noticia::where('Estado','Publicado')->findOrFail($id);
     
 
