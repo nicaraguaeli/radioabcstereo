@@ -66,6 +66,12 @@ class NoticiaController extends Controller
     public function store(Request $request)
     {
         //
+        
+        Request()->validate([
+             'imagen' => 'dimensions:max_width=850,max_height=450|mimes:jpeg,jpg,png,gif|required',
+        ]);
+
+
         $fecha = now()->format('m-Y');
         
         
@@ -268,6 +274,9 @@ class NoticiaController extends Controller
         
         if(Request()->file('imagen'))
             {
+                 Request()->validate([
+             'imagen' => 'dimensions:max_width=850,max_height=450|mimes:jpeg,jpg,png,gif|required',
+        ]);
                 $fecha = now()->format('m-Y');
                 if($request->pais && $request->ciudad)
                 {
@@ -417,7 +426,8 @@ class NoticiaController extends Controller
     public function destroy($id)
     {
         //
-        DB::table('ABCnoticias')->where('ID',$id)->delete();
+         
+         DB::table('ABCnoticias')->where('ID',$id)->delete();
          return redirect('noticia')->with('status', 'La noticia ha sido Eliminada!');
      
     }
