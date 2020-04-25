@@ -33,11 +33,11 @@
 @csrf
 @method('DELETE')
 <div class="btn-group">
-<button type="button" class="btn btn-danger btn-block" data-toggle="modal" data-target="#modal-danger">
+<button type="button" class="btn btn-danger btn-block" data-toggle="modal" data-target="#modal-danger{{$trans->id}}">
                   <i class="fas fa-trash-alt" ></i>
                 </button>
 
-                <div class="modal fade" id="modal-danger" style="display: none;" aria-hidden="true">
+                <div class="modal fade" id="modal-danger{{$trans->id}}" style="display: none;" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content bg-danger">
             <div class="modal-header">

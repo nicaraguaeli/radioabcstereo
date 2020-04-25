@@ -124,19 +124,20 @@ function dato(id)
 </td>
 <td>
   
-<form action="{{route('noticia.destroy',$nota->ID)}}" method="post">
+<form  action="{{route('noticia.destroy',$nota->ID)}}" method="post">
 @csrf
-@method('delete')
+@method('DELETE')
 <div class="btn-group">
 <a target="_blank" class="btn btn-block bg-gradient-info btn-sm" href="{{route('noticia.show',$nota->ID)}}"><i class="fas fa-eye"></i></a>
 <a class="btn btn-block bg-gradient-warning btn-sm" href="{{route('noticia.edit',$nota->ID)}}"><i class="fas fa-edit"></i></a>
-@if(Auth::user()->rol != 'admin')
-  @else
-<button type="button" class="btn btn-danger btn-block" data-toggle="modal" data-target="#modal-danger">
+@if(Auth::user()->rol == 'admin')
+ 
+
+<button type="button" class="btn btn-danger btn-block" data-toggle="modal" data-target="#modal-danger{{$nota->ID}}">
                   <i class="fas fa-trash-alt" ></i>
                 </button>
 
-                <div class="modal fade" id="modal-danger" style="display: none;" aria-hidden="true">
+                <div class="modal fade" id="modal-danger{{$nota->ID}}" style="display: none;" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content bg-danger">
             <div class="modal-header">
@@ -156,8 +157,9 @@ function dato(id)
           <!-- /.modal-content -->
         </div>
         <!-- /.modal-dialog -->
-        @endif
-      </div>
+        </div>
+  @endif
+      
 </div>
 </form>
 </td>
