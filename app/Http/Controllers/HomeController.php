@@ -47,7 +47,7 @@ class HomeController extends Controller
 
     $noticiasRam = DB::table('ABCnoticias')->where([['Estado','Publicado'],['Mes','<=',now()->month],['Mes','>=',now()->month],['Ano',now()->year]])->inRandomOrder()->take(30)->get();
     
-         
+    
         
     
                try {
