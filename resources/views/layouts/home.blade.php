@@ -82,6 +82,13 @@
               </script>
               <script>
  function clockUpdate(){var t=new Date;function c(t){return t<10?"0"+t:t}$(".digital-clock").css({color:"black"});var e,o=c((e=t.getHours())>12?e-12:0==e?12:e),n=c(t.getMinutes()),a=c(t.getSeconds());$(".digital-clock").text(o+":"+n+":"+a)}$(function(){clockUpdate(),setInterval(clockUpdate,1e3)});
+  $(function() {
+    $('marquee').mouseover(function() {
+        $(this).attr('scrollamount',0);
+    }).mouseout(function() {
+         $(this).attr('scrollamount',5);
+    });
+});
    
    
 
@@ -90,6 +97,7 @@
 
   </script>
   <style>
+
     body
     {
       font-family: "Nunito", sans-serif !important;
