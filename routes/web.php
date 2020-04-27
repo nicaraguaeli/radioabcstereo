@@ -41,6 +41,8 @@ Route::get('/departamentales','HomeController@departamental');
 Route::get('/internacionales','HomeController@internacional');
 Route::get('/nota/{id}','HomeController@noticia');
 Route::get('/abctv','HomeController@abctv');
+Route::get('/abctvsearch/{id}','HomeController@abctvsearch');
+Route::get('/abctvlist/{id}','HomeController@abctvlist');
 Route::get('/empleos','HomeController@empleos');
 Route::get('/buscar','HomeController@buscar');
 Route::get('/countview','HomeController@countview');

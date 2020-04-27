@@ -154,22 +154,66 @@ class HomeController extends Controller
     }
     public function abctv()
     {     
-         $mes = new getMes();
-
-         $destacado = Abctv::latest()->first();
-         $destacado->created_at = date('d-m-y',strtotime($destacado->created_at));
          
-         $ultimos = Abctv::latest()->take(2)->get();
          
-         $tipos = Abctv::select('tipo')->distinct('tipo')->get();
+       $mes = new getMes();
+         
+        $tipos = Abctv::select('tipo')->distinct('tipo')->get();
+       
+       
+        $videos = array();
+        
+        $flag = 0;
+
+        for ($i=0; $i < count($tipos) ; $i++) { 
+            # code...
+              
+              $datos = Abctv::where('tipo',$tipos[$i]->tipo)->take(4)->orderBy('id','desc')->get();
+             
+             foreach ($datos as $key) {
+                 # code...
+                $videos[$flag] = $key;
+                $videos[$flag]->fecha = $videos[$flag]->created_at->format('d').'-'.$mes->getmes($videos[$flag]->created_at->format('m')).'-'.$videos[$flag]->created_at->format('Y');
+
+               
+
+                $flag++;
+             }
+
+        }
+       
+      
+        
+
 
          
 
-         $abctv = Abctv::latest()->paginate(8);
+        
 
-         return view('abcviews.abctv',compact('abctv','ultimos','tipos'))->with('destacado',$destacado)->with('i');
+         return view('abcviews.abctv',compact('tipos','videos'))->with('i');
         
     }
+    public function abctvsearch($id)
+    {
+         $mes = new getMes();
+
+         $video = Abctv::find($id);
+         $ultimos = Abctv::latest()->take(2)->get();
+         $video->fecha = $video->created_at->format('d').'-'.$mes->getmes($video->created_at->format('m')).'-'.$video->created_at->format('Y');
+        $tipos = Abctv::select('tipo')->distinct('tipo')->get();
+
+       
+
+        return view('abcviews.abctvideo',['video'=>$video],compact('ultimos','tipos'));
+    }
+    public function abctvlist($id)
+    {
+
+        $videos = Abctv::where('tipo',$id)->orderBy('id','desc')->paginate(25);
+
+        return view('abcviews.resultadosabctv',compact('videos'))->with('buscar',$id);
+    }
+
     public function buscar()
     {
        

@@ -56,7 +56,7 @@ class AbctvController extends Controller
                 'autor'=> 'required',
                 'tipo'=> 'required',
                 'date'=> 'required|date',
-                'imagen'=>'mimes:jpeg,jpg,png,gif|required'
+                'imagen' => 'dimensions:width=850,height=450|mimes:jpeg,jpg,png,gif|required',
             ]);
  
         $abctv = new Abctv;
@@ -130,7 +130,7 @@ class AbctvController extends Controller
                 'autor'=> 'required',
                 'tipo'=> 'required',
                 'date'=> 'required|date',
-                'imagen'=>'mimes:jpeg,jpg,png,gif|required'
+                'imagen' => 'dimensions:width=850,height=450|mimes:jpeg,jpg,png,gif|required',
             ]);
  
         $abctv = Abctv::find($id);
