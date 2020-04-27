@@ -21,7 +21,7 @@
 	
      </div>
      <div class="mt-3">
-     	   <a  href="{{url('abctv')}}"><i class="fas fa-arrow-circle-left" style="font-size: 18px;"></i><span class="ml-1">Volver a la seccion anterior</span></a>
+     	   <a  href="{{url('abctv')}}"><i class="fas fa-arrow-circle-left" style="font-size: 18px;"></i><span class="ml-1">Volver a la sección anterior</span></a>
      </div>
   
  
@@ -69,7 +69,7 @@
 				</div>
 			
 			</div>
-			<h4 class="mt-3"><span class="badge badge-primary">Comparte esta noticia<i class="fas fa-share-alt text-white ml-1"></i></span></h4>
+			<h4 class="mt-3"><span class="badge badge-primary">Comparte este video<i class="fas fa-share-alt text-white ml-1"></i></span></h4>
      <div class="d-flex">
        <div class="mr-2"><div class="fb-share-button" 
     data-href="http://www.radioabcstereo.com/abctvsearch/{{$video->id}}_{{Str::slug($video->titulo,'-')}}"  
