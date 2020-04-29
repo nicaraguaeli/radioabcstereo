@@ -38,9 +38,10 @@
  			<div id="descripcion " class="mt-2 descr" >
 					    <h4 class="p-1 ">{{$video->titulo}}</h4>
 				<div class="d-flex p-1 justify-content-between">
-						<h6 class="mr-2"><i class="far fa-eye mr-1"></i>{{$video->visto}} vistas</h6>
-						<h6  class="mr-2"><i class="far fa-clock mr-1"></i>{{ $video->fecha }}</h6>
+						
 						<h6  class="mr-2"><i class="far fa-user mr-1"></i>{{$video->autor}}</h6>
+						<h6  class="mr-2"><i class="far fa-clock mr-1"></i>{{ $video->fecha }}</h6>
+						
 				</div>
 			
 				<h6 class="ml-1">{{$video->descripcion}}</h6>
