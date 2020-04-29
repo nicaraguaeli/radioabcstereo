@@ -62,7 +62,16 @@ return view('abcviews.nosotros')->with('nosotros',DB::table('nosotros')->first()
 
 Route::get('/abc/podcast',function(){
 
-return view('abcviews.podcast')->with('podcast',DB::table('podcasts')->orderBy('id','desc')->paginate(10));
+
+$cat = DB::table('podcasts')->select('categoria')->distinct()->get();
+return view('abcviews.podcast')->with('podcast',DB::table('podcasts')->latest()->paginate(10))->with('cat',$cat);
+
+});
+
+Route::get('/abc/podcast/{id}',function($id){
+
+$cat = DB::table('podcasts')->select('categoria')->distinct()->get();
+return view('abcviews.podcast')->with('podcast',DB::table('podcasts')->where('categoria',$id)->latest()->paginate(10))->with('cat',$cat)->with('tipo',$id);
 
 });
 
@@ -75,6 +84,13 @@ return response()->json($pod);
 
 });
 
+Route::get('abc/podcast/audio/{id}',function($id){
+
+$pod = DB::table('podcasts')->where('id',$id)->first();
+
+return view('abcviews.audio',['pod'=>$pod]);
+
+});
 
 
 

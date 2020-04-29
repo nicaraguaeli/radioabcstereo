@@ -1,14 +1,29 @@
 @extends('layouts.home')
 @section('contenido')
-@if ($errors->any())
-    <div class="alert alert-danger">
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
-@endif
+<style>
+  .hp_slide{
+    width:100%;
+   
+    height:12px;
+}
+.hp_range{
+    width:0;
+    background: #7dabbd;
+    height:12px;
+    border-right: 4px solid #b4d3b4;
+}
+.badge-info:hover
+{
+   background-color: #f2f2f2;
+
+}
+.conte:hover
+{
+    background-color: white !important;
+}
+
+
+</style>
  <div class="row mt-5">
     	 
     <div class="col-lg-12">
@@ -16,8 +31,10 @@
 	<div class="d-flex" >
 		<div class="tag " style="background-color: blue; width: 14px; height: 14px; border-right: 3px solid red; transform: translateY(3px); "></div>
 		<div><h4 class="h6 ml-2">ABC</h4></div><i class="fas fa-caret-right ml-2" style="font-size: 17px;"></i>
-		<div><h4 class="h6 font-weight-bold  ml-2 wow fadeInUp text-uppercase" data-wow-delay="0.2s">podscat</h4></div>
-		
+		<div><a class="text-dark" href="{{url('abc/podcast')}}"><h4 class="h6 font-weight-bold  ml-2 wow fadeInUp text-uppercase" data-wow-delay="0.2s">podscat</h4></a></div>
+    @isset($tipo)
+    <i class="fas fa-caret-right ml-2" style="font-size: 17px;"></i><div><h4 class="h6 font-weight-bold  ml-2 wow fadeInUp text-uppercase" data-wow-delay="0.2s">{{$tipo}}</h4></div>
+		@endif
 		
 	
      </div>
@@ -34,21 +51,18 @@
 
 	 	</div>
 	 	<div class="col-sm-12">
-	 		<div class="form-group">
-    <label class="text-white" for="exampleFormControlSelect1">Categorias</label>
-    <form action="">
-
-    <select class="form-control" id="exampleFormControlSelect1" onchange="this.form.submit()">
-      <option>Salud</option>
-      <option>Deporte</option>
-      <option>Politica</option>
-      <option>Alimentacion</option>
-      <option>Educacion</option>
-    </select>
-    	
-    </form>
+	 	
+   <div class="d-flex">
+     
+    @foreach($cat as $cat)
+     
+     <a class="ml-2" href="{{url('abc/podcast',$cat->categoria)}}"><h4><span class="badge badge-info">{{$cat->categoria}}</span></h4></a>
+    
+@endforeach
+   </div>
    
-  </div>
+   
+ 
 	 	</div>
 	 </div>
  <audio id="player-podscat">
@@ -61,17 +75,17 @@ Your browser does not support the audio element.
 	<div class="col-lg-6 " style="background: #cacaca;">
 	<ul class="list-unstyled mt-2">
 
-		@foreach($podcast as $podcast)
-			<li class="mb-3"><div style="background: #f2f2f2;
+		@foreach($podcast as $pod)
+			<li class="mb-3"><div class="conte" style="background: #f2f2f2;
 width: 100%;
-height: 3rem;
+min-height: 3rem;
 border-radius: 10px;">
 	
 	<div class="d-flex">
 		
 
-		<div  ><button  name="{{asset(''.$podcast->url)}}-{{$podcast->id}}" class="btn play-podcast"><i style="font-size: 2rem;" class="fas fa-play-circle  ml-2 "></i></button></div>
-		<div class="ml-2">{{$podcast->titulo}} </div>
+		<div class="align-self-center"  ><button  name="{{asset(''.$pod->url)}}-{{$pod->id}}" class="btn play-podcast"><i style="font-size: 2rem;" class="fas fa-play-circle  ml-2 "></i></button></div>
+		<div class="ml-2 align-self-center">{{$pod->titulo}} </div>
 
 	</div>
 
@@ -90,10 +104,12 @@ border-radius: 10px;">
 	 <div class="d-flex border-bottom mt-2">
 	 	<div><img id="img-podcast" width="128" src="https://www.bbva.com/wp-content/uploads/2018/08/Podcast-bbva-1024x678.jpg" alt=""></div>
 	 	<div class="ml-2 podcast-tittle">ESTAS EN PODCATS <br>
-	 	<h5 class="font-weight-bold " >¡Empieza a escuchar!</h5></div>
+	 	<h5 class="font-weight-bold " >¡Empieza a escuchar!</h5>
+    
+   </div>
 	 </div>
 
-      <p class="mt-3"></p>
+      <p class="mt-3 description"></p>
       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
   Más
 </button>
@@ -101,17 +117,36 @@ border-radius: 10px;">
 
 
       <div class="row justify-content-center mb-2">
-      	<div title="Atras 5s"    onclick="backward()"  class="col-sx-3"><i class="fas fa-backward" style="font-size: 48px;"></i></div>
-      	<div  title="Reproducir" id="play" class="col-sx-3"><i class="fas fa-play-circle ml-2 mr-2 text-white" style="font-size: 48px;"></i></div>
-      	<div title="Adelante 5s" onclick="forward()" class="col-sx-3"><i class="fas fa-forward" style="font-size: 48px;"></i></div>
-      </div>
+        
+        <div class="col-xs-3">  <button type="button" class="btn" title="Atras 5s"    onclick="backward()"  class="col-sx-3"><i class="fas fa-backward text-white" style="font-size: 48px;"></i></button></div>
+        <div class="col-xs-3">  <button type="button" class="btn"  id="play"  class="col-sx-3"><i class="fas fa-play-circle ml-2 mr-2 text-white" style="font-size: 48px;"></i></button></div>
+        <div class="col-xs-3"><button type="button" class="btn" title="Adelante 5s" onclick="forward()" class="col-sx-3"><i class="fas fa-forward text-white" style="font-size: 48px;"></i></button></div>
+        <div class="col-xs-3 align-self-center">
+          <div >
+           <span><a target="_blank" title="Abrir en nueva pestaña" class="text-white shared-link " href=""><i class="fas fa-share-alt text-white ml-1 mr-1"></i>Abrir en nueva pestaña</a></span>
+          </div>
+        </div>
 
-      <div class="progress-bar " style="height: 5px; width: 100%; position: absolute; bottom: 0; background: green;">
+
+      
+      
+      	
+       
+       
+      </div>
+        
+      
       	
       </div>
+<div class="hp_slide azul-claro">
+     <div class="hp_range"></div>
+</div>
 
+  <div class="mt-3">{{$podcast->links()}}</div>
 	</div>
 </div>
+
+
 <!-- Button trigger modal -->
 
 
@@ -140,18 +175,16 @@ border-radius: 10px;">
     </div>
   </div>
 </div>
+
+
+
 <script>
 	$(function(){
           
          
 
           $('.play-podcast').click(function(){
-              
-             
-
-
-
-            
+                       
               ruta = $(this).attr('name').split('-');
 
 
@@ -160,6 +193,10 @@ border-radius: 10px;">
             
 
              $('#player-podscat').attr('src',ruta[0]);
+
+
+             
+             
              $.ajax({
               		url: "{{url('getPodcast')}}",
               		type: 'get',
@@ -169,11 +206,17 @@ border-radius: 10px;">
               			$('.contenido').children().remove()
               			$('.contenido').append(data.contenido)
               			$('.podcast-tittle').find('h5').remove();
-              			$('.podcast-tittle').append('<h5 class="font-weight-bold " >'+data.titulo+'</h5>');
+                    $('.podcast-tittle').append('<h5 class="font-weight-bold " >'+data.titulo+'</h5>');
+
+                    $('.description').html('');
+                    $('.description').html(data.entrada);
+                    $('.shared-link').attr('href','{{url("abc/podcast/audio")}}'+"/"+data.id);
+                  
+              			
               			$('#img-podcast').attr('src','{{asset('')}}'+data.imagen);
 
 
-              			console.log(data)
+              			
               		}
               	});
              
@@ -198,8 +241,10 @@ border-radius: 10px;">
                 
               	$(this).find('i').removeClass('fa-play-circle')
               	$(this).find('i').addClass('fa-volume')
-              	$('#play').find('i').removeClass('fa-play-circle')
+              	
+                $('#play').find('i').removeClass('fa-play-circle')
               	$('#play').find('i').addClass('fa-pause-circle')
+                $('#play').attr('tittle','Detener')
 
               	 $('#player-podscat').trigger('play');
 
@@ -215,6 +260,8 @@ border-radius: 10px;">
               	$(this).find('i').addClass('fa-play-circle')
               	$('#play').find('i').removeClass('fa-pause-circle')
               	$('#play').find('i').addClass('fa-play-circle')
+                $('#play').attr('tittle','Reproducir')
+
 
               	 
               }
@@ -239,6 +286,7 @@ border-radius: 10px;">
 		
        
 		document.getElementById("player-podscat").currentTime += 5;
+    
 		
 	}
 
@@ -248,7 +296,40 @@ border-radius: 10px;">
        
 		document.getElementById("player-podscat").currentTime -= 5;
 	}
-    
+  $('#play').click(function(){
+       
+       if($(this).find('i').hasClass('fa-play-circle'))
+              {
+                  $('#play').find('i').removeClass('fa-play-circle')
+                  $('#play').find('i').addClass('fa-pause-circle')
+
+                   $('.play-podcast').find('i').removeClass('fa-volume')
+                   $('.play-podcast').find('i').addClass('fa-play-circle')
+
+                   $('#player-podscat').trigger('play');
+            
+              }
+              else
+              {
+                  $('#play').find('i').removeClass('fa-pause-circle')
+                  $('#play').find('i').addClass('fa-play-circle')
+
+                  $('.play-podcast').find('i').removeClass('fa-volume')
+                  $('.play-podcast').find('i').addClass('fa-play-circle')
+
+                   $('#player-podscat').trigger('pause');
+              }
+
+  });
+ 
+
+ var player = document.getElementById('player-podscat');    
+player.addEventListener("timeupdate", function() {
+    var currentTime = player.currentTime;
+    var duration = player.duration;
+    $('.hp_range').stop(true,true).animate({'width':(currentTime +.5)/duration*100+'%'},250,'linear');
+});
+
 	
 </script>
 @endsection
