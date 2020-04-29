@@ -168,7 +168,7 @@ class HomeController extends Controller
         for ($i=0; $i < count($tipos) ; $i++) { 
             # code...
               
-              $datos = Abctv::where('tipo',$tipos[$i]->tipo)->take(4)->orderBy('id','desc')->get();
+              $datos = Abctv::where('tipo',$tipos[$i]->tipo)->take(4)->latest()->get();
              
              foreach ($datos as $key) {
                  # code...
