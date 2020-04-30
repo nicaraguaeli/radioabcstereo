@@ -9,7 +9,16 @@
 		
 	
      </div>
-    
+
+     <div  class="embed-responsive embed-responsive-16by9 youtube-video" style="width: inherit; background-color: black;">
+						
+					
+						
+ 				 <iframe id="frame" class="mbed-responsive-item" src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fradioabcesteli%2Fvideos%2F1364415490257668%2F&show_text=0&width=560"  height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+ 				
+                 
+ 			</div>
+   
      @if(sizeOf($tipos) > 0)
  
  @foreach($tipos as $tipo)
