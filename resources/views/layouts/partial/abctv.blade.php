@@ -22,7 +22,7 @@
  			</div>
   <div class="card-body" >
     <div class="row justify-content-between">
-      <div class="col-xs-6"><p class="card-text wow bounceInLeft"><a class="text-dark h4" href="{{url('abctv')}}">{{$abctvdes->titulo}}</a></p></div>
+      <div class="col-xs-6"><p class="card-text wow bounceInLeft"><a class="text-dark h4" href="{{url('abctvsearch',$abctvdes->id.'_'.Str::slug($abctvdes->titulo,'-'))}}">{{$abctvdes->titulo}}</a></p></div>
        <div class="col-xs-6"><a href="#"><i class="fas fa-arrow-circle-right " style="font-size: 20px;"></i></a>
        	
        </div>
