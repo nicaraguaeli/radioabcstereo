@@ -14,7 +14,7 @@
 						
 					
 						
- 				 <iframe id="frame" class="mbed-responsive-item" src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fradioabcesteli%2Fvideos%2F1364415490257668%2F&show_text=0&width=560"  height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+ 				<iframe id="frame" class="embed-responsive-item" width="1280" height="720" src="https://www.youtube.com/embed/PN3vprBl6Y0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
  				
                  
  			</div>
