@@ -12,7 +12,14 @@
 			  <div id="card-content" class="container">
        
                    <div class="card border-0 wow fadeInUp" >
-  <img src="{{asset(''.$abctvdes->thumbnail)}}" class="card-img-top" alt="">
+  <div  class="embed-responsive embed-responsive-16by9 youtube-video" style="width: inherit; background-color: black;">
+						
+					<iframe class="embed-responsive-item"   id="frame" style="width: inherit;" height="400" src="{{$abctvdes->url}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
+						
+ 				
+ 				
+                 
+ 			</div>
   <div class="card-body" >
     <div class="row justify-content-between">
       <div class="col-xs-6"><p class="card-text wow bounceInLeft"><a class="text-dark h4" href="{{url('abctv')}}">{{$abctvdes->titulo}}</a></p></div>
