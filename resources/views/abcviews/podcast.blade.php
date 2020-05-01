@@ -161,7 +161,7 @@ border-radius: 10px;">
          
           $('#btn-mas').click(function(){
             
-            $('.contenido').toggleClass('h-50');
+            $('.contenido').toggleClass('h-auto');
 
           });
           $('.play-podcast').click(function(){

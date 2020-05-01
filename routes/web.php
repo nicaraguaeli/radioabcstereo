@@ -64,14 +64,14 @@ Route::get('/abc/podcast',function(){
 
 
 $cat = DB::table('podcasts')->select('categoria')->distinct()->get();
-return view('abcviews.podcast')->with('podcast',DB::table('podcasts')->latest()->paginate(10))->with('cat',$cat);
+return view('abcviews.podcast')->with('podcast',DB::table('podcasts')->latest()->paginate(10))->with('cat',$cat)->with('titulo','Podcast');
 
 });
 
 Route::get('/abc/podcast/{id}',function($id){
 
 $cat = DB::table('podcasts')->select('categoria')->distinct()->get();
-return view('abcviews.podcast')->with('podcast',DB::table('podcasts')->where('categoria',$id)->latest()->paginate(10))->with('cat',$cat)->with('tipo',$id);
+return view('abcviews.podcast')->with('podcast',DB::table('podcasts')->where('categoria',$id)->latest()->paginate(10))->with('cat',$cat)->with('tipo',$id)->with('titulo','Podcast ');
 
 });
 
