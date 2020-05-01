@@ -88,7 +88,7 @@ Route::get('abc/podcast/audio/{id}',function($id){
 
 $pod = DB::table('podcasts')->where('id',$id)->first();
 
-return view('abcviews.audio',['pod'=>$pod]);
+return view('abcviews.audio',['pod'=>$pod])->with('titulo','Podcast');
 
 });
 
