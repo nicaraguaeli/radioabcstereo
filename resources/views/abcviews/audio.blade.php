@@ -23,7 +23,7 @@
 	</div>
 </div>
 
-<audio controls style="width: 100%;">
+<audio controls style="width: 100%;" controlsList="nodownload">
 	<source src="{{asset($pod->url)}}">
 </audio>
 

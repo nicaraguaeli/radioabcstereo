@@ -23,6 +23,7 @@
 }
 
 
+
 </style>
  <div class="row mt-5">
     	 
@@ -31,7 +32,7 @@
 	<div class="d-flex" >
 		<div class="tag " style="background-color: blue; width: 14px; height: 14px; border-right: 3px solid red; transform: translateY(3px); "></div>
 		<div><h4 class="h6 ml-2">ABC</h4></div><i class="fas fa-caret-right ml-2" style="font-size: 17px;"></i>
-		<div><a class="text-dark" href="{{url('abc/podcast')}}"><h4 class="h6 font-weight-bold  ml-2 wow fadeInUp text-uppercase" data-wow-delay="0.2s">podscat</h4></a></div>
+		<div><a class="text-dark" href="{{url('abc/podcast')}}"><h4 class="h6 font-weight-bold  ml-2 wow fadeInUp text-uppercase" data-wow-delay="0.2s">podcast</h4></a></div>
     @isset($tipo)
     <i class="fas fa-caret-right ml-2" style="font-size: 17px;"></i><div><h4 class="h6 font-weight-bold  ml-2 wow fadeInUp text-uppercase" data-wow-delay="0.2s">{{$tipo}}</h4></div>
 		@endif
@@ -110,10 +111,11 @@ border-radius: 10px;">
 	 </div>
 
       <p class="mt-3 description"></p>
-      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+      <div class="contenido" style="height: 0px; overflow: hidden; transition: 0.3s all; "></div>
+      <button type="button" class="btn btn-primary" id="btn-mas">
   Más
 </button>
-
+ 
 
 
       <div class="row justify-content-center mb-2">
@@ -150,39 +152,18 @@ border-radius: 10px;">
 <!-- Button trigger modal -->
 
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Detalle del podcast</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-       
-      <div class="contenido">
-      	
-      </div>  
-        
-      
-
-
-
-      </div>
-      
-    </div>
-  </div>
-</div>
-
+<
 
 
 <script>
 	$(function(){
           
          
+          $('#btn-mas').click(function(){
+            
+            $('.contenido').toggleClass('h-50');
 
+          });
           $('.play-podcast').click(function(){
                        
               ruta = $(this).attr('name').split('-');
