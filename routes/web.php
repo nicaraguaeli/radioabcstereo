@@ -55,7 +55,7 @@ Route::post('/contactanos/enviar','HomeController@enviar')->name('enviar');
 
 Route::get('/nosotros',function(){
 
-return view('abcviews.nosotros')->with('nosotros',DB::table('nosotros')->first());
+return view('abcviews.nosotros')->with('nosotros',DB::table('nosotros')->first())->with('titulo','Nosotros');
 
 });
 

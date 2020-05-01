@@ -190,7 +190,7 @@ class HomeController extends Controller
 
         
 
-         return view('abcviews.abctv',compact('tipos','videos'))->with('i');
+         return view('abcviews.abctv',compact('tipos','videos'))->with('i')->with('titulo','Abctv');
         
     }
     public function abctvsearch($id)
@@ -267,7 +267,7 @@ class HomeController extends Controller
 
              $global = Noticia::where([['Area','Local'],['Estado','Publicado']])->orderBy('Ano','desc')->orderBy('ID','desc')->paginate(6);
 
-             return view('abcviews.notatemplate',compact('global','destacado','banner'))->with('tipo','local');
+             return view('abcviews.notatemplate',compact('global','destacado','banner'))->with('tipo','local')->with('titulo','Locales');
     }
     public function nacional()
     { 
@@ -278,7 +278,7 @@ class HomeController extends Controller
 
              $global = Noticia::where([['Area','Nacional'],['Estado','Publicado']])->orderBy('Ano','desc')->orderBy('ID','desc')->paginate(6);
 
-             return view('abcviews.notatemplate',compact('global','destacado','banner'))->with('tipo','nacional');
+             return view('abcviews.notatemplate',compact('global','destacado','banner'))->with('tipo','nacional')->with('titulo','Nacionales');
     }
     public function departamental()
     {     
@@ -287,7 +287,7 @@ class HomeController extends Controller
 
              $global = Noticia::where([['Area','Departamental'],['Estado','Publicado']])->orderBy('Ano','desc')->orderBy('ID','desc')->paginate(6);
 
-             return view('abcviews.notatemplate',compact('global','destacado','banner'))->with('tipo','departamental');
+             return view('abcviews.notatemplate',compact('global','destacado','banner'))->with('tipo','departamental')->with('titulo','Departamentales');
     }
     public function internacional()
     {   
@@ -296,12 +296,12 @@ $banner = Banner::latest()->where('expiracion','>=',now())->take(2)->get();
 
              $global = Noticia::where([['Area','Internacional'],['Estado','Publicado']])->orderBy('Ano','desc')->orderBy('ID','desc')->paginate(6);
 
-             return view('abcviews.notatemplate',compact('global','destacado','banner'))->with('tipo','internacional');
+             return view('abcviews.notatemplate',compact('global','destacado','banner'))->with('tipo','internacional')->with('titulo','Internacionales');
     }
    
     public function contactanos()
     {
-        return view('abcviews.contactanos');
+        return view('abcviews.contactanos')->with('titulo','Contactanos');
     }
     public function enviar()
     {
