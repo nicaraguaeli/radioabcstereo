@@ -145,48 +145,7 @@
 </a></div>
      </div>
 
-   <!--Mas Noticias -->
-
-    <div class="d-flex mt-5 " >
-    <div class="tag " style="background-color: blue; width: 14px; height: 14px; border-right: 3px solid red; transform: translateY(3px); "></div>
-    <div><h4 class="h6 ml-2">MÁS</h4></div><i class="fas fa-caret-right ml-2" style="font-size: 17px;"></i>
-    <div><h4 class="h6 font-weight-bold  ml-2 wow fadeInUp text-uppercase" data-wow-delay="0.2s">NOTICIAS</h4></div>
-    
-    
-  </div>
-
-   <div class="row mt-3">
-     <div class="col-lg-9">
-       
-            
-
-         
-         @foreach($noticiasRam as $ram)
-           <a href="{{url('nota',$ram->ID.'_'.Str::slug($ram->Titular,'-'))}}" class="link-destacado">
-          <div class="row gris mb-2 wow fadeIn" data-wow-delay="0.2s" >
-           
-            <div class="col-sm-3"> <img height="100" src="{{asset(''.$ram->Imagen)}}" alt=""></div>
-            <div class="col-sm-9"><p>{{$ram->Titular}}</p>
-                <p class="text-muted text-truncate" >{{$ram->entrada}}</p>
-              </div>
-            
-
-          </div>
-            </a>
-          @endforeach
-
- 
-       </div>
-       <div class="col-lg-3">
-        
-       </div>
-     
-
-     </div>
-    
   
-
-   <!-- Fin mas noticias-->
 
 
      <!--ENCUESTA -->
@@ -252,7 +211,51 @@
     </div>
   </div>
 </div>
+ <!-- FIN MODAL -->
+
+ <!--Mas Noticias -->
+
+    <div class="d-flex mt-5 " >
+    <div class="tag " style="background-color: blue; width: 14px; height: 14px; border-right: 3px solid red; transform: translateY(3px); "></div>
+    <div><h4 class="h6 ml-2">MÁS</h4></div><i class="fas fa-caret-right ml-2" style="font-size: 17px;"></i>
+    <div><h4 class="h6 font-weight-bold  ml-2 wow fadeInUp text-uppercase" data-wow-delay="0.2s">NOTICIAS</h4></div>
+    
+    
+  </div>
+
+   <div class="row mt-3">
+     <div class="col-lg-9">
+       
+            
+
+         
+         @foreach($noticiasRam as $ram)
+           <a href="{{url('nota',$ram->ID.'_'.Str::slug($ram->Titular,'-'))}}" class="link-destacado">
+          <div class="row gris mb-2 wow fadeIn" data-wow-delay="0.2s" >
+           
+            <div class="col-sm-3"> <img height="100" src="{{asset(''.$ram->Imagen)}}" alt=""></div>
+            <div class="col-sm-9"><p>{{$ram->Titular}}</p>
+                <p class="text-muted text-truncate" >{{$ram->entrada}}</p>
+              </div>
+            
+
+          </div>
+            </a>
+          @endforeach
+
  
+       </div>
+       <div class="col-lg-3">
+        
+       </div>
+     
+
+     </div>
+    
+  
+
+   <!-- Fin mas noticias-->
+
 
 <script
         src="https://code.jquery.com/jquery-3.4.1.min.js"
