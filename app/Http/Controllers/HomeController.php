@@ -57,11 +57,11 @@ class HomeController extends Controller
 
         ])->orWhere([
             ['Estado','Publicado'],
-            ['Dia','>',1],
+            ['Dia','>=',1],
             ['Mes',$m],
             ['Ano',now()->year]
 
-        ])->inRandomOrder()->take(30)->get();
+        ])->orderBy('Dia','desc')->inRandomOrder()->take(20)->get();
    
     $noticiasRam;
     
