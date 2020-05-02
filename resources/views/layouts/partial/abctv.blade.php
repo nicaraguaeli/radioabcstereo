@@ -1,7 +1,7 @@
 <section>
 	<div class="d-flex border-bottom mt-5 text-white azul-medio"  >
-		<div class="tag ml-1" style="background-color: #e8e8e8; width: 14px; height: 14px; border-right: 3px solid red; transform: translateY(3px); "></div>
-		<h5 class="h5 font-weight-bold ml-2 wow fadeInUp" data-wow-delay="0.2s">ABCtv</h5>
+		<div class="tag ml-1 mt-1" style="background-color: #e8e8e8; width: 14px; height: 14px; border-right: 3px solid red; transform: translateY(3px); "></div>
+		<h5 class="h5 font-weight-bold ml-2 mt-1 wow fadeInUp" data-wow-delay="0.2s">ABCtv</h5>
 	  </div>
 
 	  <div class="row mt-5">

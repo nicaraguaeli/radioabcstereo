@@ -15,7 +15,7 @@ overflow: hidden;">{{$global_nota->entrada}}</p>
     <div class="row  flex-nowrap ">
   <div class="col-sm-6"><div class="text-dark  "><span>{{$global_nota->Dia}}-{{$global_nota->Mes}}-{{$global_nota->Ano}}</span>
     </div></div>
-  <div class="col-sm-6"><div><span class="btn btn-primary" >Más</span>
+  <div class="col-sm-6 text-right"><div><span class="btn btn-primary" >Más</span>
   </div></div>
     
   
