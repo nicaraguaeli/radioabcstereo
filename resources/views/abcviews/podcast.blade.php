@@ -104,7 +104,7 @@ border-radius: 10px;">
 	 
 	 <div class="d-flex border-bottom mt-2">
 	 	<div><img id="img-podcast" width="128" src="https://www.bbva.com/wp-content/uploads/2018/08/Podcast-bbva-1024x678.jpg" alt=""></div>
-	 	<div class="ml-2 podcast-tittle">ESTAS EN PODCATS <br>
+	 	<div class="ml-2 podcast-tittle">ESTAS EN PODCAST <br>
 	 	<h5 class="font-weight-bold " >¡Empieza a escuchar!</h5>
     
    </div>
