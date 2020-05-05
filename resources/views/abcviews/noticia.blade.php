@@ -124,7 +124,7 @@
       <!--FIN ENCUESTA -->
             <!--share-->
       <h4 class="mt-3"><span class="badge badge-primary">Comparte esta noticia<i class="fas fa-share-alt text-white ml-1"></i></span></h4>
-     <div class="d-flex">
+     <div class="d-flex mb-2">
        <div class="mr-2"><div class="fb-share-button" 
     data-href="http://www.radioabcstereo.com/nota/{{$nota->ID}}_{{Str::slug($nota->Titular,'-')}}"  
     data-layout="button_count">
