@@ -7,7 +7,7 @@
 
      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
    
-    <title>{{$titulo}} ABC | Stereo</title>
+    <title>{{$titulo}} | ABC Stereo</title>
     <meta name="author" content="Eli José Moncada" />
     <meta name="keywords" content="radio abc stereo, radio abc estereo, radio abc, noticias abc, noticias esteli, noticias madriz, noticias nueva segovia, noticias nicaragua, escuchar radio abc, escuchar abc, radio abc estereo 99.7"/>
 
