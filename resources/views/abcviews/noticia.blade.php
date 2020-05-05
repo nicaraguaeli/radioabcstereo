@@ -122,6 +122,23 @@
      </div>
    
       <!--FIN ENCUESTA -->
+            <!--share-->
+      <h4 class="mt-3"><span class="badge badge-primary">Comparte esta noticia<i class="fas fa-share-alt text-white ml-1"></i></span></h4>
+     <div class="d-flex">
+       <div class="mr-2"><div class="fb-share-button" 
+    data-href="http://www.radioabcstereo.com/nota/{{$nota->ID}}_{{Str::slug($nota->Titular,'-')}}"  
+    data-layout="button_count">
+  </div></div>
+       <div class="mr-2">
+         <a style="border-radius: 3px; background: #1da1f2;" target="_blank " href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button  text-white pl-2 pr-2" data-show-count="true">Tweet</a>
+       </div>
+       <div class="mr-2"><a style="border-radius: 3px;" class="badge-info text-white pl-2 pr-2 bg-dark" href="mailto:?subject=Noticia&amp;body=Noticia ABC http://www.radioabcstereo.com/nota/{{$nota->ID}}_{{Str::slug($nota->Titular,'-')}}"
+   title="Compartir por correo">
+  <i class="fal fa-envelope mr-1" style="font-size: 12px;"></i><span>Email</span>
+</a></div>
+     </div>
+
+  <!--FinShare-->
     </div>
   </div>
   <div class="col-lg-3 wow fadeInUp border-left lomas gris  ">
@@ -169,23 +186,6 @@
 
     </div>
       
-
-      <h4 class="mt-3"><span class="badge badge-primary">Comparte esta noticia<i class="fas fa-share-alt text-white ml-1"></i></span></h4>
-     <div class="d-flex">
-       <div class="mr-2"><div class="fb-share-button" 
-    data-href="http://www.radioabcstereo.com/nota/{{$nota->ID}}_{{Str::slug($nota->Titular,'-')}}"  
-    data-layout="button_count">
-  </div></div>
-       <div class="mr-2">
-         <a style="border-radius: 3px; background: #1da1f2;" target="_blank " href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button  text-white pl-2 pr-2" data-show-count="true">Tweet</a>
-       </div>
-       <div class="mr-2"><a style="border-radius: 3px;" class="badge-info text-white pl-2 pr-2 bg-dark" href="mailto:?subject=Noticia&amp;body=Noticia ABC http://www.radioabcstereo.com/nota/{{$nota->ID}}_{{Str::slug($nota->Titular,'-')}}"
-   title="Compartir por correo">
-  <i class="fal fa-envelope mr-1" style="font-size: 12px;"></i><span>Email</span>
-</a></div>
-     </div>
-
-  
 
 
      
