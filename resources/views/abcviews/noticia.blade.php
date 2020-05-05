@@ -82,7 +82,47 @@
  <div class="row mt-3">
   <div class="col-lg-9">
     
-    <div id="contenido-nota" >{!! $nota->Contenido !!}{!! $nota->Contenido2 !!}</div>
+    <div id="contenido-nota" >{!! $nota->Contenido !!}{!! $nota->Contenido2 !!}
+
+
+   <!--ENCUESTA -->
+     <div class="row">
+       <div class="col-lg-9">
+            <section id="encuesta" class="container mt-5 wow fadeInUp" >
+       
+        <h3>¿ Te fue de interés esta noticia ?</h3>
+        <h5>Regálanos un minuto por favor.</h5>
+        <div class="card">
+          <form class="form" >
+          
+
+<h5 class="text-center">Danos tu calificación:</h5>
+<div class="custom-control custom-radio form-group border-bottom ">
+  <input type="radio" checked="" class="custom-control-input" id="defaultGroupExample1" name="groupOfDefaultRadios" value="{{$nota->ID}}-Definitivamente" >
+  <label class="custom-control-label" for="defaultGroupExample1">Si, definitivamente</label>
+</div>
+
+<!-- Group of default radios - option 2 -->
+<div class="custom-control custom-radio form-group border-bottom">
+  <input type="radio" class="custom-control-input" id="defaultGroupExample2" name="groupOfDefaultRadios"  value="{{$nota->ID}}-Interesante">
+  <label class="custom-control-label" for="defaultGroupExample2">No, es poco interesante</label>
+</div>
+
+<!-- Group of default radios - option 3 -->
+<div class="custom-control custom-radio form-group border-bottom">
+  <input type="radio" class="custom-control-input" id="defaultGroupExample3" name="groupOfDefaultRadios" value="{{$nota->ID}}-Indiferente">
+  <label class="custom-control-label" for="defaultGroupExample3">Me es indiferente</label>
+</div>
+<button type="button" id="btn-encuesta" class="btn btn-primary text-white" >Calificar</button>
+
+          </form>
+        </div>
+     </section>
+       </div>
+     </div>
+   
+      <!--FIN ENCUESTA -->
+    </div>
   </div>
   <div class="col-lg-3 wow fadeInUp border-left lomas gris  ">
         <div class="row">
@@ -148,43 +188,7 @@
   
 
 
-     <!--ENCUESTA -->
-     <div class="row">
-       <div class="col-lg-9">
-            <section id="encuesta" class="container mt-5 wow fadeInUp" >
-       
-        <h3>¿ Te fue de interés esta noticia ?</h3>
-        <h5>Regálanos un minuto por favor.</h5>
-        <div class="card">
-          <form class="form" >
-          
-
-<h5 class="text-center">Danos tu calificación:</h5>
-<div class="custom-control custom-radio form-group border-bottom ">
-  <input type="radio" checked="" class="custom-control-input" id="defaultGroupExample1" name="groupOfDefaultRadios" value="{{$nota->ID}}-Definitivamente" >
-  <label class="custom-control-label" for="defaultGroupExample1">Si, definitivamente</label>
-</div>
-
-<!-- Group of default radios - option 2 -->
-<div class="custom-control custom-radio form-group border-bottom">
-  <input type="radio" class="custom-control-input" id="defaultGroupExample2" name="groupOfDefaultRadios"  value="{{$nota->ID}}-Interesante">
-  <label class="custom-control-label" for="defaultGroupExample2">No, es poco interesante</label>
-</div>
-
-<!-- Group of default radios - option 3 -->
-<div class="custom-control custom-radio form-group border-bottom">
-  <input type="radio" class="custom-control-input" id="defaultGroupExample3" name="groupOfDefaultRadios" value="{{$nota->ID}}-Indiferente">
-  <label class="custom-control-label" for="defaultGroupExample3">Me es indiferente</label>
-</div>
-<button type="button" id="btn-encuesta" class="btn btn-primary text-white" >Calificar</button>
-
-          </form>
-        </div>
-     </section>
-       </div>
-     </div>
-   
-      <!--FIN ENCUESTA -->
+     
 
 
 

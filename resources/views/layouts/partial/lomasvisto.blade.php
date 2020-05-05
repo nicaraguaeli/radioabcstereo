@@ -5,7 +5,7 @@
 
         <div id="card-content" class="container">
          @foreach($masvisto as $mas)
-         <a href="{{url('nota',$mas->ID.'_'.Str::slug($mas->Titular,'-'))}}">
+         <a class="text-decoration-none" href="{{url('nota',$mas->ID.'_'.Str::slug($mas->Titular,'-'))}}">
            <div class="card" >
   <img src="{{asset(''.$mas->Imagen)}}" class="card-img-top" alt="...">
   <div class="card-body text-white azul-claro" >

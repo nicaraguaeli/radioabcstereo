@@ -92,7 +92,10 @@ return view('abcviews.audio',['pod'=>$pod])->with('titulo','Podcast');
 
 });
 
-
+Route::get('transmisiones', function()
+{
+   return view('abcviews.podcastall',['transmisiones'=>DB::table('transmisions')->orderBy('id','desc')->paginate(30)]);
+});
 
 
 

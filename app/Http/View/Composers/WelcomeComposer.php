@@ -22,7 +22,7 @@ class WelcomeComposer
       
        $mes = new getMes();
 
-      $transmision = Transmision::latest()->get()->take(6);
+      $transmision = Transmision::latest()->get()->take(4);
 
 
       $noticias = DB::table('ABCnoticias')->orderBy('ID','desc')->where('Estado','Publicado')->take(5)
