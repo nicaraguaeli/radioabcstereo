@@ -17,7 +17,7 @@
 <th>Nº</th>
 <th>Fecha Publicacion</th>
 <th>Autor</th>
-<th>Url</th>
+<th>Imagen</th>
 <th>Descripción</th>
 <th>Tipo</th>
 <th>Acciones</th>
@@ -28,7 +28,7 @@
 <td>#</td>
 <td>{{$video->created_at}}</td>
 <td>{{$video->autor}}</td>
-<td>{{$video->url}}</td>
+<td><img style="width: 150px;" class="img-fluid" src="{{asset('').$video->thumbnail}}" alt=""></td>
 <td>{{$video->descripcion}}</td>
 <td>{{$video->tipo}}</td>
 <td>

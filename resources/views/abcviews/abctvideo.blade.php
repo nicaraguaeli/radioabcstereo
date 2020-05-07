@@ -29,7 +29,7 @@
 				<div class="col-lg-9">
 					<div  class="embed-responsive embed-responsive-16by9 youtube-video" style="width: inherit; background-color: black;">
 						
-					<iframe class="embed-responsive-item" onload="{{$video->id}}"  id="frame" style="width: inherit;" height="400" src="{{$video->url}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
+					{!!$video->frame!!}
 						
  				
  				
@@ -104,23 +104,5 @@
 
 
                
-			<script>
-	 $(function() {
-    
-    function count(e) {
-        $.ajax({
-            url: "{{url('countview')}}",
-            method: "get",
-            data: {
-                id: e
-            }
-        })
-    }
-
-    id = $("#frame").attr("onload");
-    count(id);
-
-});
-	
-</script>
+<script>$(function(){var a;a={{$video->id}},$.ajax({url:"{{url('countview')}}",method:"get",data:{id:a}})}); </script>
 @endsection

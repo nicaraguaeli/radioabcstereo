@@ -51,7 +51,7 @@ class AbctvController extends Controller
         if(Request()->file('imagen'))
         {
             Request()->validate([
-                'url' => 'required|max:100',
+                'url' => 'required|max:500',
                 'descripcion'=> 'required',
                 'autor'=> 'required',
                 'tipo'=> 'required',
@@ -60,7 +60,8 @@ class AbctvController extends Controller
             ]);
  
         $abctv = new Abctv;
-        $abctv->url = Request()->url;
+        $abctv->url = "null";
+        $abctv->frame = Request()->url;
         $abctv->descripcion = Request()->descripcion;
         $abctv->autor = Request()->autor;
         $abctv->titulo = Request()->titulo;
@@ -125,7 +126,7 @@ class AbctvController extends Controller
           if(Request()->file('imagen'))
         {
             Request()->validate([
-                'url' => 'required|max:100',
+                'url' => 'required|max:500',
                 'descripcion'=> 'required',
                 'autor'=> 'required',
                 'tipo'=> 'required',
@@ -134,7 +135,8 @@ class AbctvController extends Controller
             ]);
  
         $abctv = Abctv::find($id);
-        $abctv->url = Request()->url;
+        $abctv->url = "null";
+        $abctv->frame = Request()->url;
         $abctv->descripcion = Request()->descripcion;
         $abctv->autor = Request()->autor;
         $abctv->titulo = Request()->titulo;
@@ -168,7 +170,8 @@ class AbctvController extends Controller
             ]);
             
         $abctv = Abctv::find($id);
-        $abctv->url = Request()->url;
+        $abctv->url = "null";
+        $abctv->frame = Request()->url;
         $abctv->descripcion = Request()->descripcion;
         $abctv->autor = Request()->autor;
         $abctv->titulo = Request()->titulo;

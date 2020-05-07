@@ -29,9 +29,9 @@
            
                 
                  <div class="form-group row">
-                    <label for="inputEmail3" class="col-sm-2 col-form-label">Url del Video</label>
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Código de inserción del Video</label>
                     <div class="col-sm-12">
-                      <input required name="url" type="text" class="form-control" id="inputEmail3" placeholder="Url">
+                      <input required name="url" type="text" class="form-control" id="inputEmail3" placeholder="Codigo">
                     </div>
                   </div>
                    <div class="form-group row">
