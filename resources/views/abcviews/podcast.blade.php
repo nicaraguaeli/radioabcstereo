@@ -76,7 +76,7 @@ Your browser does not support the audio element.
 
 <div class="row ">
 	<div class="col-lg-6 " style="background: #cacaca;">
-    <h6 class="text-center p-2 azul-claro text-white" >ESTAS EN PODCAST ABC <br>Selecciona un audio de nuestra lista y dale play</h6>
+    <h6 class="text-center p-2 azul-claro text-white font-weight-bold" >ESTAS EN PODCAST ABC <br>Selecciona un audio de nuestra lista y dale play</h6>
 	<ul class="list-unstyled mt-2">
 
 		@foreach($podcast as $pod)
@@ -155,7 +155,7 @@ border-radius: 10px;">
 <!-- Button trigger modal -->
 
 
-<
+
 
 
 <script>
