@@ -127,6 +127,9 @@
       <li class="nav-item nav-link-hover">
         <a class="nav-link text-white mr-3" href="{{url('abctv')}}">ABCtv</a>
       </li>
+      <li class="nav-item nav-link-hover">
+        <a class="nav-link text-white mr-3" href="{{url('abc/podcast')}}">Podcast</a>
+      </li>
          <li class="nav-item">
         <a  class="nav-link text-white  mr-3 nav-link-hover" href="{{url('empleos')}}"><span >Empleos</span></a>
       </li>

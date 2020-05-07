@@ -51,7 +51,9 @@
 	  </a>
 <div class="row">
 	<div class="col-md-12">
+		 <a href="{{url('abc/podcast')}}">
 			<img class="img-fluid mt-2 bg-dark" src="{{asset('img/PODCAST-IMG.png')}}" alt="">
+	     </a>
 	</div>
 
 	 	<div class="col-md-12 mt-3 wow fadeIn">
