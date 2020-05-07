@@ -60,6 +60,8 @@
      <a class="ml-2" href="{{url('abc/podcast',$cat->categoria)}}"><h4><span class="badge badge-info">{{$cat->categoria}}</span></h4></a>
     
 @endforeach
+ 
+
    </div>
    
    
@@ -74,6 +76,7 @@ Your browser does not support the audio element.
 
 <div class="row ">
 	<div class="col-lg-6 " style="background: #cacaca;">
+    <h6 class="text-center p-2 azul-claro text-white" >ESTAS EN PODCAST ABC <br>Selecciona un audio de nuestra lista y dale play</h6>
 	<ul class="list-unstyled mt-2">
 
 		@foreach($podcast as $pod)
@@ -85,7 +88,7 @@ border-radius: 10px;">
 	<div class="d-flex">
 		
 
-		<div class="align-self-center"  ><button  name="{{asset(''.$pod->url)}}-{{$pod->id}}" class="btn play-podcast"><i style="font-size: 2rem;" class="fas fa-play-circle  ml-2 "></i></button></div>
+		<div class="align-self-center"  ><button title="play"  name="{{asset(''.$pod->url)}}-{{$pod->id}}" class="btn play-podcast"><i style="font-size: 2rem;" class="fas fa-play-circle  ml-2 "></i></button></div>
 		<div class="ml-2 align-self-center">{{$pod->titulo}} </div>
 
 	</div>
@@ -104,8 +107,8 @@ border-radius: 10px;">
 	 
 	 <div class="d-flex border-bottom mt-2">
 	 	<div><img id="img-podcast" width="128" src="https://www.bbva.com/wp-content/uploads/2018/08/Podcast-bbva-1024x678.jpg" alt=""></div>
-	 	<div class="ml-2 podcast-tittle">ESTAS EN PODCAST <br>
-	 	<h5 class="font-weight-bold " >¡Empieza a escuchar!</h5>
+	 	<div class="ml-2 podcast-tittle"><br>
+	 	<h5 class="font-weight-bold " ></h5>
     
    </div>
 	 </div>
