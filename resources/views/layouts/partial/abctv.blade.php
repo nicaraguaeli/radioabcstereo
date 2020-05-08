@@ -13,12 +13,13 @@
                    <div class="card border-0 wow fadeInUp" >
   <div  class="embed-responsive embed-responsive-16by9 youtube-video" style=" background-color: black;">
 						
-					<iframe class="embed-responsive-item"   id="frame"  height="400" src="{{$abctvdes->url}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
+					{!!$abctvdes->frame!!}
 						
  				
  				
                  
  			</div>
+					
   <div class="card-body" >
     <div class="row justify-content-between">
       <div class="col-xs-6"><p class="card-text wow bounceInLeft"><a class="text-dark h4" href="{{url('abctvsearch',$abctvdes->id.'_'.Str::slug($abctvdes->titulo,'-'))}}">{{$abctvdes->titulo}}</a></p></div>
