@@ -51,7 +51,7 @@ class AbctvController extends Controller
         if(Request()->file('imagen'))
         {
             Request()->validate([
-                'url' => 'required|max:500',
+                'url' => 'required',
                 'descripcion'=> 'required',
                 'autor'=> 'required',
                 'tipo'=> 'required',
@@ -126,7 +126,7 @@ class AbctvController extends Controller
           if(Request()->file('imagen'))
         {
             Request()->validate([
-                'url' => 'required|max:500',
+                'url' => 'required',
                 'descripcion'=> 'required',
                 'autor'=> 'required',
                 'tipo'=> 'required',
@@ -161,7 +161,7 @@ class AbctvController extends Controller
         }else
         {
             Request()->validate([
-                'url' => 'required|max:100',
+                'url' => 'required',
                 'descripcion' => 'required',
                 'autor' => 'required',
                 'tipo' => 'required',
