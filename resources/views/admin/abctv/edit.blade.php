@@ -30,9 +30,9 @@
            
                 
                  <div class="form-group row">
-                    <label for="inputEmail3" class="col-sm-2 col-form-label">Url del Video</label>
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Código de inserción del video</label>
                     <div class="col-sm-12">
-                      <input required value="{{$video->url}}" name="url" type="text" class="form-control" id="inputEmail3" placeholder="Url">
+                      <input required value="{{$video->frame}}" name="url" type="text" class="form-control" id="inputEmail3" placeholder="Codigo">
                     </div>
                   </div>
                    <div class="form-group row">
