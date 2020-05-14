@@ -217,9 +217,32 @@ class HomeController extends Controller
     public function buscar()
     {
        
-       $count = Noticia::where([['Titular','like','%'.Request()->buscar.'%'],['Contenido','like','%'.Request()->buscar.'%']])->count();
+       $count = Noticia::where([
+        ['Titular','like','%'.Request()->buscar.'%'],
+        ['Estado','Publicado']
+    ])->orWhere([
+        ['Contenido','like','%'.Request()->buscar.'%'],
+        ['Estado','Publicado']
+    ])->orWhere([
+        ['entrada',Request()->buscar],
+        ['Estado','Publicado']])->orderBy('ID','desc')->count();
       
-       $notas = Noticia::where([['Titular','like','%'.Request()->buscar.'%'],['Contenido','like','%'.Request()->buscar.'%'],['Estado','Publicado']])->orderBy('Ano','desc')->orderBy('Mes','desc')->paginate(16);
+       
+      
+
+
+       $notas = Noticia::where([
+        ['Titular','like','%'.Request()->buscar.'%'],
+        ['Estado','Publicado']
+    ])->orWhere([
+        ['Contenido','like','%'.Request()->buscar.'%'],
+        ['Estado','Publicado']
+    ])->orWhere([
+        ['entrada',Request()->buscar],
+        ['Estado','Publicado']])->orderBy('ID','desc')->paginate(20);
+       
+
+
        return view('abcviews.resultados',compact('notas'))->with('i')->with('buscar',Request()->buscar)->with('count',$count);
 
         return redirect('dashboard')->with('status', 'Profile updated!');
