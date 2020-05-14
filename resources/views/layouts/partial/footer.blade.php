@@ -56,7 +56,7 @@
  	<div class="col-md-12 text-center">
  	<div>
  		<img width="50px" src="{{asset('img/brand.png')}}" alt="Logo">
- 		<p style="line-height: 0.8" class="text-white">Radio ABC Stereo {{now()->year}}-2018 <br> Desarrollado por </p><span><a target="_blank" href="https://www.facebook.com/ArcedDesarrollo">ARCED</a></span>
+ 		<h6 style="line-height: 0.8" class="text-white">Radio ABC Stereo {{now()->year}}-2018 <br> Desarrollado por </h6><span><a target="_blank" href="https://www.facebook.com/ArcedDesarrollo">ARCED</a></span>
  	</div>
  	</div>
  </div>
