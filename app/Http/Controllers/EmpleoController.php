@@ -52,8 +52,8 @@ class EmpleoController extends Controller
           Request()->validate([
           'pais'=>'required',
           'city_id'=>'required',
-          'cargo'=>'required|max:35',
-          'empleador'=>'required|max:35',
+          'cargo'=>'required',
+          'empleador'=>'required',
           'descripcion' =>'required',
           'expiracion'=> 'required|date',
 
@@ -113,8 +113,8 @@ class EmpleoController extends Controller
              Request()->validate([
           'pais'=>'required',
           'city_id'=>'required',
-          'cargo'=>'required|max:35',
-          'empleador'=>'required|max:35',
+          'cargo'=>'required',
+          'empleador'=>'required',
           'descripcion' =>'required',
           'expiracion'=> 'required|date',
 

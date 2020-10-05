@@ -118,7 +118,7 @@
                <li class="nav-item">
                 <a href="{{route('transmision.index')}}" class="nav-link">
                   <i class="fas fa-signal mr-2"></i>
-                  <p>Transmisiones</p>
+                  <p>Facebook Live</p>
                 </a>
               </li>
                 <li class="nav-item">

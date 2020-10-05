@@ -196,10 +196,32 @@ class NoticiaController extends Controller
     $periodistas = Periodista::all();
 
     $ubicacion = explode('-', $nota->Ciudad);
+
+            
+            $date_old = now()->subDays(5);
+            $destacado = DB::table('ABCnoticias')->orderBy('Leido','desc')->where(
+                [
+                  ['Mes',$date_old->month],
+                  ['Ano',$date_old->year],
+                  ['Dia','<',$date_old->day],
+                  ['Area','Local'],
+                  
+                  ])
+                  ->orWhere(
+                    [
+                      ['Mes',$mes->getmes($date_old->month)],
+                      ['Ano',$date_old->year],
+                      ['Dia','>',$date_old->day],
+                      ['Area','Local'],
+                     
+                      ])->take(8)->get();
+
+
+
     if(sizeof($ubicacion) == 2)
     {
 
-       return view('abcviews.noticia',['nota'=>$nota,'periodistas'=>$periodistas,'fecha'=>$fecha])->with('titulo',$nota->Titular)->with('noticiasRam',$noticiasRam);
+       return view('abcviews.noticia',['nota'=>$nota,'periodistas'=>$periodistas,'fecha'=>$fecha])->with('destacado',$destacado)->with('titulo',$nota->Titular)->with('noticiasRam',$noticiasRam);
     }
     elseif(sizeof($ubicacion) == 1 && $ubicacion[0] != null)
     {     
@@ -209,11 +231,11 @@ class NoticiaController extends Controller
             {
                  $pais = Country::find($ciudad->country_id);
                  $nota->Ciudad = $ciudad->name.'-'.$pais->name;
-                 return view('abcviews.noticia',['nota'=>$nota,'periodistas'=>$periodistas,'fecha'=>$fecha])->with('titulo',$nota->Titular)->with('noticiasRam',$noticiasRam);
+                 return view('abcviews.noticia',['nota'=>$nota,'periodistas'=>$periodistas,'fecha'=>$fecha])->with('destacado',$destacado)->with('titulo',$nota->Titular)->with('noticiasRam',$noticiasRam);
 
             }else
             {
-                return view('abcviews.noticia',['nota'=>$nota,'periodistas'=>$periodistas,'fecha'=>$fecha])->with('titulo',$nota->Titular)->with('noticiasRam',$noticiasRam);
+                return view('abcviews.noticia',['nota'=>$nota,'periodistas'=>$periodistas,'fecha'=>$fecha])->with('destacado',$destacado)->with('titulo',$nota->Titular)->with('noticiasRam',$noticiasRam);
             }
 
          
@@ -226,7 +248,7 @@ class NoticiaController extends Controller
     }
     else
     {
-         return view('abcviews.noticia',['nota'=>$nota,'periodistas'=>$periodistas,'fecha'=>$fecha])->with('titulo',$nota->Titular)->with('noticiasRam',$noticiasRam);
+         return view('abcviews.noticia',['nota'=>$nota,'periodistas'=>$periodistas,'fecha'=>$fecha])->with('destacado',$destacado)->with('titulo',$nota->Titular)->with('noticiasRam',$noticiasRam);
 
     }
     
@@ -481,7 +503,7 @@ class NoticiaController extends Controller
     public function destroy($id)
     {
         //
-         
+        
          DB::table('ABCnoticias')->where('ID',$id)->delete();
          return redirect('noticia')->with('status', 'La noticia ha sido Eliminada!');
      

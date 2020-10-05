@@ -8,7 +8,7 @@
           <div class="card card-outline card-info">
             <div class="card-header">
               <h3 class="card-title">
-                Información de la transmisión
+                Información sobre el facebook live
                
               </h3>
               <!-- tools box -->
@@ -29,7 +29,7 @@
            
                 
                  <div class="form-group row">
-                    <label for="inputEmail3" class="col-sm-2 col-form-label">Url de la transmisión</label>
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Url del facebook live</label>
                     <div class="col-sm-12">
                       <input required name="url" type="text" class="form-control" id="inputEmail3" placeholder="Url">
                     </div>
@@ -38,6 +38,13 @@
                     <label for="inputEmail3" class="col-sm-2 col-form-label">Título</label>
                     <div class="col-sm-12">
                       <input required name="titulo" type="text" class="form-control" id="inputEmail3" placeholder="Titulo">
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <label for="video" class="col-sm-2 col-form-label">Insertar código de video</label>
+                    <div class="col-sm-12">
+                      <textarea required name="video"  class="form-control" id="video" placeholder="Insertar video"></textarea>
                     </div>
                   </div>
                 

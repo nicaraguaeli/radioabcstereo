@@ -28,19 +28,19 @@ class TransmisionController extends Controller
 
     public function store()
     {
-
-    	Request()->validate(['url'=>'required|max:100','titulo'=>'required|max:100']);
+       
+    	Request()->validate(['url'=>'required|max:100','titulo'=>'required|max:100','video'=>'required']);
 
       
     	Transmision::create(Request()->all());
 
-    	return redirect('transmision')->with('status','La transmisión ha sido publicada');
+    	return redirect('transmision')->with('status','El facebook live ha sido publicado');
     }
    
     public function destroy($id)
     {
 
         Transmision::find($id)->delete();
-    	return redirect('transmision')->with('status','La transmisión ha sido eliminada');
+    	return redirect('transmision')->with('status','El facebook live ha sido eliminado');
     }
 }

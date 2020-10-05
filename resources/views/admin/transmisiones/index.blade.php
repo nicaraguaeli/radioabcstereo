@@ -4,7 +4,7 @@
 <div class="card card-primary card-outline">
 <div class="card-header">
 <div class="row">
-<div class="col sm-4"><a class="btn btn-block btn-secondary" href="{{route('transmision.create')}}">Agregar nueva transmisión</a></div>
+<div class="col sm-4"><a class="btn btn-block btn-secondary" href="{{route('transmision.create')}}">Agregar nuevo facebook live</a></div>
  <div class="col sm-4"></div>
  <div class="col sm-4"></div>
 </div>
@@ -41,13 +41,13 @@
         <div class="modal-dialog">
           <div class="modal-content bg-danger">
             <div class="modal-header">
-              <h4 class="modal-title">¿ Deseas Eliminar ?</h4>
+              <h4 class="modal-title">¿ Deseas Eliminar ?<br>{{$trans->titulo}}</h4>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">×</span>
               </button>
             </div>
             <div class="modal-body">
-              <p>El dato sera borrado de la base de datos…</p>
+              <p>El dato sera eliminado de la base de datos…</p>
             </div>
             <div class="modal-footer justify-content-between">
               <button type="button" class="btn btn-outline-light" data-dismiss="modal">Cancelar</button>
@@ -70,7 +70,7 @@
 <div class="card card-primary card-outline">
 <div class="card-header">
 <div class="row">
- <div class="col sm-4"><a class="btn btn-block btn-secondary" href="{{route('transmision.create')}}">Agregar nueva transmisión</a></div>
+ <div class="col sm-4"><a class="btn btn-block btn-secondary" href="{{route('transmision.create')}}">Agregar nuevo facebook live</a></div>
  <div class="col sm-4"></div>
  <div class="col sm-4"></div>
 </div>

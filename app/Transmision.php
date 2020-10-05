@@ -11,5 +11,5 @@ class Transmision extends Model
     protected $table = 'transmisions';
     protected $primaryKey = 'id';
 
-    protected $fillable = ['url','titulo'];
+    protected $fillable = ['url','titulo','video'];
 }
