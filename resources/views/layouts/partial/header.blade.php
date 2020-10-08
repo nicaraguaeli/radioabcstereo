@@ -122,7 +122,7 @@
 
 <div class="media-print">
 
-  <nav class="navbar navbar-expand-lg  navbar-fixed bg-white container p-0 fixed-sm-top shadow">
+  <nav class="navbar navbar-expand-lg  navbar-fixed bg-white container p-0 fixed-sm-top " style="border-bottom: 2px solid #dee2e6!important;">
     <a id="logo-small" class="navbar-brand text-white pl-2 " href="{{url('/')}}"><img width="50px" src="{{asset('img/brand.png')}}" alt="Logo"></a>
    
 
