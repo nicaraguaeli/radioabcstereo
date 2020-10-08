@@ -74,15 +74,19 @@
 
           <div class="col-md-8 align-self-center p-0">
             <div class=" mr-2 float-right">
+              <a href="{{url('escuchar')}}" target="_blank">
               <i class="fas fa-play-circle" style="font-size: 3rem;"></i>
+              </a>
             </div>
 
           </div>
           <div class="col-md-4 align-self-center p-0">
+          <a href="{{url('escuchar')}}" target="_blank">
             <div class="font-weight-bold " style="line-height: 16px;  font-size: 1.1rem; color: #006097;">
               ESCÚCHANOS <br> EN VIVO
 
             </div>
+          </a>
           </div>
           <div class="col-md-12">
             <div class="float-right" style="max-width: 14rem;">
