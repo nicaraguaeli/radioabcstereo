@@ -6,7 +6,7 @@
 <meta property="og:description" content="{{   Str::limit($nota->entrada, 150, '...')    }}" />
 <meta property="og:image" content="http://www.radioabcstereo.com/{{$nota->Imagen}}" />
 
-<meta name="keywords" content="{{ str_replace(' ',',',$nota->Titular)}}"/>
+<meta name="keywords" content="{{ str_replace(' ',',',$nota->Titular)}}" />
 
 @endsection
 @section('contenido')
@@ -154,7 +154,7 @@
         </blockquote>
       </div>
 
-      
+
       <!--end-widget-->
 
       <!--fin-contenido-->
@@ -216,9 +216,9 @@
                 </div>
                 <div class="align-self-center">
                   <div class="pl-2">
-                  <span class=" badge badge-danger">{{$ram->Area}}</span>
+                    <span class=" badge badge-danger">{{$ram->Area}}</span>
                   </div>
-                
+
                   <p class="pl-2">{{$ram->Titular}}</p>
 
 
@@ -256,33 +256,36 @@
     <!--FIN--FILA-PRINCIPAL-->
 
     <!--Fila-secundaria-->
-    <div class="col-12 col-md-3 col-lg-3 d-none d-sm-none d-md-block  ">
+    <div class="col-12 col-md-3 col-lg-3 d-none d-md-block  ">
       <div class="destacado-fixed print-hidden">
         <h5 class="font-weight-bold">TE PUEDE INTERESAR</h5>
         @foreach($destacado as $de)
         <a class="text-dark" href="{{url('nota',$de->ID.'_'.Str::slug($de->Titular,'-'))}}">
-        <div class="row">
+          <div class="row">
 
-          <div class="col-6">
-            <img class=" img-thumbnail" src="{{asset(''.$de->Imagen)}}" alt="Cargando..">
-          </div>
-          <div class="col-6">
-           
-            <h6>{{$de->Titular}}</h6>
-          </div>
+            <div class="col-6">
+              <img class=" img-thumbnail" src="{{asset(''.$de->Imagen)}}" alt="Cargando..">
+            </div>
+            <div class="col-6">
 
-        </div>
+              <h6>{{$de->Titular}}</h6>
+            </div>
+
+          </div>
         </a>
         @endforeach
 
         <!--fb-widget-->
-        <div id="fb-root"></div>
-        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v6.0"></script>
-        <div class="fb-page" data-href="https://www.facebook.com/radioabcesteli" data-tabs="timeline" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
-          <blockquote cite="https://www.facebook.com/radioabcesteli" class="fb-xfbml-parse-ignore">
-            <a href="https://www.facebook.com/radioabcesteli">Radio ABC Stereo</a>
-          </blockquote>
-        </div>
+        
+          <div id="fb-root" class=""></div>
+          <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v6.0"></script>
+          <div class="fb-page " data-href="https://www.facebook.com/radioabcesteli" data-tabs="timeline" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+            <blockquote cite="https://www.facebook.com/radioabcesteli" class="fb-xfbml-parse-ignore">
+              <a href="https://www.facebook.com/radioabcesteli">Radio ABC Stereo</a>
+            </blockquote>
+          </div>
+        
+
 
 
         <!--end-widget-->
@@ -303,22 +306,39 @@
 </div>
 
 <script>
-  $(function(){$("#btn-encuesta").click(function(a){a.preventDefault(),id=$("input[name='groupOfDefaultRadios']:checked").val(),$.ajax({url:"{{url('calificacion')}}",type:"get",data:{id:id},success:function(a){$("#modalencuesta").modal("show"),$("#encuesta").css("display","none")}})})
-   $('iframe').addClass('embed-responsive-item').wrap( "<div class='embed-responsive embed-responsive-16by9'></div>" );
-   $('#contenido-nota').addClass('format').children('p').addClass('format');
-    
-});
+  $(function() {
+    $("#btn-encuesta").click(function(a) {
+      a.preventDefault(), id = $("input[name='groupOfDefaultRadios']:checked").val(), $.ajax({
+        url: "{{url('calificacion')}}",
+        type: "get",
+        data: {
+          id: id
+        },
+        success: function(a) {
+          $("#modalencuesta").modal("show"), $("#encuesta").css("display", "none")
+        }
+      })
+    })
+    $('iframe').addClass('embed-responsive-item').wrap("<div class='embed-responsive embed-responsive-16by9'></div>");
+    $('#contenido-nota').addClass('format').children('p').addClass('format');
 
+  });
 </script>
 <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  (function(i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function() {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
   ga('create', 'UA-86035316-1', 'auto');
   ga('send', 'pageview');
-
 </script>
 
 

@@ -122,7 +122,7 @@
 
 <div class="media-print">
 
-  <nav class="navbar navbar-expand-lg  navbar-fixed bg-white container p-0 fixed-sm-top ">
+  <nav class="navbar navbar-expand-lg  navbar-fixed bg-white container p-0 fixed-sm-top shadow">
     <a id="logo-small" class="navbar-brand text-white pl-2 " href="{{url('/')}}"><img width="50px" src="{{asset('img/brand.png')}}" alt="Logo"></a>
    
 
@@ -137,7 +137,7 @@
       <span class="mr-1 text-dark font-weight-bold">MENU</span><i class="far fa-bars text-dark" style="font-size: 1rem;"></i>
     </button>
     <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
-      <div class="container border-top" style="box-shadow: 0 5px 7px -6px rgba(0,0,0,.5);">
+      <div class="container border-top" >
 
         <ul class="navbar-nav justify-content-between text-uppercase font-weight-bold text-md-center " style="font-size: 1rem; width: 100%;">
           <li class="nav-item buscador py-2" style="display: none;">
