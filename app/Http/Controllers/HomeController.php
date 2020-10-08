@@ -48,23 +48,23 @@ class HomeController extends Controller
         $mes = new getMes();
 
         //Obtener noticias 5 dias antes tomar 20 y mostrar 4 aleatorias
-        
+        $old = now()->subDays(7);
         $noticiasR = DB::table('ABCnoticias')->where(
             [
                 ['Estado', 'Publicado'],
                 ['Mes', $mes->getmes(now()->month)],
-               
+                ['Dia','>',$old],
                 ['Ano', now()->year],
                 ['ID', '!=', $id]
             ]
         )->orWhere([
             ['Estado', 'Publicado'],
-            
+            ['Dia','>',$old],
             ['Mes', now()->month],
             ['Ano', now()->year],
             ['ID', '!=', $id]
 
-        ])->orderBy('Dia', 'desc')->inRandomOrder()->take(15)->get();
+        ])->inRandomOrder()->take(15)->get();
         
         
 
@@ -80,6 +80,7 @@ class HomeController extends Controller
                 $noticiasRam[$i] = $noticiasR[$i];
             }
         } else {
+
             $noticiasRam = $noticiasR;
         }
 
@@ -91,7 +92,7 @@ class HomeController extends Controller
 
             $nota = Noticia::where('Estado', 'Publicado')->findOrFail($id);
 
-            $date_old = now()->subDays(7);
+            $date_old = now()->subDays(5);
 
             //consulta para obtener resultados de los ultimos 7 dias segun el tipo
             $destacado = DB::table('ABCnoticias')
@@ -115,12 +116,14 @@ class HomeController extends Controller
                 )->take(5)->get();
 
 
-            if (count($destacado) <= 0) {
+            if (count($destacado) == 0) {
                 $destacado = DB::table('ABCnoticias')
                     ->orderBy('Leido', 'desc')->where(
                         [
-
+                            ['Mes', $mes->getmes(now()->month)],
+                            ['Ano', now()->year],
                             ['Area', $nota->Area],
+                            ['ID', '!=', $id],
                             ['Estado', 'Publicado']
                         ]
                     )->take(5)->get();
