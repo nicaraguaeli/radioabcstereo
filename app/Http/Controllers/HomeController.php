@@ -53,13 +53,13 @@ class HomeController extends Controller
             [
                 ['Estado', 'Publicado'],
                 ['Mes', $mes->getmes(now()->month)],
-                ['Dia','>',$old],
+                ['Dia','>=',$old],
                 ['Ano', now()->year],
                 ['ID', '!=', $id]
             ]
         )->orWhere([
             ['Estado', 'Publicado'],
-            ['Dia','>',$old],
+            ['Dia','>=',$old],
             ['Mes', now()->month],
             ['Ano', now()->year],
             ['ID', '!=', $id]
@@ -100,8 +100,9 @@ class HomeController extends Controller
                     [
                         ['Mes', $date_old->month],
                         ['Ano', $date_old->year],
-                        ['Dia', '>', $date_old->day],
+                        ['Dia', '>=', $date_old->day],
                         ['Area', $nota->Area],
+                        ['ID', '!=', $id],
                         ['Estado', 'Publicado']
                     ]
                 )
@@ -109,8 +110,9 @@ class HomeController extends Controller
                     [
                         ['Mes', $mes->getmes($date_old->month)],
                         ['Ano', $date_old->year],
-                        ['Dia', '>', $date_old->day],
+                        ['Dia', '>=', $date_old->day],
                         ['Area', $nota->Area],
+                        ['ID', '!=', $id],
                         ['Estado', 'Publicado'],
                     ]
                 )->take(5)->get();
