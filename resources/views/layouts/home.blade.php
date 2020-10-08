@@ -9,12 +9,13 @@
    
     <title>{{$titulo}} | ABC Stereo</title>
     <meta name="author" content="Eli José Moncada" />
-    <meta name="keywords" content="radio abc stereo, radio abc estereo, radio abc, noticias abc, noticias esteli, noticias madriz, noticias nueva segovia, noticias nicaragua, escuchar radio abc, escuchar abc, radio abc estereo 99.7"/>
+    
 
     <!-- TECNOLOGIA SEO ARCED -->
     @isset($descripcion)
-    <meta name="description" content="{{$descripcion}}" />
+    <meta name="description" content="{{  Str::limit($descripcion, 150, '...')      }}" />
     @else
+     <meta name="keywords" content="radio abc stereo, radio abc estereo, radio abc, noticias abc, noticias esteli, noticias madriz, noticias nueva segovia, noticias nicaragua, escuchar radio abc, escuchar abc, radio abc estereo 99.7"/> 
      <meta name="description" content="Radio ABC Stereo, transmitiendo desde Estelí, Nicaragua. Escúchenos en línea e infórmese con las noticias más importantes." />
     @endif<!-- TECNOLOGIA SEO ARCED META INDEXACIÓN -->         
     <meta name="robots" content="Radio ABC Stereo, transmitiendo desde Estelí, Nicaragua. Escúchenos en línea e infórmese con las noticias más importantes." />
@@ -56,53 +57,43 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
-
+   
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="{{ asset('plugins/jquery.marquee.js') }}"></script>
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <!--<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">-->
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/animate.css') }}" rel="stylesheet">
     <link href="{{ asset('fontawesome/css/all.min.css') }}" rel="stylesheet">
-     <link href="{{ asset('css/fuentebig.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/fuentebig.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('css/css.css')}}" media="print">
-    <script
-        src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-        crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
      
-         <script src="{{asset('js/wow.min.js')}}"></script>
-           
-         
-              <script>
-                 new WOW().init();
-                 
-              </script>
-              <script>
- function clockUpdate(){var t=new Date;function c(t){return t<10?"0"+t:t}$(".digital-clock").css({color:"black"});var e,o=c((e=t.getHours())>12?e-12:0==e?12:e),n=c(t.getMinutes()),a=c(t.getSeconds());$(".digital-clock").text(o+":"+n+":"+a)}$(function(){clockUpdate(),setInterval(clockUpdate,1e3)});
-  $(function() {
-    $('marquee').mouseover(function() {
-        $(this).attr('scrollamount',0);
-    }).mouseout(function() {
-         $(this).attr('scrollamount',5);
-    });
-});
-   
-   
-
-      
-    
-
-  </script>
+       
+              
   <style>
 
     body
     {
-      font-family: "Nunito", sans-serif !important;
+      font-family: "Helvetica Neue", sans-serif !important;
+      
     }
-    
+    .container
+    {
+      max-width: 1500px;
+    }
+    .color-red
+    {
+      color: #006097;
+    }
+    .border-b
+{
+     border-bottom: 3px solid #125fbc !important;
+}
 
   </style>
    
@@ -123,24 +114,12 @@
 
 
   @include('layouts.partial.header')
-  @isset($noticias)
-  <div  class="franja bg-dark text-center">
- <marquee behavior="scroll" direction="left" style="max-width: 900px; font-size: 0.7rem;" >
   
-  @foreach($noticias as $nota)
-    <span class="badge badge-danger mr-2 text-uppercase">{{$nota->Ciudad}}</span><a class="text-white text-uppercase mr-3" href="{{url('nota',$nota->ID.'_'.Str::slug($nota->Titular,'-'))}}">{{$nota->Titular}}</a>
-    @endforeach
-   
-   </marquee>
- </div>  
-  @endif
  
  
- <div class="container-fluid" style="min-height: calc(100vh - 400px)">
-  <div class="container p-0">
-    @yield('contenido')
-  </div> 
- </div>
+ 
+  @yield('contenido')
+  
    
  
  @include('layouts.partial.footer')
@@ -153,6 +132,8 @@
             scrollTop: 0
         }, 1000);
     });
+  
+    
    });
  </script> 
  

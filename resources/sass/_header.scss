@@ -1,6 +1,16 @@
+.form-control
+{
+  &:focus
+  {
+    box-shadow: none !important;
+    border-bottom: 1px solid rgb(0,96,151) !important;
+  }
+  border: none !important;
+  border-bottom: 1px solid #cecece !important;
+}
 p
 {
-  font-size: 1.1rem !important;
+  font-size: 1.2rem !important;
 }
 .header
 {
@@ -13,11 +23,11 @@ p
 
    
 }
-.navbar
+.navbar-fixed
 {
 	
 	height: 40px;
-  box-shadow: 0px 1px 0px 0px inset #0067a2;
+  transition: all .5s;
   
 	
 }
@@ -77,6 +87,18 @@ p
   
 
 }
+.background-color-dark
+{
+  background-color: #18191a;
+}
+.text-dark-primary
+{
+  color: #e4e6eb !important;
+}
+.text-dark-secondary
+{
+  color: #b0b3b8 !important;
+}
 .gris
     {
       background: #e8e8e8 !important;
@@ -88,7 +110,37 @@ p
   &:hover
   {
     box-shadow: 0px -60px 0px 0px inset rgb(0,96,151) !important;
-   
+    .nav-link
+    {
+     
+        color: white !important;
+    
+      
+    }
+    
   }
+ 
+  
+  
 
+}
+
+.title-content
+{
+  background: linear-gradient( to top, black, rgba(255, 0, 0, 0) );
+}
+@media screen and(max-width: 576px)
+{
+  .font-size
+  {
+    font-size: 1.2rem !important; 
+  }
+  .fixed-sm-top
+  {
+    position: fixed !important;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+  }
 }

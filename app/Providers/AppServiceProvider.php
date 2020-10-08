@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Http\getMes;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\View;
 use App\Noticia;
@@ -19,6 +20,7 @@ class AppServiceProvider extends ServiceProvider
     {
         //
          
+        
     }
 
     /**
@@ -31,10 +33,19 @@ class AppServiceProvider extends ServiceProvider
         //
         Schema::defaultStringLength(191);
         
-       
+        $mes = new getMes();
 
+        $noticias = DB::table('ABCnoticias')->where('Estado','Publicado')->orderBy('ID','desc')->take(5)
+        ->get();
+
+        for ($i=0; $i < count($noticias) ; $i++) { 
+            # code...\
+           
+           $noticias[$i]->Mes  = $mes->getmes($noticias[$i]->Mes);
+             
+          }
      
-
-        View::share(['titulo'=>'Radio ABC Stereo | Inicio']);
+        
+        View::share(['titulo'=>'Radio ABC Stereo | Inicio','noticias'=>$noticias]);
     }
 }

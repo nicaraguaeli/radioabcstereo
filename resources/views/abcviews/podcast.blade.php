@@ -25,7 +25,10 @@
 
 
 </style>
- <div class="row mt-5">
+<div class="container">
+<br class="mt-5 mt-md-0 mt-lg-0">
+  <br class="mt-5 mt-md-0 mt-lg-0">
+<div class="row mt-5">
     	 
     <div class="col-lg-12">
     	
@@ -44,9 +47,11 @@
         
 
 	 </div>
+</div>
+ 
 
-
-	 <div class="row mt-2" style="background: #004064;">
+<div class="container">
+<div class="row mt-2" style="background: #004064;">
 	 	<div class="col-lg-12" >
 	 		<img class="img-fluid" src="{{asset('img/podcast.png')}}" alt="">
 
@@ -153,6 +158,8 @@ border-radius: 10px;">
 
 
 <!-- Button trigger modal -->
+</div>
+	
 
 
 

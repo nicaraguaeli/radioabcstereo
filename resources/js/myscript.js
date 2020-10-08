@@ -27,7 +27,7 @@ $("#spinner").fadeOut("slow", function(){
 //Fin Spin
 
 
-//ancho
+//width
 if($(window).width() < 990)
    {
        //Header
@@ -74,7 +74,7 @@ if($(window).width() < 990)
 
          $('.pagination').removeClass('pagination-sm');
    }
-//Fin ancho
+//Fin width
 $( window ).resize(function() {
    
    if($(window).width() < 990)
@@ -133,34 +133,60 @@ $( window ).resize(function() {
    }
 });
 
+ var width = $(window).width();
 
- $(window).scroll(function() {
+ $(window).on('scroll',function() {
   var height = $(window).scrollTop();
-  var ancho = $(window).width();
-
-  $('#formulario').removeClass('d-block').addClass('d-none');
   
 
-  if(height < 10 && ancho > 990) {
+  
+  
+
+ 
+  if(height < 250 && width > 990) {
      
-       $('.navbar').removeClass("fixed-top");
-       $('.hide-element').css('display','none').removeClass('ml-3 mt-2');
-       $('.nav-hidden').css('display','none');
-       $('.escuchanos-nav').css("display","none");
+       $('.navbar-fixed').removeClass("fixed-top ");
+
+       $('.hide-element').addClass('d-none').removeClass('ml-3 mt-2');
+       $('.nav-hidden').removeClass('d-block').addClass('d-sm-none');
+       $('.escuchanos-nav').removeClass('d-block').addClass('d-none');
 
 
      
-  } else if(height > 10 && ancho > 990) {
+  } else if(height > 250 && width > 990) {
    
-   $('.navbar').addClass("fixed-top");
+   $('.navbar-fixed').addClass("fixed-top");
+   
   
-   $('.hide-element').css('display','block').addClass('ml-3 mt-2');
-   $('.nav-hidden').css('display','block');
-   $('.escuchanos-nav').css("display","block");
+   $('.hide-element').addClass('ml-3 mt-2 d-block');
+   $('.nav-hidden').removeClass('d-sm-none').addClass('d-block');
+   $('.escuchanos-nav').removeClass('d-none').addClass('d-block');
   }
 });
 
- $('#btn-encuesta').click(function(event)
+//NOTICIA DESTACADA FIXED
+
+if(width > 990)
+{
+    $(window).on("scroll",function(){
+    height = $(window).scrollTop()
+    if(height >465)
+    {
+      $(".destacado-fixed").addClass('position-sticky').css({top: "4rem",right: "8rem",overflow: "scroll","max-height": "100%"})
+    }
+    else
+    {
+      $(".destacado-fixed").removeClass('position-sticky').removeAttr("style")
+    }
+    
+    
+    
+ });
+
+}
+ 
+
+ $('#btn-encuesta').on('click',function(event)
     {
       event.preventDefault();
        
@@ -195,7 +221,7 @@ request.fail(function( jqXHR, textStatus ) {
   //CONTENIDO NOTA
   $("#contenido-nota").find('img').each(function() {  
    
-   $(this).addClass('img-fluid');
+   $(this).addClass('w-100');
   });  
 
   //Fin CONTENIDO NOTA

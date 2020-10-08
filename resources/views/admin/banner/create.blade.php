@@ -41,7 +41,7 @@
                         <select required class="form-control" name="posicion">
                         
                        
-                          <option value="Header">Header |Ancho: 600px Alto: 100px</option>
+                          <option value="Header">Header |Ancho: 1080px Alto: 200px</option>
                            <option value="Aside">Aside |Ancho: 300px Alto:600px</option>
                             
                        

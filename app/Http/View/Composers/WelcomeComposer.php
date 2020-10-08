@@ -22,13 +22,34 @@ class WelcomeComposer
       
        $mes = new getMes();
 
-      $transmision = Transmision::latest()->get()->take(4);
+       //fecha 7 dias atras
+       $date_old = now()->subDays(7);
+       
+      //consulta para obtener resultados de los ultimos 7 dias
+       $destacado = DB::table('ABCnoticias')
+       ->orderBy('Leido','desc')->where(
+         [
+           ['Mes',$date_old->month],
+           ['Ano',$date_old->year],
+           ['Dia','>=',$date_old->day],
+           ['Estado','Publicado']
+           ])
+           ->orWhere(
+             [
+               ['Mes',$mes->getmes($date_old->month)],
+               ['Ano',$date_old->year],
+               ['Dia','>=',$date_old->day],
+               ['Estado','Publicado'],
+               ])->take(4)->get();
 
 
-      $noticias = DB::table('ABCnoticias')->orderBy('ID','desc')->where('Estado','Publicado')->take(5)
-     ->get();
 
-      $local = DB::table('ABCnoticias')->orderBy('ID','desc')->where([['Area','Local'],['Estado','Publicado']])->take(3)
+      $transmision = Transmision::latest()->get()->take(2);
+
+
+      
+
+      $local = DB::table('ABCnoticias')->orderBy('ID','desc')->where([['Area','Local'],['Estado','Publicado']])->take(4)
      ->get();
 
 
@@ -43,7 +64,7 @@ class WelcomeComposer
      
      
    
-     $departamental = DB::table('ABCnoticias')->orderBy('ID','desc')->where([['Area','Departamental'],['Estado','Publicado']])->take(3)
+     $departamental = DB::table('ABCnoticias')->orderBy('ID','desc')->where([['Area','Departamental'],['Estado','Publicado']])->take(5)
      ->get();
 
      for ($i=0; $i < count($departamental) ; $i++) { 
@@ -74,10 +95,12 @@ class WelcomeComposer
      }
 
       $abctvdes = Abctv::latest()->first();
+      
+      $podcast = DB::table('podcasts')->select('id','titulo','url','imagen')->latest()->get();
 
      
       
 
-        $view->with('local',$local)->with('departamental',$departamental)->with('nacional',$nacional)->with('internacional',$internacional)->with('abctvdes',$abctvdes)->with('transmision',$transmision)->with('i');
+        $view->with('podcast', $podcast->toJson())->with('destacado',$destacado)->with('local',$local)->with('departamental',$departamental)->with('nacional',$nacional)->with('internacional',$internacional)->with('abctvdes',$abctvdes)->with('transmision',$transmision)->with('i');
     }
 }

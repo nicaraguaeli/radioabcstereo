@@ -1,4 +1,4 @@
-.header, .franja ,footer, .lomas, #encuesta, #seccion-nota
+.print-hidden
 {
 	display: none !important;
 }
