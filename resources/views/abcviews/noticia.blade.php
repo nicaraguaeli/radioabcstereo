@@ -144,7 +144,25 @@
       </div>
 
       <!--FinShare-->
+      <div class="d-sm-block d-md-none">
+      <h5 class="font-weight-bold text-center">TE PUEDE INTERESAR</h5>
+        @foreach($destacado as $de)
+        <a class="text-dark" href="{{url('nota',$de->ID.'_'.Str::slug($de->Titular,'-'))}}">
+          <div class="row">
 
+            <div class="col-6 align-self-center">
+              <img class=" img-thumbnail" src="{{asset(''.$de->Imagen)}}" alt="Cargando..">
+            </div>
+            <div class="col-6 align-self-center">
+
+              <h6>{{$de->Titular}}</h6>
+            </div>
+
+          </div>
+        </a>
+        @endforeach
+        <hr>
+      </div>
       <!--fb-widget-->
       <div id="fb-root" class=""></div>
       <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v6.0"></script>
