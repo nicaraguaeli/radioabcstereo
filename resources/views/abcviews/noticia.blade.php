@@ -145,6 +145,7 @@
 
       <!--FinShare-->
       <div class="d-sm-block d-md-none">
+        <hr>
       <h5 class="font-weight-bold text-center">TE PUEDE INTERESAR</h5>
         @foreach($destacado as $de)
         <a class="text-dark" href="{{url('nota',$de->ID.'_'.Str::slug($de->Titular,'-'))}}">
