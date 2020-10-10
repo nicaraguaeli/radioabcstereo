@@ -88,7 +88,11 @@
     }
     .color-red
     {
-      color: #006097;
+      color: #f60b1b !important;
+    }
+    .bg-red
+    {
+      background-color: #f60b1b !important;
     }
     .border-b
 {

@@ -4,7 +4,7 @@
      <div class="card-body text-white">
        <div class="row justify-content-around">
          <div class="col-xs-6">
-            <span class="badge badge-danger">{{$global_nota->Area}}</span>
+            <span class="badge bg-red text-white">{{$global_nota->Area}}</span>
            <h4 style="min-height: 110px;" class="h4 text-dark auto-height font-weight-bold">{{$global_nota->Titular}}</h4>
          </div>
           

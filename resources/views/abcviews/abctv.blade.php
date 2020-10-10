@@ -13,7 +13,7 @@
 @foreach($tipos as $tipo)
 
 <div class="d-flex mt-5 mb-4 azul-claro p-2 rounded">
-  <div class="tag " style="background-color: blue; width: 14px; height: 14px; border-right: 3px solid red; transform: translateY(2px); "></div>
+ 
   <div>
     <h4 class="h6 ml-2 text-white m-0">SECCIÓN</h4>
   </div><i class="fas fa-caret-right ml-2 text-white" style="font-size: 17px;"></i>

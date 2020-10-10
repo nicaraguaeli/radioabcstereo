@@ -4,7 +4,7 @@
 
     <a href="{{url('locales')}}">
       <div class="d-flex border-b">
-        <div class="tag " style="background-color: blue; width: 14px; height: 14px; border-right: 3px solid red; transform: translateY(3px); "></div>
+      
         <div class=" font-weight-bold ml-2 wow fadeInUp text-dark" data-wow-delay="0.2s" style="font-size: 1.1rem;">LOCALES</div>
       </div>
     </a>
@@ -25,7 +25,7 @@
 
       <div class="col-lg-3 wow fadeInUp border-left gris ">
 
-        <p class="text-center font-weight-bold text-white azul-medio ">TE PUEDE INTERESAR</p>
+        <p class="text-center font-weight-bold text-white azul-claro rounded ">TE PUEDE INTERESAR</p>
 
 
         @foreach($destacado as $de)
@@ -63,7 +63,7 @@
   <section style="padding-top: 20px;">
     <a href="{{url('departamentales')}}">
       <div class="d-flex border-b">
-        <div class="tag " style="background-color: blue; width: 14px; height: 14px; border-right: 3px solid red; transform: translateY(3px); "></div>
+       
         <h5 class="h5 font-weight-bold ml-2 wow fadeInUp text-dark" data-wow-delay="0.2s" style="font-size: 1.1rem;">DEPARTAMENTALES</h5>
       </div>
     </a>
@@ -120,7 +120,7 @@
       <div class="col-lg-6 border-right">
         <a href="{{url('nacionales')}}">
           <div class="d-flex border-b">
-            <div class="tag " style="background-color: blue; width: 14px; height: 14px; border-right: 3px solid red; transform: translateY(3px); "></div>
+           
             <h5 class="h5 font-weight-bold ml-2 wow fadeInUp text-dark" data-wow-delay="0.2s" style="font-size: 1.1rem;">NACIONALES</h5>
           </div>
         </a>
@@ -137,7 +137,7 @@
       </div>
       <div class="col-lg-6"><a href="{{url('internacionales')}}">
           <div class="d-flex border-b">
-            <div class="tag " style="background-color: blue; width: 14px; height: 14px; border-right: 3px solid red; transform: translateY(3px); "></div>
+           
             <h5 class="h5 font-weight-bold ml-2 wow fadeInUp text-dark" data-wow-delay="0.2s" style="font-size: 1.1rem;">INTERNACIONALES</h5>
           </div>
         </a>

@@ -14,7 +14,7 @@
           <marquee behavior="scroll" direction="left" style=" font-size: 0.8rem;">
 
             @foreach($noticias as $nota)
-            <span class="badge badge-danger mr-2 text-uppercase">{{$nota->Ciudad}}</span><a class="text-white text-uppercase mr-3" href="{{url('nota',$nota->ID.'_'.Str::slug($nota->Titular,'-'))}}">{{$nota->Titular}}</a>
+            <span class="badge bg-red text-white py-1 mr-2 text-uppercase">{{$nota->Ciudad}}</span><a class="text-white text-uppercase mr-3" href="{{url('nota',$nota->ID.'_'.Str::slug($nota->Titular,'-'))}}">{{$nota->Titular}}</a>
             @endforeach
 
           </marquee>
@@ -75,7 +75,7 @@
           <div class="col-md-8 align-self-center p-0">
             <div class=" mr-2 float-right">
               <a href="{{url('escuchar')}}" target="_blank">
-              <i class="fas fa-play-circle" style="font-size: 3rem;"></i>
+              <i class="fas fa-play-circle color-red" style="font-size: 3rem;"></i>
               </a>
             </div>
 

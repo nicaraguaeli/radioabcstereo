@@ -5,7 +5,7 @@
 			<div class="col-lg-6 ">
 				<a href="{{url('abctv')}}">
 					<div class="d-flex border-bottom mt-5 text-white azul-claro rounded">
-						<div class="tag ml-1 mt-1" style="background-color: #e8e8e8; width: 14px; height: 14px; border-right: 3px solid red; transform: translateY(3px); "></div>
+						
 						<h5 class="h5 font-weight-bold ml-2 mt-1 wow fadeInUp" data-wow-delay="0.2s">ABCtv</h5>
 					</div>
 				</a>
@@ -48,7 +48,7 @@
 
 				<a href="{{url('abc/podcast')}}">
 					<div class="d-flex border-bottom mt-5 text-white azul-claro rounded">
-						<div class="tag ml-1 mt-1" style="background-color: #e8e8e8; width: 14px; height: 14px; border-right: 3px solid red; transform: translateY(3px); "></div>
+						
 
 						<h5 class="h5 font-weight-bold ml-2 mt-1 wow fadeInUp" data-wow-delay="0.2s">Podcast</h5>
 					</div>
@@ -65,7 +65,7 @@
 					<div class="col-md-12 mt-3 wow fadeIn">
 						<a href="{{url('transmisiones')}}">
 							<div class="d-flex border-bottom  text-white azul-claro rounded">
-								<div class="tag ml-1 mt-1" style="background-color: #e8e8e8; width: 14px; height: 14px; border-right: 3px solid red; transform: translateY(3px); "></div>
+								
 
 								<h5 class="h5 font-weight-bold ml-2 mt-1 wow fadeInUp" data-wow-delay="0.2s">Facebook live</h5>
 							</div>
