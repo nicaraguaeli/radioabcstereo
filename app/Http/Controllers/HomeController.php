@@ -227,17 +227,18 @@ class HomeController extends Controller
         return view('abcviews.resultadosabctv', compact('videos'))->with('buscar', $id);
     }
 
-    public function buscar()
+    public function buscar(Request $request)
     {
 
+        
         $count = Noticia::where([
-            ['Titular', 'like', '%' . Request()->buscar . '%'],
+            ['Titular', 'like', '%' . $request->buscar . '%'],
             ['Estado', 'Publicado']
         ])->orWhere([
-            ['Contenido', 'like', '%' . Request()->buscar . '%'],
+            ['Contenido', 'like', '%' . $request->buscar . '%'],
             ['Estado', 'Publicado']
         ])->orWhere([
-            ['entrada', Request()->buscar],
+            ['entrada', $request->buscar],
             ['Estado', 'Publicado']
         ])->orderBy('ID', 'desc')->count();
 
@@ -245,20 +246,13 @@ class HomeController extends Controller
 
 
 
-        $notas = Noticia::where([
-            ['Titular', 'like', '%' . Request()->buscar . '%'],
+        $notas = DB::table('ABCnoticias')->where([
+            ['Titular', 'like', "%{$request->buscar}%"],
             ['Estado', 'Publicado']
-        ])->orWhere([
-            ['Contenido', 'like', '%' . Request()->buscar . '%'],
-            ['Estado', 'Publicado']
-        ])->orWhere([
-            ['entrada', Request()->buscar],
-            ['Estado', 'Publicado']
-        ])->orderBy('ID', 'desc')->paginate(20);
-
-
-
-        return view('abcviews.resultados', compact('notas'))->with('i')->with('buscar', Request()->buscar)->with('count', $count);
+        ])->simplePaginate(20);
+        
+        
+        return view('abcviews.resultados')->with('i')->with('buscar', $request->buscar)->with('notas', $notas)->with("count",$count);
 
         // return redirect('dashboard')->with('status', 'Profile updated!');
 
