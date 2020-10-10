@@ -1,7 +1,7 @@
 <div class="container  mt-5 mt-md-3 ">
  
  
-  <div class="row flex-column-reverse flex-md-row flex-lg-row  mt-md-0">
+  <div class="row   mt-md-0">
 
     <div class="col-12 col-sm-12 col-md-8 col-lg-8 p-sm-0 p-0 p-md-1     mb-2 position-relative overflow-hidden">
 
@@ -26,7 +26,7 @@
 
     <div class="col-12 col-sm-12 col-md-4 col-lg-4 p-sm-0 p-0 p-md-1     mb-2 position-relative overflow-hidden ">
     <a href="{{url('nota',$local[0]->ID.'_'.Str::slug($local[0]->Titular,'-'))}}" class="text-dark">
-      <h1 class="p-2  h1 font-size font-weight-bold mt-5 mt-md-0">{{$local[0]->Titular}}</h1>
+      <h1 class="p-2  h1 font-size font-weight-bold mt-md-0">{{$local[0]->Titular}}</h1>
     </a>
     
     
