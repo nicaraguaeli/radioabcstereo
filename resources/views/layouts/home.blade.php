@@ -102,8 +102,8 @@
   display: inline-block;
   width: 80px;
   height: 80px;
-  bottom: 60%;
-  right: 36%;
+  bottom: 70%;
+  right: 40%;
 }
 .lds-dual-ring:after {
   content: " ";
@@ -175,7 +175,8 @@ function loadImage(elem){
   newImg.onload = function(){
     console.log("done loading");
     $(elem).attr("src", url);
-    $('.lds-dual-ring').addClass('d-none');
+    let placeholder = $(elem).attr("name");
+    $('.'+placeholder).addClass('d-none');
   }
   newImg.src = url;
 }

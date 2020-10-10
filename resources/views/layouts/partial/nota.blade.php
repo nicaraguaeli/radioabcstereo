@@ -1,7 +1,7 @@
  <a class="text-decoration-none" href="{{url('nota',$global_nota->ID.'_'.Str::slug($global_nota->Titular,'-'))}}">
    <div class="card border-0 shadow mb-2 position-relative ">
-   <div class="lds-dual-ring position-absolute"></div>
-     <img src="{{asset('img/placeholder2.jpg')}}" class="card-img-top rounded" alt="{{$global_nota->Titular}}" ref-src="{{asset(''.$global_nota->Imagen)}}">
+   <div class="lds-dual-ring position-absolute {{$global_nota->ID}}"></div>
+     <img src="{{asset('img/placeholder2.jpg')}}" name="{{$global_nota->ID}}"  class="card-img-top rounded" alt="{{$global_nota->Titular}}" ref-src="{{asset(''.$global_nota->Imagen)}}">
      <div class="card-body text-white">
        <div class="row justify-content-around">
          <div class="col-xs-6 p-1">
