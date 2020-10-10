@@ -96,7 +96,7 @@
     }
     .border-b
 {
-     border-bottom: 3px solid #125fbc !important;
+     border-bottom: 3px solid #1b328e !important;
 }
 .lds-dual-ring {
   display: inline-block;

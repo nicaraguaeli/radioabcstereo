@@ -23,7 +23,7 @@
       @endif
       @endforeach
 
-      <div class="col-lg-3 wow fadeInUp border-left gris ">
+      <div class="col-lg-3 wow fadeInUp border-left gris rounded ">
 
         <p class="text-center font-weight-bold text-white azul-claro rounded ">TE PUEDE INTERESAR</p>
 
