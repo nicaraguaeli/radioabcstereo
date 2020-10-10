@@ -8,7 +8,7 @@
 
       <a href="{{url('nota',$local[0]->ID.'_'.Str::slug($local[0]->Titular,'-'))}}">
 
-        <img src="{{asset(''.$local[0]->Imagen)}}" alt="" class="w-100 rounded">
+        <img src="{{asset('img/placeholder2.jpg')}}" alt="{{$local[0]->Titular}}" class="w-100 rounded" ref-src="{{asset(''.$local[0]->Imagen)}}">
 
         <div class="position-absolute  p-3  w-100" style="top: 0;">
           <h2 class="" ><span class="badge azul-claro text-white">Local</span></h2>

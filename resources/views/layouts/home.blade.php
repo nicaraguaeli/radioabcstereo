@@ -98,6 +98,32 @@
 {
      border-bottom: 3px solid #125fbc !important;
 }
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  bottom: 60%;
+  right: 36%;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #6c757d;
+  border-color: #6c757d transparent #6c757d transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
   </style>
    
@@ -139,6 +165,20 @@
   
     
    });
+   let imgs = $("img");
+for(let a=0;a<imgs.length;a++){
+  loadImage(imgs[a]);
+}
+function loadImage(elem){
+  let url = $(elem).attr("ref-src");
+  let newImg = new Image();
+  newImg.onload = function(){
+    console.log("done loading");
+    $(elem).attr("src", url);
+    $('.lds-dual-ring').addClass('d-none');
+  }
+  newImg.src = url;
+}
  </script> 
  
 </body>

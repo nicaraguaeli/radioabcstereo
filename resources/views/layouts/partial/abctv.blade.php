@@ -1,6 +1,6 @@
 <section class="gris pb-5">
 
-	<div class="container ">
+	<div class="container " style="background: #dfdfdf;">
 		<div class="row py-sm-5">
 			<div class="col-lg-6 ">
 				<a href="{{url('abctv')}}">

@@ -17,25 +17,25 @@
 	</div>
      <div class="d-flex justify-content-center mt-3">
 		 <div>
-			 <a class="text-dark" href="https://www.facebook.com/radioabcesteli/?fref=ts"> 
+			 <a target="_blank" class="text-dark" href="https://www.facebook.com/radioabcesteli/?fref=ts"> 
 			 <i style="font-size: 2.5rem;" class="fab fa-facebook-square px-3"></i>
 			</a>
 		
 		 </div>
 		 <div>
-			 <a class="text-dark" href="https://twitter.com/radioabcesteli">
+			 <a target="_blank" class="text-dark" href="https://twitter.com/radioabcesteli">
  <i style="font-size: 2.5rem;" class="fab fa-twitter-square px-3"></i>
 			 </a>
 		
 		 </div>
 		 <div>
-			 <a class="text-dark" href="https://www.youtube.com/channel/UC4jgoYzXPyiQ-JejLctLtlA">
+			 <a target="_blank" class="text-dark" href="https://www.youtube.com/channel/UC4jgoYzXPyiQ-JejLctLtlA">
 				  <i style="font-size: 2.5rem;" class="fab fa-youtube-square px-3"></i>
 			 </a>
 		
 		 </div>
 		 <div>
-			 <a class="text-dark" href="https://www.instagram.com/radioabcesteli/">
+			 <a target="_blank" class="text-dark" href="https://www.instagram.com/radioabcesteli/">
 				  <i style="font-size: 2.5rem;" class="fab fa-instagram px-3"></i>
 			 </a>
 		
