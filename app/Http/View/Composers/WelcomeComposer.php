@@ -23,24 +23,55 @@ class WelcomeComposer
        $mes = new getMes();
 
        //fecha 7 dias atras
-       $date_old = now()->subDays(7);
-       
+      
+       $destacado = [];
       //consulta para obtener resultados de los ultimos 7 dias
-       $destacado = DB::table('ABCnoticias')
-       ->orderBy('Leido','desc')->where(
-         [
-           ['Mes',$date_old->month],
-           ['Ano',$date_old->year],
-           ['Dia','>=',$date_old->day],
-           ['Estado','Publicado']
-           ])
-           ->orWhere(
-             [
-               ['Mes',$mes->getmes($date_old->month)],
-               ['Ano',$date_old->year],
-               ['Dia','>=',$date_old->day],
-               ['Estado','Publicado'],
-               ])->take(4)->get();
+       if(now()->month == now()->subDays(17)->month)
+       {
+        $destacado = DB::table('ABCnoticias')->orderBy('Leido','desc')->Where(
+              [
+                
+                ['Mes',$mes->getmes(now()->month)],
+                ['Ano',now()->year],
+                ['Dia','>=',now()->subDays(7)],
+                ['Estado','Publicado'],
+                ])->take(4)->get();
+
+                
+       }
+       else
+       {
+        $current_data = DB::table('ABCnoticias')->orderBy('Leido','desc')
+        ->Where(
+          [
+            ['Mes',$mes->getmes(now()->month)],
+            ['Ano',now()->year],
+            ['Dia','<=',now()->day],          
+            ['Estado','Publicado'],
+            ])->get();
+
+           
+        
+
+        $old_data = DB::table('ABCnoticias')->orderBy('Leido','desc')
+        ->Where(
+          [
+            ['Mes',$mes->getmes(now()->subDays(7)->month)],
+            ['Ano',now()->year],
+            ['Dia','>=',now()->subDays(7)->day],
+           
+            ['Estado','Publicado'],
+            ])->get();
+
+            foreach ($old_data as $key => $value) {
+              # code...
+              $current_data->push($value);
+            }
+           
+         
+          $destacado = $current_data;
+       }
+       
 
 
 
@@ -101,6 +132,6 @@ class WelcomeComposer
      
       
 
-        $view->with('podcast', $podcast->toJson())->with('destacado',$destacado)->with('local',$local)->with('departamental',$departamental)->with('nacional',$nacional)->with('internacional',$internacional)->with('abctvdes',$abctvdes)->with('transmision',$transmision)->with('i');
+        $view->with('podcast', $podcast->toJson())->with('destacado',$destacado->take(4))->with('local',$local)->with('departamental',$departamental)->with('nacional',$nacional)->with('internacional',$internacional)->with('abctvdes',$abctvdes)->with('transmision',$transmision)->with('i');
     }
 }
