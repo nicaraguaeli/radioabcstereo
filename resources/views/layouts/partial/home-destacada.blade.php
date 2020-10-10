@@ -31,7 +31,9 @@
     
     
     <div class="position-md-absolute w-100" style="bottom: 0;">
+    <a href="{{url('nota',$local[0]->ID.'_'.Str::slug($local[0]->Titular,'-'))}}" class="text-dark">
     <h5 class="p-2 text-dark h5 font-size text-muted ">{{$local[0]->entrada}}</h5>
+    </a>
     <div class="row  flex-nowrap d-sm-none d-md-flex d-none " >
    
  
