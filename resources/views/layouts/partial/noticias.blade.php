@@ -32,7 +32,7 @@
         <a class="link-destacado" href="{{url('nota',$de->ID.'_'.Str::slug($de->Titular,'-'))}}">
           <div class="row ">
 
-            <div class="col-3 col-sm-3 col-md-3 align-self-center">
+            <div class="col-3 col-sm-3 col-md-3 align-self-center overflow-hidden">
               <div>
                 
                 <img width="90px;" class="pl-1 pr-1" src="{{asset(''.$de->Imagen)}}" alt="Cargando.." title="{{$de->Titular}}">
