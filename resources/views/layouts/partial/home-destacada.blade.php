@@ -27,7 +27,7 @@
           </div>
         </div>
 
-        <h4 class="text-dark font-weight-bold p-2 text-center">{{$local[0]->Titular}}</h4 class="text-dark">
+        <h4 class="text-dark font-weight-bold p-2 ">{{$local[0]->Titular}}</h4 class="text-dark">
       </a>
 
     </div>
@@ -55,7 +55,7 @@
 
           </div>
         </div>
-        <h4 class="text-dark font-weight-bold p-2 text-center">{{$departamental[0]->Titular}}</h4 class="text-dark">
+        <h4 class="text-dark font-weight-bold p-2 ">{{$departamental[0]->Titular}}</h4 class="text-dark">
       </a>
 
 

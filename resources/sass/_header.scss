@@ -127,6 +127,10 @@ p
 
 .title-content
 {
+  background: -moz-linear-gradient( to top, black, rgba(255, 0, 0, 0) );
+  background: -webkit-linear-gradient( to top, black, rgba(255, 0, 0, 0) );
+  background: -o-linear-gradient( to top, black, rgba(255, 0, 0, 0) );
+  background: -ms-linear-gradient( to top, black, rgba(255, 0, 0, 0) );
   background: linear-gradient( to top, black, rgba(255, 0, 0, 0) );
 }
 @media screen and(max-width: 576px)
