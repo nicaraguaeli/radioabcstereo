@@ -16,7 +16,7 @@
   <br class="mt-5 mt-md-0 mt-lg-0">
   <br class="mt-5 mt-md-0 mt-lg-0">
   <div class="d-flex  ">
-    <div class="tag " style="background-color: blue; width: 14px; height: 14px; border-right: 3px solid red; transform: translateY(3px); "></div>
+  
     <div>
       <h4 class="h6 ml-2">NOTICIA</h4>
     </div><i class="fas fa-caret-right ml-2" style="font-size: 17px;"></i>
@@ -129,6 +129,7 @@
       <!--FIN ENCUESTA -->
 
       <!--share-->
+      <hr>
       <h4 class="mt-3"><span class="badge badge-primary">Comparte esta noticia<i class="fas fa-share-alt text-white ml-1"></i></span></h4>
       <div class="d-flex mb-2">
         <div class="mr-2">
@@ -144,6 +145,7 @@
       </div>
 
       <!--FinShare-->
+   
       <div class="d-sm-block d-md-none">
         <hr>
       <h5 class="font-weight-bold text-center">TE PUEDE INTERESAR</h5>

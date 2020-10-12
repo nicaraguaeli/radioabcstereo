@@ -75,7 +75,7 @@
           <div class="col-md-8 align-self-center p-0">
             <div class=" mr-2 float-right">
               <a href="{{url('escuchar')}}" target="_blank">
-              <i class="fas fa-play-circle" style="font-size: 3rem;"></i>
+              <i class="fas fa-play-circle color-red" style="font-size: 3rem;"></i>
               </a>
             </div>
 
@@ -127,19 +127,20 @@
 <div class="media-print">
 
   <nav class="navbar navbar-expand-lg  navbar-fixed bg-white container p-0 fixed-sm-top " style="border-bottom: 2px solid #dee2e6!important;">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+
+<i class="far fa-bars text-dark ml-2" style="font-size: 1.6rem;"></i>
+</button>
     <a id="logo-small" class="navbar-brand text-white pl-2 " href="{{url('/')}}"><img width="50px" src="{{asset('img/brand.png')}}" alt="Logo"></a>
    
 
     <a href="{{url('escuchar')}} " class="escuchanos" target="_blank">
-      <div class="d-flex azul-claro p-1 px-2 rounded-lg">
-        <div> <i style="font-size: 1.5rem;" class="far fa-play-circle text-white mr-1"></i></div>
-        <div class="align-self-center"> <small class="text-white font-weight-bold escuchanos">Escúchanos </small></div>
+      <div class="d-flex  p-1 px-2 rounded-lg">
+        <div> <i style="font-size: 1.7rem;" class="far fa-play-circle text-dark mr-2"></i></div>
+        <div class="align-self-center"> <small class="text-white font-weight-bold escuchanos"> </small></div>
       </div>
     </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-
-      <span class="mr-1 text-dark font-weight-bold">MENU</span><i class="far fa-bars text-dark" style="font-size: 1rem;"></i>
-    </button>
+   
     <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
       <div class="container border-top" >
 

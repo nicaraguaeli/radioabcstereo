@@ -1,4 +1,7 @@
-<footer class="footer  container-fluid fixed-height print-hidden">
+<footer class="footer  container-fluid fixed-height print-hidden border-top">
+	<div  class="text-center">
+		<img src="{{asset('img/ft-logo.png')}}" alt="footer-logo" width="64px;">
+	</div>
 	<div class="container my-5">
 	 
 	
@@ -9,11 +12,12 @@
 		<li class="border-right px-3"><a class="text-dark" href="{{url('internacionales')}}">Internacionales</a></li>
 		<li class="border-right px-3"><a class="text-dark" href="{{url('empleos')}}">Empleos</a></li>
 		<li class="border-right px-3"><a class="text-dark" href="{{url('abctv')}}">ABCtv</a></li>
+		<li class="border-right px-3"><a class="text-dark" href="{{url('escuchanos')}}">Escúchanos</a></li>
 		<li class="border-right px-3"><a class="text-dark" href="{{url('nosotros')}}">Nosotros</a></li>
-		<li class="border-right px-3"><a class="text-dark" href="{{url('contactanos')}}">Contacto</a></li>
+		<li class=" px-3"><a class="text-dark" href="{{url('contactanos')}}">Contacto</a></li>
 	</ul>
 	<div class="text-center">
-    <small >síguenos en</small>
+    <small >Síguenos en</small>
 	</div>
      <div class="d-flex justify-content-center mt-3">
 		 <div>

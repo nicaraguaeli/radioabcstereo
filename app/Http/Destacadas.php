@@ -15,13 +15,8 @@ class Destacadas
 
         $destacado = [];
 
-
-
        if(now()->month == now()->subDays(3)->subDays(5)->month)
        {
-        
-        
-       
 
         $destacado = DB::table('ABCnoticias')->orderBy('Leido','desc')
         ->Where(
@@ -32,13 +27,11 @@ class Destacadas
             ['Dia','>=',now()->subDays(3)->subDays(5)->day],
             ['Area',$area],
             ['Estado','Publicado'],
-            ])->get();
-           
+            ])->get();          
             
        }
        else
-       {
-        
+       {       
         $current_data = DB::table('ABCnoticias')->orderBy('Leido','desc')
         ->Where(
           [
@@ -48,10 +41,7 @@ class Destacadas
             ['Area',$area],
             ['Estado','Publicado'],
             ])->get();
-
-           
-        
-
+            
         $old_data = DB::table('ABCnoticias')->orderBy('Leido','desc')
         ->Where(
           [

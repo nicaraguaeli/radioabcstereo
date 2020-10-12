@@ -7,8 +7,8 @@
          
          <div class="col-lg-12">
              
-         <div class="d-flex" >
-             <div class="tag " style="background-color: blue; width: 14px; height: 14px; border-right: 3px solid red; transform: translateY(3px); "></div>
+         <div class="d-flex border-b mb-5" >
+            
              <div><h4 class="h6 ml-2">ABC</h4></div><i class="fas fa-caret-right ml-2" style="font-size: 17px;"></i>
              <div><h4 class="h6 font-weight-bold  ml-2 wow fadeInUp text-uppercase" data-wow-delay="0.2s">Contáctanos</h4></div>
              
@@ -138,7 +138,7 @@
               <h6 class="text-center">+505 2714-2000</h6>
               <h6 class="text-center font-weight-bold">Celulares para mensajes</h6>
               <h6 class="text-center">+505 8845-0415 Claro (WhatsApp)</h6>
-              <h6 class="text-center">+505 8113-2643 Movistar</h6>
+              <h6 class="text-center">+505 8113-2643 Tigo</h6>
      
      
      
@@ -148,7 +148,7 @@
              <h6 class="text-center font-weight-bold">Teléfono</h6>
              <h6 class="text-center">+505 2713-6001</h6>
              <h6 class="text-center font-weight-bold">Celular</h6>
-             <h6 class="text-center">+505 8151-3977 Movistar (WhatsApp)</h6>
+             <h6 class="text-center">+505 8151-3977 Tigo (WhatsApp)</h6>
          </div>
      
      </div>

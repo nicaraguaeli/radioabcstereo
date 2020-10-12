@@ -19,9 +19,9 @@
           @click="play"
         >
           <i
-            class="fas"
+            class=" fas "
             v-bind:class="{
-              'fa-play-circle': play_state,
+              'fa-play-circle color-red ': play_state,
               'fa-pause-circle text-white': play_state == false,
             }"
             style="font-size: 3rem"

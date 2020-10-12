@@ -7,8 +7,8 @@
     	 
 		 <div class="col-lg-12">
 			 
-		 <div class="d-flex" >
-			 <div class="tag " style="background-color: blue; width: 14px; height: 14px; border-right: 3px solid red; transform: translateY(3px); "></div>
+		 <div class="d-flex border-b" >
+			
 			 <div><h4 class="h6 ml-2">EMPLEOS</h4></div><i class="fas fa-caret-right ml-2" style="font-size: 17px;"></i>
 			 <div><h4 class="h6 font-weight-bold  ml-2 wow fadeInUp text-uppercase" data-wow-delay="0.2s">ABC</h4></div>
 			 
@@ -21,7 +21,7 @@
 	 
 		  </div>
 	 @if(sizeOf($empleos)>0)
-			 <h3 class="mt-4">Oportunidades de Empleo</h3>
+			
 			 <div class="row mt-5">
 	 
 				 @foreach($empleos as $empleo)

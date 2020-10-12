@@ -10,11 +10,13 @@
 @endsection
 @section('contenido')
 
-
+<div class="container mb-5">
 
 <div class="mt-3">
      	   <a  href="{{url('abc/podcast')}}"><i class="fas fa-arrow-circle-left" style="font-size: 18px;"></i><span class="ml-1">Volver a la sección anterior</span></a>
-     </div>
+  </div>
+  
+<div style="width: 50%; margin: 0 auto;" class="audio-container" >
 
 <div class="row mt-5">
      
@@ -25,7 +27,7 @@
 		<div class="row">
 			<div class="col-sm-12 ml-2">
 				<h5 class="font-weight-bold">{{$pod->titulo}}</h5>
-				<p>{{$pod->entrada}}</p>
+				<p class="text-muted">{{$pod->entrada}}</p>
 			</div>
 			
 		</div>
@@ -56,6 +58,13 @@
 
   <!--FinShare-->
 
+</div>  
+
+
+</div>
+
+
+
    <div id="fb-root"></div>
   <script>(function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
@@ -64,4 +73,6 @@
     js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));</script>
+ 
 @endsection
+

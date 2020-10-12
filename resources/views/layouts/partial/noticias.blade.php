@@ -1,17 +1,17 @@
 <!-- LOCAL -->
 <div class="container ">
-  <section class="mt-5">
+  <section >
 
-    <a href="{{url('locales')}}">
-      <div class="d-flex border-b">
+    <a href="{{url('locales')}}" class="">
+      <div class="d-flex border-b my-4">
       
-        <div class=" font-weight-bold ml-2 wow fadeInUp text-dark" data-wow-delay="0.2s" style="font-size: 1.1rem;">LOCALES</div>
+        <div class=" font-weight-bold  wow fadeInUp text-dark" data-wow-delay="0.2s" style="font-size: 1.1rem;">LOCALES</div>
       </div>
     </a>
     @php
     $flyer = $banner;
     @endphp
-    <div class="row mt-5">
+    <div class="row ">
 
       @foreach($local as $global_nota)
       @if(!$loop->first)
@@ -60,14 +60,14 @@
 
 
   <!--DEPARTAMENTALES -->
-  <section style="padding-top: 20px;">
+  <section >
     <a href="{{url('departamentales')}}">
-      <div class="d-flex border-b">
+      <div class="d-flex border-b my-4">
        
-        <h5 class="h5 font-weight-bold ml-2 wow fadeInUp text-dark" data-wow-delay="0.2s" style="font-size: 1.1rem;">DEPARTAMENTALES</h5>
+        <h5 class="h5 font-weight-bold  wow fadeInUp text-dark" data-wow-delay="0.2s" style="font-size: 1.1rem;">DEPARTAMENTALES</h5>
       </div>
     </a>
-    <div class="row mt-5">
+    <div class="row ">
 
       @foreach($departamental as $global_nota)
 
@@ -115,16 +115,16 @@
   <!--FIN DEPARTAMENTALES -->
 
   <!-- NACIONAL E INTERNACIONAL -->
-  <section>
-    <div class="row mt-5">
+  <section >
+    <div class="row ">
       <div class="col-lg-6 border-right">
         <a href="{{url('nacionales')}}">
-          <div class="d-flex border-b">
+          <div class="d-flex border-b my-4">
            
-            <h5 class="h5 font-weight-bold ml-2 wow fadeInUp text-dark" data-wow-delay="0.2s" style="font-size: 1.1rem;">NACIONALES</h5>
+            <h5 class="h5 font-weight-bold wow fadeInUp text-dark" data-wow-delay="0.2s" style="font-size: 1.1rem;">NACIONALES</h5>
           </div>
         </a>
-        <div class="row mt-5">
+        <div class="row">
 
           @foreach($nacional as $global_nota)
           <div class="col-lg-6 wow bounceInLeft " data-wow-delay="0.{{$i+=1}}s">
@@ -136,12 +136,12 @@
         </div>
       </div>
       <div class="col-lg-6"><a href="{{url('internacionales')}}">
-          <div class="d-flex border-b">
+          <div class="d-flex border-b my-4">
            
-            <h5 class="h5 font-weight-bold ml-2 wow fadeInUp text-dark" data-wow-delay="0.2s" style="font-size: 1.1rem;">INTERNACIONALES</h5>
+            <h5 class="h5 font-weight-bold  wow fadeInUp text-dark" data-wow-delay="0.2s" style="font-size: 1.1rem;">INTERNACIONALES</h5>
           </div>
         </a>
-        <div class="row mt-5">
+        <div class="row ">
 
           @foreach($internacional as $global_nota)
           <div class="col-lg-6 wow bounceInLeft " data-wow-delay="0.{{$i+=1}}s">

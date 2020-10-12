@@ -2,10 +2,10 @@
 @section('contenido')
 
 <div class="container mt-5">
-<br class="mt-5 mt-md-0 mt-lg-0">
-  <br class="mt-5 mt-md-0 mt-lg-0">
-	<div class="d-flex ">
-		<div class="tag " style="background-color: blue; width: 14px; height: 14px; border-right: 3px solid red; transform: translateY(3px); "></div>
+	<br class="mt-5 mt-md-0 mt-lg-0">
+	<br class="mt-5 mt-md-0 mt-lg-0">
+	<div class="d-flex border-b mb-3">
+
 		<div>
 			<h4 class="h6 ml-2">NOTICIAS</h4>
 		</div><i class="fas fa-caret-right ml-2" style="font-size: 17px;"></i>
@@ -35,7 +35,7 @@
 
 
 
-<div class="container">
+<div class="container mb-5">
 
 	<div class="row mt-3">
 		<div class="col-lg-9">
@@ -52,7 +52,7 @@
 			<div class="row destacado-fixed">
 				<div class="col-sm-12">
 
-					<p class="text-center font-weight-bold text-white azul-medio ">TE PUEDE INTERESAR</p>
+					<p class="text-center font-weight-bold text-white azul-claro ">TE PUEDE INTERESAR</p>
 
 
 					@foreach($destacado as $de)
@@ -94,8 +94,8 @@
 
 	</div>
 	<div class="mt-2">
-	{{$global->links()}}
-</div>
+		{{$global->links()}}
+	</div>
 
 
 </div>

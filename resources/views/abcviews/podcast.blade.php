@@ -32,8 +32,8 @@
     	 
     <div class="col-lg-12">
     	
-	<div class="d-flex" >
-		<div class="tag " style="background-color: blue; width: 14px; height: 14px; border-right: 3px solid red; transform: translateY(3px); "></div>
+	<div class="d-flex border-b mb-5" >
+	
 		<div><h4 class="h6 ml-2">ABC</h4></div><i class="fas fa-caret-right ml-2" style="font-size: 17px;"></i>
 		<div><a class="text-dark" href="{{url('abc/podcast')}}"><h4 class="h6 font-weight-bold  ml-2 wow fadeInUp text-uppercase" data-wow-delay="0.2s">podcast</h4></a></div>
     @isset($tipo)
@@ -50,7 +50,7 @@
 </div>
  
 
-<div class="container">
+<div class="container mb-5">
 <div class="row mt-2" style="background: #004064;">
 	 	<div class="col-lg-12" >
 	 		<img class="img-fluid" src="{{asset('img/podcast.png')}}" alt="">

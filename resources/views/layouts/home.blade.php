@@ -102,7 +102,7 @@
   display: inline-block;
   width: 80px;
   height: 80px;
-  bottom: 70%;
+  bottom: 30%;
   right: 40%;
 }
 .lds-dual-ring:after {
