@@ -231,7 +231,7 @@ class HomeController extends Controller
     {
 
         
-        $count = Noticia::where([
+       /* $count = Noticia::where([
             ['Titular', 'like', '%' . $request->buscar . '%'],
             ['Estado', 'Publicado']
         ])->orWhere([
@@ -241,18 +241,26 @@ class HomeController extends Controller
             ['entrada', $request->buscar],
             ['Estado', 'Publicado']
         ])->orderBy('ID', 'desc')->count();
+*/
 
 
 
 
-
-        $notas = DB::table('ABCnoticias')->where([
+        $notas = DB::table('ABCnoticias')->orderBy('ID','Desc')->where([
             ['Titular', 'like', "%{$request->buscar}%"],
             ['Estado', 'Publicado']
-        ])->simplePaginate(20);
+        ])->orWhere([
+            ['Contenido', 'like', "%{$request->buscar}%"],
+            ['Estado', 'Publicado']
+        ])->orWhere([
+            ['entrada', 'like', "%{$request->buscar}%"],
+            ['Estado', 'Publicado']
+        ])->Paginate(30);
+
         
+     
         
-        return view('abcviews.resultados')->with('i')->with('buscar', $request->buscar)->with('notas', $notas)->with("count",$count);
+        return view('abcviews.resultados')->with('notas', $notas)->with('busqueda',$request->buscar);
 
         // return redirect('dashboard')->with('status', 'Profile updated!');
 

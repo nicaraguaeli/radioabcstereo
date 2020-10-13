@@ -43,15 +43,13 @@ Route::get('/nota/{id}','HomeController@noticia');
 Route::get('/abctv','HomeController@abctv');
 Route::get('/abctvsearch/{id}','HomeController@abctvsearch');
 Route::get('/abctvlist/{id}','HomeController@abctvlist');
-Route::get('/empleos','HomeController@empleos');
 Route::get('/buscar','HomeController@buscar');
+Route::get('/empleos','HomeController@empleos');
 Route::get('/countview','HomeController@countview');
 Route::get('/calificacion','HomeController@calificacion');
 Route::get('/contactanos','HomeController@contactanos');
 Route::get('/noticias/{id}','HomeController@periodista');
 Route::post('/contactanos/enviar','HomeController@enviar')->name('enviar');
-
-
 
 Route::get('/nosotros',function(){
 
