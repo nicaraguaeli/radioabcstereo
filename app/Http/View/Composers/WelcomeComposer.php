@@ -26,7 +26,7 @@ class WelcomeComposer
       
        $destacado = [];
       //consulta para obtener resultados de los ultimos 7 dias
-       if(now()->month == now()->subDays(17)->month)
+       if(now()->month == now()->subDays(7)->month)
        {
         $destacado = DB::table('ABCnoticias')->orderBy('Leido','desc')->Where(
               [
@@ -35,7 +35,7 @@ class WelcomeComposer
                 ['Ano',now()->year],
                 ['Dia','>=',now()->subDays(7)],
                 ['Estado','Publicado'],
-                ])->take(4)->get();
+                ])->get();
 
                 
        }
