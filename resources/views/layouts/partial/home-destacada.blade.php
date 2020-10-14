@@ -39,7 +39,7 @@
 
     <div class="col-12 col-sm-12 col-md-6 col-lg-6 p-sm-0 p-0 p-md-1     mb-2 position-relative overflow-hidden ">
 
-      <a href="{{url('nota',$local[0]->ID.'_'.Str::slug($departamental[0]->Titular,'-'))}}">
+      <a href="{{url('nota',$departamental[0]->ID.'_'.Str::slug($departamental[0]->Titular,'-'))}}">
         <div class="position-relative">
           <div class="lds-dual-ring position-absolute {{$departamental[0]->ID}}"></div>
           <img src="{{asset('img/placeholder2.jpg')}}" name="{{$departamental[0]->ID}}" alt="{{$departamental[0]->Titular}}" class="w-100 rounded img-fluid" ref-src="{{asset(''.$departamental[0]->Imagen)}}">
@@ -49,8 +49,8 @@
             <div class="row  flex-nowrap  ">
 
 
-              <div class="col-sm-6 text-white ml-2"><i class="fal fa-clock"></i><span class="h6 p-2">{{$local[0]->Dia}}-{{$local[0]->Mes}}-{{$local[0]->Ano}}</span></div>
-              <div class="col-sm-6 text-white text-right"><i class="far fa-map-marker-alt"></i><span class="h6 p-2">{{$local[0]->Ciudad}}</span></div>
+              <div class="col-sm-6 text-white ml-2"><i class="fal fa-clock"></i><span class="h6 p-2">{{$departamental[0]->Dia}}-{{$departamental[0]->Mes}}-{{$departamental[0]->Ano}}</span></div>
+              <div class="col-sm-6 text-white text-right"><i class="far fa-map-marker-alt"></i><span class="h6 p-2">{{$departamental[0]->Ciudad}}</span></div>
             </div>
 
           </div>
