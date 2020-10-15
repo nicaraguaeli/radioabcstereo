@@ -1,9 +1,26 @@
 @extends('layouts.home')
 @section('contenido')
-<div class="container mt-5">
-	<br class="mt-5 mt-md-0 mt-lg-0">
-	<br class="mt-5 mt-md-0 mt-lg-0">
-	<h1 class="font-weight-bold text-uppercase text-center " style="color: #005c92;">¡99.7: en las mejores calificaciones!</h1>
+<div class="container mb-5">
+<br class="mt-5 mt-md-0 mt-lg-0">
+  <br class="mt-5 mt-md-0 mt-lg-0">
+<div class="row mt-5">
+    
+		 <div class="col-lg-12">
+			 
+		 <div class="d-flex border-b" >
+			
+			 <div><h4 class="h6 ml-2">SOBRE</h4></div><i class="fas fa-caret-right ml-2" style="font-size: 17px;"></i>
+			 <div><h4 class="h6 font-weight-bold  ml-2 wow fadeInUp text-uppercase" data-wow-delay="0.2s">nosotros</h4></div>
+			 
+			 
+		 
+		  </div>
+	 
+		 </div>	
+			 
+	 
+		  </div>
+	<h1 class="font-weight-bold text-uppercase text-center mt-3 " style="color: #005c92;">¡99.7: en las mejores calificaciones!</h1>
 	<div class="row mt-5">
           
 		<div class="col-12 col-md-6 align-self-center shadow">

@@ -162,11 +162,13 @@
             </div>
 
           </li>
-          <li class="nav-item  nav-link-hover ">
-            <a class="nav-link text-dark  " href="{{url('/')}}">Inicio <span class="sr-only">(current)</span></a>
+          <li class="nav-item  nav-link-hover {{ (request()->is('/')) ? 'azul-claro' : '' }} ">
+           
+            <a class="nav-link  {{ (request()->is('/')) ? 'text-white' : 'text-dark' }} " href="{{url('/')}}">Inicio <span class="sr-only">(current)</span></a>
+          
           </li>
-          <li class="nav-item dropdown nav-link-hover ">
-            <a class="nav-link dropdown-toggle text-dark   " href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <li class="nav-item dropdown nav-link-hover {{ (request()->is(['locales','departamentales','internacionales','nacionales'])) ? 'azul-claro' : '' }} ">
+            <a class="nav-link dropdown-toggle {{ (request()->is(['locales','departamentales','internacionales','nacionales'])) ? 'text-white' : 'text-dark' }}   " href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Noticias <span>ABC</span>
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -178,20 +180,20 @@
 
             </div>
           </li>
-          <li class="nav-item nav-link-hover ">
-            <a class="nav-link text-dark  " href="{{url('abctv')}}">ABCtv</a>
+          <li class="nav-item nav-link-hover {{ (request()->is('abctv')) ? 'azul-claro' : '' }}">
+            <a class="nav-link {{ (request()->is('abctv')) ? 'text-white' : 'text-dark' }}  " href="{{url('abctv')}}">ABCtv</a>
           </li>
-          <li class="nav-item nav-link-hover ">
-            <a class="nav-link text-dark  " href="{{url('abc/podcast')}}">Podcast</a>
+          <li class="nav-item nav-link-hover {{ (request()->is('abc/podcast')) ? 'azul-claro' : '' }}">
+            <a class="nav-link {{ (request()->is('abc/podcast')) ? 'text-white' : 'text-dark' }}  " href="{{url('abc/podcast')}}">Podcast</a>
           </li>
-          <li class="nav-item nav-link-hover ">
-            <a class="nav-link text-dark    " href="{{url('empleos')}}"><span>Empleos</span></a>
+          <li class="nav-item nav-link-hover {{ (request()->is('empleos')) ? 'azul-claro' : '' }}">
+            <a class="nav-link {{ (request()->is('empleos')) ? 'text-white' : 'text-dark' }}   " href="{{url('empleos')}}"><span>Empleos</span></a>
           </li>
-          <li class="nav-item nav-link-hover ">
-            <a class="nav-link text-dark  " href="{{url('nosotros')}}">Nosotros</a>
+          <li class="nav-item nav-link-hover {{ (request()->is('nosotros')) ? 'azul-claro' : '' }}">
+            <a class="nav-link {{ (request()->is('nosotros')) ? 'text-white' : 'text-dark' }}  " href="{{url('nosotros')}}">Nosotros</a>
           </li>
-          <li class="nav-item text-white nav-link-hover ">
-            <a class="nav-link text-dark  " href="{{url('contactanos')}}">Contáctanos</a>
+          <li class="nav-item  nav-link-hover  {{ (request()->is('contactanos')) ? 'azul-claro' : '' }} ">
+            <a class="nav-link {{ (request()->is('contactanos')) ? 'text-white' : 'text-dark' }} " href="{{url('contactanos')}}">Contáctanos</a>
           </li>
 
           <li class="nav-item mt-2 escuchanos-nav text-center">
