@@ -11,7 +11,7 @@
       <div class="card-header">
         <h3 class="card-title">
           Información del Podcast
-          <small>podcast</small>
+         
         </h3>
         <!-- tools box -->
 
@@ -25,13 +25,13 @@
         <div class="form-group row">
           <label for="inputEmail3" class="col-sm-2 col-form-label">Título</label>
           <div class="col-sm-12">
-            <input required name="titulo" type="text" class="form-control" id="inputEmail3" placeholder="Titulo">
+            <input required name="titulo" type="text" class="form-control" id="title" placeholder="Titulo">
           </div>
         </div>
         <div class="form-group row">
           <label for="inputEmail3" class="col-sm-2 col-form-label">Breve descripción</label>
           <div class="col-sm-12">
-            <input required name="descripcion" type="text" class="form-control" id="inputEmail3" placeholder="descripción">
+            <input required name="descripcion" type="text" class="form-control" id="description" placeholder="descripción">
           </div>
         </div>
 
@@ -56,12 +56,12 @@
               <!-- <label for="customFile">Custom File</label> -->
               <label for="">Audio (mp3) </label>
               <div class="custom-file">
-                <input accept=".mp3,audio/*" required name="audio" type="file" class="custom-file-input" id="customFileAudio" value="Submit">
+                <input accept=".mp3,audio/*" require name="audio" type="file" class="custom-file-input" id="customFileAudio" value="Submit">
                 <label class="custom-file-label" for="customFile">Subir audio</label>
               </div>
             </div>
             <div class="progress">
-              <div class="progress-bar" role="progressbar"  aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">0%</div>
+              <div class="progress-bar" role="progressbar"  aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
           </div>
         </div>
@@ -101,16 +101,11 @@
 </form>
 <!-- /.col-->
 </div>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
-<script src="http://malsup.github.com/jquery.form.js"></script>
+
+
 <script>
   $(function() {
-    bsCustomFileInput.init();
-
-
-    bsCustomFileInput.init();
-
-
+     bsCustomFileInput.init();
     var availableTags = [];
     i = -1;
 
@@ -125,59 +120,14 @@
       }
     });
 
-
-
-
     $("#tags").autocomplete({
       source: availableTags
     });
+    
+ 
 
   });
 </script>
 
-<script type="text/javascript">
- 
-    function validate(formData, jqForm, options) {
-      
-        var form = jqForm[0];
-        if (!form.audio.value) {
-            alert('File not found');
-            return false;
-        }
-    }
- 
-    (function() {
- 
-    var bar = $('.progress-bar');
-    var percent = $('.progress-bar');
-    var status = $('#status');
- 
-    $('form').ajaxForm({
-        beforeSubmit: validate,
-        beforeSend: function() {
-            status.empty();
-            var percentVal = '0%';
-            var posterValue = $('input[name=audio]').value;
-            bar.width(percentVal)
-            percent.html(percentVal);
-        },
-        uploadProgress: function(event, position, total, percentComplete) {
-            var percentVal = percentComplete + '%';
-            bar.width(percentVal)
-            percent.html(percentVal);
-        },
-        success: function() {
-            var percentVal = 'Wait, Saving';
-            bar.width(percentVal)
-            percent.html(percentVal);
-        },
-        complete: function(xhr) {
-            status.html(xhr.responseText);
-            alert('Subido con éxito');
-            window.location.href = "../podcast";
-        }
-    });
-     
-    })();
-</script>
+
 @endsection
