@@ -16,9 +16,10 @@
   <br class="mt-5 mt-md-0 mt-lg-0">
   <br class="mt-5 mt-md-0 mt-lg-0">
   <div class="d-flex  ">
-  
+  <div class="ml-1" style="border-left: 14px solid #1b328e ;
+    box-shadow: 5px 0px 0px 0px #f60b1b inset;  height: 17px; width: 20px;"></div>
     <div>
-      <h4 class="h6 ml-2">NOTICIA</h4>
+    <h4 class="h6 ml-2">NOTICIA</h4>
     </div><i class="fas fa-caret-right ml-2" style="font-size: 17px;"></i>
     <div>
       <h4 class="h6 font-weight-bold  ml-2 wow fadeInUp text-uppercase" data-wow-delay="0.2s">{{$nota->Area}}</h4>
