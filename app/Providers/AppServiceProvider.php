@@ -8,7 +8,6 @@ use Illuminate\Support\Facades\View;
 use App\Noticia;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
-use Illuminate\Support\Facades\Url;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -33,8 +32,6 @@ class AppServiceProvider extends ServiceProvider
     {
         //
         Schema::defaultStringLength(191);
-
-        URL::forceScheme('https');
         
         $mes = new getMes();
 
@@ -50,7 +47,5 @@ class AppServiceProvider extends ServiceProvider
      
         
         View::share(['titulo'=>'Radio ABC Stereo | Inicio','noticias'=>$noticias]);
-
-
     }
 }
