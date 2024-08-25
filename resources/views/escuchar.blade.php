@@ -53,7 +53,7 @@ src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
             <div class="player__albumImg active-song" data-author="Radio ABC Stereo 99.7 fm" data-song="Esteli-Nicaragua" data data-src="https://ssl.aloncast.com:1633/"
                 style="background-image: url('{{asset('img/brand.png')}}')">
             </div>
-            <div class="player__albumImg" data-author="Radio ABC Stereo" data-song="Angels" data data-src="https://ssl.aloncast.com:1633"
+            <div class="player__albumImg" data-author="Radio ABC Stereo" data-song="Angels" data data-src="https://stream-152.zeno.fm/7y3nc198cxhvv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiI3eTNuYzE5OGN4aHZ2IiwiaG9zdCI6InN0cmVhbS0xNTIuemVuby5mbSIsInJ0dGwiOjUsImp0aSI6InFlNWtGSElKUnJxWGJ0T0UzaDZoMkEiLCJpYXQiOjE3MjQ1NDUzMzIsImV4cCI6MTcyNDU0NTM5Mn0.4XlHqaS6KKioly6IwE0dgvqleKh-eE9KU2W_v5tl1bA"
                 style="background-image: url('{{asset('img/brand.png')}}' )">
             </div>
         </div>
