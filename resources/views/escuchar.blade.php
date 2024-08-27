@@ -48,8 +48,8 @@
             margin-bottom: 10px;
         }
         .logo {
-            width: 60px;
-            height: 60px;
+            width: 75px;
+            height: 75px;
             margin-right: 15px;
             display: flex;
             justify-content: center;
@@ -64,7 +64,7 @@
         }
         h1 {
             margin: 0 0 5px 0;
-            font-size: 20px;
+            font-size: 16px;
         }
         p {
             margin: 0;
@@ -144,7 +144,7 @@
                     <img src="https://radioabcstereo.com/img/brand.png" alt="ABC Stereo Logo">
                 </div>
                 <div class="text-content">
-                    <h1>RADIO ABC STEREO 99.7</h1>
+                    <h1>RADIO ABC STEREO <br> 99.7 FM </h1>
                     <p>Esteli-Nicaragua</p>
                 </div>
             </div>
@@ -154,7 +154,7 @@
         </div>
         <div class="white-section">
            
-            <audio id="stream" src="https://stream.zeno.fm/7y3nc198cxhvv"></audio>
+            <audio id="stream" src="https://ssl.aloncast.com:1633/"></audio>
             <div class="controls">
                 <button onclick="togglePlay()"><i class="fas fa-play" id="playIcon"></i></button>
                 <div class="volume-control">
