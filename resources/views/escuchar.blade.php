@@ -154,7 +154,7 @@
         </div>
         <div class="white-section">
            
-            <audio id="stream" src="https://ssl.aloncast.com:1633/"></audio>
+            <audio id="stream" src="https://ssl.aloncast.com:1669/"></audio>
             <div class="controls">
                 <button onclick="togglePlay()"><i class="fas fa-play" id="playIcon"></i></button>
                 <div class="volume-control">
