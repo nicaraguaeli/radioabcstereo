@@ -26,8 +26,10 @@ class NoticiaHomeServiceProvider extends ServiceProvider
     public function boot()
     {
         //
+        
         View::composer(
             'welcome', 'App\Http\View\Composers\WelcomeComposer'
         );
+        
     }
 }

@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\View;
 use App\Noticia;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Pagination\Paginator;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -30,9 +31,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+      
+        Paginator::useBootstrap();
         //
         Schema::defaultStringLength(191);
-        
+       
         $mes = new getMes();
 
         $noticias = DB::table('ABCnoticias')->where('Estado','Publicado')->orderBy('ID','desc')->take(5)
@@ -47,5 +50,8 @@ class AppServiceProvider extends ServiceProvider
      
         
         View::share(['titulo'=>'Radio ABC Stereo | Inicio','noticias'=>$noticias]);
+        
+       
+        
     }
 }

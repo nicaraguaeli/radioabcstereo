@@ -25,8 +25,10 @@ class AsideServiceProvider extends ServiceProvider
     public function boot()
     {
         //
+        
         View::composer(
             ['welcome','abcviews.noticia'], 'App\Http\View\Composers\AsideComposer'
         );
+        
     }
 }

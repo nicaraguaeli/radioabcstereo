@@ -25,9 +25,11 @@ class AdminServiceProvider extends ServiceProvider
     public function boot()
     {
         //
+        
         View::composer(
             'layouts.master', 'App\Http\View\Composers\AdminComposer'
         );
+        
     }
 }
 

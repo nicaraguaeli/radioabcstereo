@@ -2,6 +2,17 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
+
+
+
+
+
+Route::get('/', function () {
+    
+
+    return view('welcome');
+});
 
 /*
 |--------------------------------------------------------------------------
@@ -14,12 +25,7 @@ use Illuminate\Support\Facades\DB;
 |
 */
 
-Route::get('/', function () {
 
-        
-        //$nota = DB::table('abcnoticias')->where('ID','17248')->first();
-        return view('welcome');
-});
 
 
 
